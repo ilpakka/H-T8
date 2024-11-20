@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    scroll-behavior: smooth;
+}
+
+@property --background {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #101010;
+}
+
+@property --primary {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #EEF4ED;
+}
+
+@property --secondary {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #484948;
+}
+
+@property --contrast {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #003D87;
+}
+
+@property --highlight {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #32C743;
+}
