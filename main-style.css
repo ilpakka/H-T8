@@ -738,6 +738,45 @@ toiminta page starts here
                 display: none;
             }
         }
+
+        /* 
+    Front page ends here
+------------------------------------------------------------------------------------------------------------------------------
+    säännöt page starts here
+*/
+
+        .rules-section {
+
+            .h1 {
+                margin: 0 0 20px 0;
+                font-size: 35px;
+            }
+
+            .h2 {
+                margin: 70px 0 20px 0;
+                font-size: 30px;
+            }
+
+            .paragraph {
+                margin: 20px 0 5px 0;
+                font-size: 22px;
+            }
+
+            .paragraph-secondary {
+                margin: 0 0 0 20px;
+                font-size: 16px;
+            }
+
+        }
+
+
+        /* 
+säännöt page ends here
+------------------------------------------------------------------------------------------------------------------------------
+toiminta page starts here
+*/
+
+
     }
 
 
