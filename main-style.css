@@ -515,9 +515,62 @@
     /* 
     säännöt page ends here
 ------------------------------------------------------------------------------------------------------------------------------
-    toiminta page starts here
+    resurssit page starts here
 */
 
+.teams {
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .red-team {
+
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            padding: 200px 0;
+            background-image: url('/assets/231f55b0cca84344b59b412463d5c96c.jpg');
+            background-size: cover;
+            background-color: rgba(255, 0, 0, 1); /* Red color with 50% opacity */
+            background-blend-mode: multiply; /* Blend the red overlay with the image */
+            filter: grayscale(100%);
+            text-decoration: none;
+
+            &:hover {
+                filter: grayscale(0%);
+                background-color: rgba(255, 0, 0, 0.9);
+                scale: 1.02;
+            }
+
+        }
+
+        .blue-team {
+            background-color: blue;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            padding: 200px 0;
+            background-image: url('/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%);
+            background-color: rgba(144, 144, 247, 0); /* Blue color with 50% opacity */
+            background-blend-mode: multiply; /* Blend the blue overlay with the image */
+            text-decoration: none;
+        
+            &:hover {
+                
+                filter: grayscale(0%);
+                background-color: rgb(0, 255, 238);
+                scale: 1.02;
+            }
+        }
+    }
+
+}
 
 
 
@@ -683,6 +736,60 @@ säännöt page ends here
 ------------------------------------------------------------------------------------------------------------------------------
 toiminta page starts here
 */
+
+.teams {
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        .red-team {
+
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            padding: 200px 0;
+            background-image: url('/assets/231f55b0cca84344b59b412463d5c96c.jpg');
+            background-size: cover;
+            background-color: rgba(255, 0, 0, 1); /* Red color with 50% opacity */
+            background-blend-mode: multiply; /* Blend the red overlay with the image */
+            filter: grayscale(100%);
+            text-decoration: none;
+
+            &:hover {
+                filter: grayscale(0%);
+                background-color: rgba(255, 0, 0, 0.9);
+                scale: 1.02;
+            }
+
+        }
+
+        .blue-team {
+            background-color: blue;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            padding: 200px 0;
+            background-image: url('/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%);
+            background-color: rgba(144, 144, 247, 0); /* Blue color with 50% opacity */
+            background-blend-mode: multiply; /* Blend the blue overlay with the image */
+            text-decoration: none;
+        
+            &:hover {
+                
+                filter: grayscale(0%);
+                background-color: rgb(0, 255, 238);
+                scale: 1.02;
+            }
+        }
+    }
+
+}
 
 
     @media screen and (min-width: 1024px) {
