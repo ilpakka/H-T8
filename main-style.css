@@ -7,6 +7,7 @@
     box-sizing: border-box;
     transition: all 0.2s linear;
     scroll-behavior: smooth;
+    overscroll-behavior: none;
 
 }
 
@@ -364,8 +365,10 @@
                 border-radius: 10px;
                 font-weight: 200;
                 border: 0;
-                border: 2px solid var(--background);
+                box-shadow: 0 10px 30px 1px rgba(16, 208, 61, 0.513);
                 background: rgba(11, 11, 11, 0.05);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
 
 
 
@@ -373,6 +376,9 @@
                     cursor: pointer;
                     transform: translateY(-4px);
                     box-shadow: inset 8px 2px 25px 0 rgba(46, 46, 46, 0.5);
+                    backdrop-filter: blur(0px);
+                    -webkit-backdrop-filter: blur(0px);
+                    box-shadow: 0 20px 50px 1px rgba(49, 98, 61, 0.513);
 
                 }
 
@@ -518,59 +524,63 @@
     resurssit page starts here
 */
 
-.teams {
-    
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        .red-team {
+    .teams {
 
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            padding: 200px 0;
-            background-image: url('/H-T8/assets/231f55b0cca84344b59b412463d5c96c.jpg');
-            background-size: cover;
-            background-color: rgba(255, 0, 0, 1); /* Red color with 50% opacity */
-            background-blend-mode: multiply; /* Blend the red overlay with the image */
-            filter: grayscale(100%);
-            text-decoration: none;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-            &:hover {
-                filter: grayscale(0%);
-                background-color: rgba(255, 0, 0, 0.9);
-                scale: 1.02;
+            .red-team {
+
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                padding: 200px 0;
+                background-image: url('../assets/231f55b0cca84344b59b412463d5c96c.jpg');
+                background-size: cover;
+                background-color: rgba(255, 0, 0, 1);
+                /* Red color with 50% opacity */
+                background-blend-mode: multiply;
+                /* Blend the red overlay with the image */
+                filter: grayscale(100%);
+                text-decoration: none;
+
+                &:hover {
+                    filter: grayscale(0%);
+                    background-color: rgba(255, 0, 0, 0.9);
+                    scale: 1.02;
+                }
+
             }
 
-        }
+            .blue-team {
+                background-color: blue;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                padding: 200px 0;
+                background-image: url('../assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+                background-size: cover;
+                background-position: center;
+                filter: grayscale(100%);
+                background-color: rgba(144, 144, 247, 0);
+                /* Blue color with 50% opacity */
+                background-blend-mode: multiply;
+                /* Blend the blue overlay with the image */
+                text-decoration: none;
 
-        .blue-team {
-            background-color: blue;
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            padding: 200px 0;
-            background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: grayscale(100%);
-            background-color: rgba(144, 144, 247, 0); /* Blue color with 50% opacity */
-            background-blend-mode: multiply; /* Blend the blue overlay with the image */
-            text-decoration: none;
-        
-            &:hover {
-                
-                filter: grayscale(0%);
-                background-color: rgb(0, 255, 238);
-                scale: 1.02;
+                &:hover {
+
+                    filter: grayscale(0%);
+                    background-color: rgb(0, 255, 238);
+                    scale: 1.02;
+                }
             }
         }
+
     }
-
-}
 
 
 
@@ -737,54 +747,175 @@ säännöt page ends here
 toiminta page starts here
 */
 
-.teams {
-    
-    .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        
-        .red-team {
+    .teams {
 
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            padding: 200px 0;
-            background-image: url('/H-T8/assets/231f55b0cca84344b59b412463d5c96c.jpg');
-            background-size: cover;
-            background-color: rgba(255, 0, 0, 1); /* Red color with 50% opacity */
-            background-blend-mode: multiply; /* Blend the red overlay with the image */
-            filter: grayscale(100%);
-            text-decoration: none;
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
 
-            &:hover {
-                filter: grayscale(0%);
-                background-color: rgba(255, 0, 0, 0.9);
-                scale: 1.02;
+            .red-team {
+
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                padding: 200px 0;
+                background-image: url('../assets/231f55b0cca84344b59b412463d5c96c.jpg');
+                background-size: cover;
+                background-color: rgba(255, 0, 0, 1);
+                /* Red color with 50% opacity */
+                background-blend-mode: multiply;
+                /* Blend the red overlay with the image */
+                filter: grayscale(100%);
+                text-decoration: none;
+                margin: 20px 0 0 0;
+
+                &:hover {
+                    filter: grayscale(0%);
+                    background-color: rgba(255, 0, 0, 0.9);
+                    scale: 1.02;
+                }
+
             }
 
+            .blue-team {
+                background-color: blue;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                padding: 200px 0;
+                background-image: url('../assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+                background-size: cover;
+                background-position: center;
+                filter: grayscale(100%);
+                background-color: rgba(144, 144, 247, 0);
+                /* Blue color with 50% opacity */
+                background-blend-mode: multiply;
+                /* Blend the blue overlay with the image */
+                text-decoration: none;
+                margin: 20px 0 0 0;
+
+                &:hover {
+
+                    filter: grayscale(0%);
+                    background-color: rgb(0, 255, 238);
+                    scale: 1.02;
+                }
+            }
         }
 
-        .blue-team {
-            background-color: blue;
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            padding: 200px 0;
-            background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: grayscale(100%);
-            background-color: rgba(144, 144, 247, 0); /* Blue color with 50% opacity */
-            background-blend-mode: multiply; /* Blend the blue overlay with the image */
-            text-decoration: none;
-        
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .link {
+        font-size: 18px;
+    }
+
+    .page-content {
+        margin: 0 10%;
+    }
+
+    .navbar {
+        padding: 0 15px;
+        z-index: 2;
+
+
+        .nav-logo img {
+            height: 70px;
+            margin: 10px 0 0 0;
+
             &:hover {
-                
-                filter: grayscale(0%);
-                background-color: rgb(0, 255, 238);
-                scale: 1.02;
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            position: relative;
+            transform: translateY(0);
+            background-color: transparent;
+            height: 60px;
+            flex-direction: row-reverse;
+
+            .nav-item {
+                margin: 0 20px;
+
+
+                .nav-link {
+                    color: var(--primary);
+                    font: 18px 'JetBrains Mono', monospace;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: var(--highlight);
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    /* 
+    Front page ends here
+------------------------------------------------------------------------------------------------------------------------------
+    säännöt page starts here
+*/
+
+    .rules-section {
+
+        .h1 {
+            margin: 0 0 20px 0;
+            font-size: 35px;
+        }
+
+        .h2 {
+            margin: 70px 0 20px 0;
+            font-size: 30px;
+        }
+
+        .paragraph {
+            margin: 20px 0 5px 0;
+            font-size: 22px;
+        }
+
+        .paragraph-secondary {
+            margin: 0 0 0 20px;
+            font-size: 16px;
+        }
+
+    }
+
+
+    /* 
+säännöt page ends here
+------------------------------------------------------------------------------------------------------------------------------
+resurssit page starts here
+*/
+
+
+    .teams {
+
+        .container {
+
+
+            .red-team {
+                padding: 300px 0;
+                background-image: url('../assets/231f55b0cca84344b59b412463d5c96c.jpg');
+
+
+            }
+
+            .blue-team {
+                padding: 300px 0;
+                background-image: url('../assets/5EwOWqXb-HKZovc4uvvC3.jpg');
             }
         }
     }
@@ -792,162 +923,67 @@ toiminta page starts here
 }
 
 
-    @media screen and (min-width: 1024px) {
 
-        .link {
-            font-size: 18px;
-        }
+@media screen and (min-width: 1480px) {
 
-        .page-content {
-            margin: 0 10%;
-        }
+    .page-content {
 
-        .navbar {
-            padding: 0 15px;
-            z-index: 2;
+        margin: 0 20%;
 
+        .button-hero {
 
-            .nav-logo img {
-                height: 70px;
-                margin: 10px 0 0 0;
+            a {
 
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.1);
-                }
-            }
+                font-size: 18px;
 
-            .nav-menu {
-                display: flex;
-                position: relative;
-                transform: translateY(0);
-                background-color: transparent;
-                height: 60px;
-                flex-direction: row-reverse;
-
-                .nav-item {
-                    margin: 0 20px;
-
-
-                    .nav-link {
-                        color: var(--primary);
-                        font: 18px 'JetBrains Mono', monospace;
-                        font-weight: 600;
-
-                        &:hover {
-                            color: var(--highlight);
-                        }
-                    }
-                }
-            }
-
-            .hamburger {
-                display: none;
             }
         }
-
-        /* 
-    Front page ends here
-------------------------------------------------------------------------------------------------------------------------------
-    säännöt page starts here
-*/
-
-        .rules-section {
-
-            .h1 {
-                margin: 0 0 20px 0;
-                font-size: 35px;
-            }
-
-            .h2 {
-                margin: 70px 0 20px 0;
-                font-size: 30px;
-            }
-
-            .paragraph {
-                margin: 20px 0 5px 0;
-                font-size: 22px;
-            }
-
-            .paragraph-secondary {
-                margin: 0 0 0 20px;
-                font-size: 16px;
-            }
-
-        }
-
-
-        /* 
-säännöt page ends here
-------------------------------------------------------------------------------------------------------------------------------
-toiminta page starts here
-*/
 
 
     }
 
+    .about {
+        padding: 150px 0 150px 0;
+        margin: 40px 0 0 0;
+
+    }
+
+    .activities {
+
+        .container {
+            padding: 100px 0;
+            width: 110%;
+
+            .activity-cards {
+                margin: 30px 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 
 
-    @media screen and (min-width: 1480px) {
-
-        .page-content {
-
-            margin: 0 20%;
-
-            .button-hero {
-
-                a {
-
-                    font-size: 18px;
-
-                }
-            }
-
-
-        }
-
-        .about {
-            padding: 150px 0 150px 0;
-            margin: 40px 0 0 0;
-
-        }
-
-        .activities {
-
-            .container {
-                padding: 100px 0;
-                width: 110%;
-
-                .activity-cards {
-                    margin: 30px 0;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-
-
-                    .activity-card {
-                        border: 1px solid var(--background);
-                        padding: 25px;
-                        border-radius: 10px;
+                .activity-card {
+                    border: 1px solid var(--background);
+                    padding: 25px;
+                    border-radius: 10px;
 
 
 
-                        a {
-                            text-decoration: none;
+                    a {
+                        text-decoration: none;
 
-                        }
+                    }
 
-                        .h3 {
-                            margin: 0 0 20px 0;
-                            font-weight: 800;
-                        }
+                    .h3 {
+                        margin: 0 0 20px 0;
+                        font-weight: 800;
                     }
                 }
-
             }
 
         }
 
     }
+
+
 
     .h1-hero {
         font-size: 70px;
