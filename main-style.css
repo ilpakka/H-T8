@@ -14,7 +14,19 @@
 @property --background {
     syntax: "<color>";
     inherits: false;
-    initial-value: #0c0c0c;
+    initial-value: #131313;
+}
+
+@property --table-head {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #090909;
+}
+
+@property --table-body {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #151515;
 }
 
 @property --primary {
@@ -29,12 +41,6 @@
     initial-value: #696969;
 }
 
-@property --contrast {
-    syntax: '<color>';
-    inherits: false;
-    initial-value: #003D87;
-}
-
 @property --highlight {
     syntax: '<color>';
     inherits: false;
@@ -46,6 +52,44 @@
     inherits: false;
     initial-value: #000000;
 }
+
+@property --beginner {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #33a828;
+}
+
+@property --beginner-background {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #091c09;
+}
+
+@property --intermediate {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #d6a938;
+}
+
+@property --intermediate-background {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #261f0c;
+}
+
+@property --advanced {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #e31806;
+}
+
+@property --advanced-background {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #321010;
+}
+
+
 
 
 ::selection {
@@ -117,6 +161,39 @@
             box-shadow: none;
         }
     }
+
+    .breadcrumbs {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+  
+      /* Individual breadcrumb items */
+      .breadcrumbs li {
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+      }
+  
+      /* Breadcrumb link styling */
+      .breadcrumbs a {
+        text-decoration: none;
+        color: var(--secondary);
+        transition: color 0.3s;
+      }
+  
+      .breadcrumbs a:hover {
+        color: var(--highlight);
+      }
+  
+      /* Separator styling */
+      .breadcrumbs li + li::before {
+        content: " > ";
+        margin: 0 5px;
+        color: var(--secondary);
+      }
 
     .grain-effect {
         background-image: url('assets/1000-54-10-monochrome.png');
@@ -365,7 +442,7 @@
                 border-radius: 10px;
                 font-weight: 200;
                 border: 0;
-                box-shadow: 0 10px 30px 1px rgba(16, 208, 61, 0.513);
+                box-shadow: 0 10px 40px 1px rgba(131, 132, 131, 0.513);
                 background: rgba(11, 11, 11, 0.05);
                 backdrop-filter: blur(10px);
                 -webkit-backdrop-filter: blur(10px);
@@ -378,7 +455,7 @@
                     box-shadow: inset 8px 2px 25px 0 rgba(46, 46, 46, 0.5);
                     backdrop-filter: blur(0px);
                     -webkit-backdrop-filter: blur(0px);
-                    box-shadow: 0 20px 50px 1px rgba(49, 98, 61, 0.513);
+                    box-shadow: 0 20px 60px 1px rgba(49, 98, 61, 0.513);
 
                 }
 
@@ -430,7 +507,6 @@
                     border-radius: 10px;
 
                     &:hover {
-                        cursor: pointer;
                         transform: translateY(-4px);
                         box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
                     }
@@ -535,15 +611,13 @@
             .red-team {
 
                 width: 100%;
-                height: 100px;
                 text-align: center;
-                padding: 200px 0;
+                padding: 80px 0;
                 background-image: url('/H-T8/assets/231f55b0cca84344b59b412463d5c96c.jpg');
                 background-size: cover;
-                background-color: rgba(255, 0, 0, 1);
-                /* Red color with 50% opacity */
+                background-position: center;
                 background-blend-mode: multiply;
-                /* Blend the red overlay with the image */
+                background-color: rgba(109, 59, 59, 1);
                 filter: grayscale(100%);
                 text-decoration: none;
 
@@ -553,14 +627,13 @@
                     scale: 1.02;
                 }
 
+
             }
 
             .blue-team {
-                background-color: blue;
                 width: 100%;
-                height: 100px;
                 text-align: center;
-                padding: 200px 0;
+                padding: 80px 0;
                 background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
                 background-size: cover;
                 background-position: center;
@@ -577,9 +650,219 @@
                     background-color: rgb(0, 255, 238);
                     scale: 1.02;
                 }
+
+            }
+
+            .general {
+                width: 100%;
+                background-image: url(/H-T8/assets/Designer\(12\).jpeg);
+                text-align: center;
+                text-decoration: none;
+                padding: 80px 0;
+                background-size: cover;
+                background-position: center;
+                background-color: rgba(59, 59, 59, 0.9);
+                background-blend-mode: multiply;
+
+
+                &:hover {
+                    background-color: rgba(167, 167, 167, 0.9);
+                    color: var(--black);
+                    scale: 1.02;
+
+                }   
+
+
+
             }
         }
 
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        
+        .card {
+            text-decoration: none;
+            border: 2px solid var(--background);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 10px;
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-2px);
+                box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                
+                .h3 {
+                    margin: 0 0 20px 0;
+                }
+
+                .paragraph-secondary {
+                    margin: 0 0 15px 0;
+                }
+
+                .tags {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin: 10px 0 0 0;
+
+                    .tag {
+                        margin: 0 10px 10px 0;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background-color: var(--highlight);
+                        color: var(--black);
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-container {
+        margin: 20px auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto; /* Enable horizontal scroll on small screens */
+        max-width: 100%; /* Responsive table */
+        border-radius: 5px;
+        background-color: rgba(21, 20, 20, 0.715);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    th {
+        padding: 12px 16px;
+        border: 1px solid var(--background);
+        color: var(--primary);
+    }
+
+    td {
+        padding: 12px 16px;
+        font-weight: 300;
+        border: 1px solid var(--background);
+        color: var(--secondary);
+
+        
+    }
+
+    .advanced {
+        color: var(--advanced);
+
+        span   {
+            background-color: var(--advanced-background);
+            border-radius: 10px;
+            padding: 4px 10px;
+            font-size: 14px;
+        }
+    }
+
+    .intermediate {
+        color: var(--intermediate); 
+        
+        span   {
+            background-color: var(--intermediate-background);
+            border-radius: 10px;
+            padding: 4px 10px;
+            font-size: 14px;
+        }
+    }
+
+    .beginner {
+        color: var(--beginner);
+
+        span   {
+            background-color: var(--beginner-background);
+            border-radius: 10px;
+            padding: 4px 10px;
+            font-size: 14px;
+        }
+    }
+
+    thead {
+        background-color: var(--table-head);
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: var(--table-head);
+    }
+
+    tbody tr:hover {
+        color: var(--primary);
+        background-color: var(--table-body);
+    }
+
+    a {
+        color: var(--highlight);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    /* Pagination */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+
+        button {
+            padding: 8px 12px;
+            margin: 0 5px;
+            border: 1px solid var(--background);
+            background-color: var(--table-body);
+            color: var(--secondary);
+            border-radius: 4px;
+            cursor: pointer;
+
+            &.disabled, 
+            &[disabled] {
+                background-color: var(--background);
+                cursor: not-allowed;
+            }
+
+            &.active {
+                background-color: var(--highlight);
+                color: var(--primary)
+            }
+
+            &:hover:not(.active):not([disabled]) {
+                background-color: var(--highlight);
+                color: var(--primary);
+            }
+        }
+    }
+
+
+
+    /*
+    resurssit page ends here
+------------------------------------------------------------------------------------------------------------------------------
+    tietoa page starts here
+*/
+
+    .information-page {
+
+        p {
+            line-height: 23px;
+        }
     }
 
 
@@ -690,7 +973,7 @@
                     border-radius: 10px;
 
                     &:hover {
-                        cursor: pointer;
+                        cursor:default;
                         transform: translateY(-4px);
                         box-shadow: inset 20px 2px 70px 0 rgba(36, 36, 36, 0.5);
                     }
@@ -744,7 +1027,7 @@
     /* 
 säännöt page ends here
 ------------------------------------------------------------------------------------------------------------------------------
-toiminta page starts here
+resurssit page starts here
 */
 
     .teams {
@@ -777,6 +1060,14 @@ toiminta page starts here
                     scale: 1.02;
                 }
 
+                .h3 {
+                    background-color: var(--background);
+                    background: rgba(0, 0, 0, 0.6);
+                    padding: 5px 0;
+                    
+                }
+                
+
             }
 
             .blue-team {
@@ -802,10 +1093,119 @@ toiminta page starts here
                     background-color: rgb(0, 255, 238);
                     scale: 1.02;
                 }
+
+                .h3 {
+                    background-color: var(--background);
+                    background: rgba(0, 0, 0, 0.6);
+                    padding: 5px 0;
+                    
+                }
+                
+            }
+
+            .general {
+                width: 100%;
+                background-image: url(/H-T8/assets/Designer\(12\).jpeg);
+                text-align: center;
+                text-decoration: none;
+                height: 100px;
+                padding: 200px 0;
+                background-size: cover;
+                margin: 20px 0 0 0;
+
+
+                &:hover {
+                    color: var(--black);
+                    scale: 1.02;
+                }
+
+                .h3 {
+                    background-color: var(--background);
+                    background: rgba(0, 0, 0, 0.6);
+                    padding: 5px 0;
+                    
+                }
+                
             }
         }
 
     }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        
+        .card {
+            text-decoration: none;
+            border: 2px solid var(--background);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-2px);
+                box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
+            }
+
+            .card-image {
+
+                img {
+                    height: 200px;
+                    width: auto;
+                    margin: 0 20px 0 0;
+                    
+                }
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                
+                .h3 {
+                    margin: 0 0 20px 0;
+                }
+
+                .paragraph-secondary {
+                    margin: 0 0 15px 0;
+                }
+
+                .tags {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin: 10px 0 0 0;
+
+                    .tag {
+                        margin: 0 10px 10px 0;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background-color: var(--highlight);
+                        color: var(--black);
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+
+/*
+    resurssit page ends here
+------------------------------------------------------------------------------------------------------------------------------
+    yhteystiedot page starts here
+*/
+
+
+
+
+
 }
 
 
@@ -916,6 +1316,11 @@ resurssit page starts here
             .blue-team {
                 padding: 300px 0;
                 background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+            }
+
+            .general {
+                padding: 300px 0;
+                background-image: url(/H-T8/assets/Designer\(12\).jpeg);
             }
         }
     }
