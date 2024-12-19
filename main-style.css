@@ -109,15 +109,18 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: var(--background);
-        z-index: 100;
-        pointer-events: none;
+        background-color: rgb(17, 17, 17); /* Dark overlay, change color as needed */
+        z-index: 9999;
         opacity: 0;
-        transition: opacity 0.3s ease;
-
-        &:not(.hidden) {
-            opacity: 1; /* Fully visible */
-          }
+        transform-origin: bottom;
+        transition: opacity 0.2s ease-out;
+        pointer-events: none;
+    }
+    
+    /* Active state for the overlay */
+    #transition-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
     }
 
 

@@ -19,45 +19,34 @@ hamburger.addEventListener("click", () => {
 // LINK HOVER EFFECT
 
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".flapper-link"); // Select all links
-  const scrambleChars = "!@#$%^&*()_+<>?|~{}[]";
+  const overlay = document.getElementById("transition-overlay");
 
-  links.forEach((link) => {
-    const text = link.textContent;
-    link.textContent = ""; // Clear the link text content
+  // Function to activate and deactivate the overlay
+  const activateOverlay = () => {
+      overlay.classList.add("active");
+      setTimeout(() => overlay.classList.remove("active"), 100); // Matches transition duration
+  };
 
-    // Wrap each character in a <span>
-    text.split("").forEach((char, index) => {
-      const charSpan = document.createElement("span");
-      charSpan.textContent = char;
-      charSpan.dataset.original = char; // Store the original character
-      charSpan.style.transitionDelay = `${index * 0.05}s`;
-      link.appendChild(charSpan);
-    });
-
-    // Add hover effect
-    link.addEventListener("mouseover", () => {
-      const chars = link.querySelectorAll("span");
-      let isAnimating = true; // Flag to track the animation state
-
-      // Stop animation after 300ms
-      setTimeout(() => {
-        isAnimating = false;
-      }, 320);
-
-      chars.forEach((span, index) => {
-        const originalChar = span.dataset.original;
-        let scrambleTimeout = setInterval(() => {
-          if (!isAnimating) {
-            clearInterval(scrambleTimeout); // Stop scrambling
-            span.textContent = originalChar; // Reset to original
-            return;
+  // Trigger overlay on link clicks
+  document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+          if (link.href && link.target !== "_blank" && !link.href.startsWith("#")) {
+              e.preventDefault();
+              activateOverlay();
+              setTimeout(() => {
+                  window.location.href = link.href;
+              }, 100); // Matches transition duration
           }
-          span.textContent = scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-        }, 60); // Faster scrambling
       });
-    });
   });
+
+  // Handle back and forward navigation
+  window.addEventListener("popstate", () => {
+      activateOverlay();
+  });
+
+  // Initial activation (if needed for page loads)
+  activateOverlay();
 });
 
 
