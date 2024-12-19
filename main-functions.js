@@ -65,37 +65,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const overlay = document.getElementById('transition-overlay');
 
-// Handle fade-in on page load
-window.addEventListener('DOMContentLoaded', () => {
+// Function to hide the overlay (fade-out effect)
+function hideOverlay() {
   setTimeout(() => {
     overlay.classList.add('hidden');
-  }, 50); // Slight delay for smooth fade-in
+    console.log("Overlay hidden.");
+  }, 50); // Match CSS fade-in duration
+}
+
+// Function to show the overlay (fade-in effect)
+function showOverlay() {
+  overlay.classList.remove('hidden');
+  console.log("Overlay shown.");
+}
+
+// Handle fade-in on initial page load
+window.addEventListener('DOMContentLoaded', () => {
+  console.log("Page loaded, hiding overlay...");
+  hideOverlay(); // Hide overlay after loading
 });
 
 // Handle link navigation with fade-out
 document.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', event => {
-    event.preventDefault(); // Prevent default link behavior
+    event.preventDefault(); // Prevent default navigation
+    const href = link.getAttribute('href'); // Get the target URL
 
-    const href = link.getAttribute('href'); // Get the link's href
+    console.log(`Navigating to ${href}, showing overlay...`);
+    showOverlay(); // Show overlay for fade-out effect
 
-    // Trigger fade-out animation
-    overlay.classList.remove('hidden');
-
-    // Push the new state to the history
+    // Navigate after fade-out completes
     setTimeout(() => {
       window.location.href = href;
-    }, 100); // Match CSS transition duration
+    }, 600); // Match CSS fade-out duration
   });
 });
 
 // Handle back/forward button navigation
 window.addEventListener('popstate', () => {
-  overlay.classList.remove('hidden'); // Show overlay for smooth transition
-  setTimeout(() => {
-    overlay.classList.add('hidden'); // Fade out after loading the previous page
-  }, 50); // Adjust delay for fade-out
+  console.log("Back/forward navigation detected, resetting overlay...");
+  showOverlay(); // Show overlay briefly
+  setTimeout(hideOverlay, 600); // Then fade out
 });
+
 
 
 // BREADCRUMBS
