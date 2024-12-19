@@ -52,49 +52,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PAGE TRANSITION
 
-const overlay = document.getElementById('transition-overlay');
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("transition-overlay");
 
-// Function to show the overlay (fade-in)
-function showOverlay() {
-  overlay.classList.remove('hidden');
-  console.log("Overlay shown.");
-}
+  // Function to activate and deactivate the overlay
+  const activateOverlay = () => {
+      overlay.classList.add("active");
+  };
 
-// Function to hide the overlay (fade-out)
-function hideOverlay() {
-  setTimeout(() => {
-    overlay.classList.add('hidden');
-    console.log("Overlay hidden.");
-  }, 100); // Match CSS fade-in duration
-}
+  const deactivateOverlay = () => {
+      overlay.classList.remove("active");
+  };
 
-// Handle fade-out on initial page load
-window.addEventListener('DOMContentLoaded', () => {
-  console.log("Page loaded, hiding overlay...");
-  hideOverlay(); // Hide the overlay after the page loads
-});
+  // Ensure overlay starts hidden
+  deactivateOverlay();
 
-// Handle link navigation with fade-in
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault(); // Prevent default navigation
-    const href = link.getAttribute('href'); // Get the target URL
-
-    console.log(`Navigating to ${href}, showing overlay...`);
-    showOverlay(); // Show overlay for fade-in effect
-
-    // Navigate after fade-in completes
-    setTimeout(() => {
-      window.location.href = href;
-    }, 100); // Match CSS fade-in duration
+  // Trigger overlay on link clicks
+  document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+          if (link.href && link.target !== "_blank" && !link.href.startsWith("#")) {
+              e.preventDefault(); // Prevent immediate navigation
+              activateOverlay();
+              setTimeout(() => {
+                  window.location.href = link.href; // Navigate after animation
+              }, 500); // Matches transition duration
+          }
+      });
   });
-});
 
-// Handle back/forward button navigation
-window.addEventListener('popstate', () => {
-  console.log("Back/forward navigation detected, showing overlay...");
-  showOverlay(); // Show overlay briefly on navigation
-  setTimeout(hideOverlay, 100); // Fade out after showing the overlay
+  // Handle back and forward navigation
+  window.addEventListener("popstate", () => {
+      activateOverlay();
+      setTimeout(() => deactivateOverlay(), 1000); // Deactivate after animation
+  });
 });
 
 
