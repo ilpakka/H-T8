@@ -65,48 +65,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const overlay = document.getElementById('transition-overlay');
 
-// Function to hide the overlay (fade-out effect)
-function hideOverlay() {
-  setTimeout(() => {
-    overlay.classList.add('hidden');
-    console.log("Overlay hidden.");
-  }, 50); // Match CSS fade-in duration
-}
-
-// Function to show the overlay (fade-in effect)
+// Function to show the overlay (fade-in)
 function showOverlay() {
   overlay.classList.remove('hidden');
   console.log("Overlay shown.");
 }
 
-// Handle fade-in on initial page load
+// Function to hide the overlay (fade-out)
+function hideOverlay() {
+  setTimeout(() => {
+    overlay.classList.add('hidden');
+    console.log("Overlay hidden.");
+  }, 100); // Match CSS fade-in duration
+}
+
+// Handle fade-out on initial page load
 window.addEventListener('DOMContentLoaded', () => {
   console.log("Page loaded, hiding overlay...");
-  hideOverlay(); // Hide overlay after loading
+  hideOverlay(); // Hide the overlay after the page loads
 });
 
-// Handle link navigation with fade-out
+// Handle link navigation with fade-in
 document.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault(); // Prevent default navigation
     const href = link.getAttribute('href'); // Get the target URL
 
     console.log(`Navigating to ${href}, showing overlay...`);
-    showOverlay(); // Show overlay for fade-out effect
+    showOverlay(); // Show overlay for fade-in effect
 
-    // Navigate after fade-out completes
+    // Navigate after fade-in completes
     setTimeout(() => {
       window.location.href = href;
-    }, 600); // Match CSS fade-out duration
+    }, 100); // Match CSS fade-in duration
   });
 });
 
 // Handle back/forward button navigation
 window.addEventListener('popstate', () => {
-  console.log("Back/forward navigation detected, resetting overlay...");
-  showOverlay(); // Show overlay briefly
-  setTimeout(hideOverlay, 600); // Then fade out
+  console.log("Back/forward navigation detected, showing overlay...");
+  showOverlay(); // Show overlay briefly on navigation
+  setTimeout(hideOverlay, 100); // Fade out after showing the overlay
 });
+
 
 
 

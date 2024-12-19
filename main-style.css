@@ -112,13 +112,12 @@
         background: var(--background);
         z-index: 100;
         pointer-events: none;
-        opacity: 1;
+        opacity: 0;
         transition: opacity 0.3s ease;
 
-        &.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
+        &:not(.hidden) {
+            opacity: 1; /* Fully visible */
+          }
     }
 
 
