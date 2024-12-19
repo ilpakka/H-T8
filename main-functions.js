@@ -63,32 +63,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PAGE TRANSITION
 
+const overlay = document.getElementById('transition-overlay');
+
 // Handle fade-in on page load
 window.addEventListener('DOMContentLoaded', () => {
-  const overlay = document.getElementById('transition-overlay');
   setTimeout(() => {
     overlay.classList.add('hidden');
   }, 50); // Slight delay for smooth fade-in
 });
 
 // Handle link navigation with fade-out
-const links = document.querySelectorAll('a');
-
-links.forEach(link => {
+document.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', event => {
-    event.preventDefault(); // Prevent default navigation
+    event.preventDefault(); // Prevent default link behavior
 
-    const href = link.getAttribute('href'); // Get the href attribute
-    const overlay = document.getElementById('transition-overlay');
+    const href = link.getAttribute('href'); // Get the link's href
 
     // Trigger fade-out animation
     overlay.classList.remove('hidden');
 
-    // Wait for the animation to complete, then navigate
+    // Push the new state to the history
     setTimeout(() => {
       window.location.href = href;
-    }, 100); // Match the CSS transition duration
+    }, 100); // Match CSS transition duration
   });
+});
+
+// Handle back/forward button navigation
+window.addEventListener('popstate', () => {
+  overlay.classList.remove('hidden'); // Show overlay for smooth transition
+  setTimeout(() => {
+    overlay.classList.add('hidden'); // Fade out after loading the previous page
+  }, 50); // Adjust delay for fade-out
 });
 
 
