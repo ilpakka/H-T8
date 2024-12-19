@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to activate and deactivate the overlay
   const activateOverlay = () => {
       overlay.classList.add("active");
-      setTimeout(() => overlay.classList.remove("active"), 100); // Matches transition duration
+      setTimeout(() => overlay.classList.remove("active"), 500); // Matches transition duration
   };
 
   // Trigger overlay on link clicks
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
               activateOverlay();
               setTimeout(() => {
                   window.location.href = link.href;
-              }, 100); // Matches transition duration
+              }, 500); // Matches transition duration
           }
       });
   });
