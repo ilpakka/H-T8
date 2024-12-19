@@ -195,23 +195,6 @@
         color: var(--secondary);
       }
 
-    .grain-effect {
-        background-image: url('assets/1000-54-10-monochrome.png');
-        background-size: cover;
-        /* Adjusts the size of the texture */
-        opacity: 0.8;
-        /* Adjust the transparency of the grain */
-        pointer-events: none;
-        /* Ensures it doesn’t interfere with user interactions */
-        position: absolute;
-        /* To overlay the effect */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-    }
-
 
     .h1-hero {
         font-size: 35px;
@@ -422,7 +405,7 @@
 
 
     .hero {
-        background: url(assets/debasish-lenka-VJpUjPRD-PU-unsplash.jpg);
+        background: url(assets/front_page.webp);
         color: var(--black);
         display: flex;
         flex-direction: column;
@@ -613,7 +596,7 @@
                 width: 100%;
                 text-align: center;
                 padding: 80px 0;
-                background-image: url('/H-T8/assets/231f55b0cca84344b59b412463d5c96c.jpg');
+                background-image: url('/H-T8/assets/red_team.webp');
                 background-size: cover;
                 background-position: center;
                 background-blend-mode: multiply;
@@ -634,7 +617,7 @@
                 width: 100%;
                 text-align: center;
                 padding: 80px 0;
-                background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+                background-image: url('/H-T8/assets/blue_team.webp');
                 background-size: cover;
                 background-position: center;
                 filter: grayscale(100%);
@@ -655,7 +638,7 @@
 
             .general {
                 width: 100%;
-                background-image: url(/H-T8/assets/Designer\(12\).jpeg);
+                background-image: url("/H-T8/assets/general.webp");
                 text-align: center;
                 text-decoration: none;
                 padding: 80px 0;
@@ -952,6 +935,7 @@
         ;
     }
 
+
     .activities {
 
 
@@ -1044,7 +1028,6 @@ resurssit page starts here
                 height: 100px;
                 text-align: center;
                 padding: 200px 0;
-                background-image: url('/H-T8/assets/231f55b0cca84344b59b412463d5c96c.jpg');
                 background-size: cover;
                 background-color: rgba(255, 0, 0, 1);
                 /* Red color with 50% opacity */
@@ -1076,7 +1059,6 @@ resurssit page starts here
                 height: 100px;
                 text-align: center;
                 padding: 200px 0;
-                background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
                 background-size: cover;
                 background-position: center;
                 filter: grayscale(100%);
@@ -1105,7 +1087,6 @@ resurssit page starts here
 
             .general {
                 width: 100%;
-                background-image: url(/H-T8/assets/Designer\(12\).jpeg);
                 text-align: center;
                 text-decoration: none;
                 height: 100px;
@@ -1202,7 +1183,19 @@ resurssit page starts here
     yhteystiedot page starts here
 */
 
+.contacts {
 
+    .container {
+
+        .h2 {
+            font-size: 45px;
+        }
+
+        b, a, p {
+            font-size: 16px;
+        }
+    }
+}
 
 
 
@@ -1308,19 +1301,19 @@ resurssit page starts here
 
             .red-team {
                 padding: 300px 0;
-                background-image: url('/H-T8/assets/231f55b0cca84344b59b412463d5c96c.jpg');
+                background-image: url('/H-T8/assets/red_team.webp');
 
 
             }
 
             .blue-team {
                 padding: 300px 0;
-                background-image: url('/H-T8/assets/5EwOWqXb-HKZovc4uvvC3.jpg');
+                background-image: url('/H-T8/assets/blue_team.webp');
             }
 
             .general {
                 padding: 300px 0;
-                background-image: url(/H-T8/assets/Designer\(12\).jpeg);
+                background-image: url("/H-T8/assets/general.webp");
             }
         }
     }
