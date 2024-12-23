@@ -882,6 +882,7 @@ toiminta page starts here
         -webkit-overflow-scrolling: touch;
         scroll-snap-align: start;
         scrollbar-width: small;
+        scrollbar-color: var(--secondary) var(--background);
     }
 
     .events-container-2 {
