@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Hakkerointi ilta",
+    "date": "06-01-2025 14:00", 
+    "location": "Room 3202, Haaga-Helia",
+    "description": "Tule hakkeroimaan yhdessä joka viikko!",
+    "recurring": true,
+    "recurrence": "weekly",
+    "tag1": "hakkerointia",
+    "tag2": "rentoa hengausta",
+    "showDate": true
+    
+  }
+
+]
