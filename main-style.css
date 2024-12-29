@@ -103,6 +103,9 @@
     color: var(--highlight);
 }
 
+body {
+    background-color: var(--background);
+}
 
 
 
