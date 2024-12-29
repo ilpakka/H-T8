@@ -89,6 +89,12 @@
     initial-value: #321010;
 }
 
+@property --code {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #ccd3d4;
+}
+
 
 
 
@@ -277,7 +283,7 @@
         font-family: 'Geist Mono', monospace;
         font-weight: 400;
         color: var(--primary);
-
+        margin: 0 0 5px 0;
     }
 
     .paragraph-secondary {
@@ -285,6 +291,27 @@
         font-family: 'Geist Mono', monospace;
         font-weight: 500;
         color: var(--secondary);
+    }
+
+    .code-snippet {
+        background-color: var(--table-head);
+        color: var(--code);
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: 'Geist Mono', monospace;
+        margin: 10px 0;
+    }
+
+    .inline-code-snippet {
+        background-color: var(--background);
+        color: var(--code);
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-size: 13px;
+        font-family: 'Geist Mono', monospace;
+        line-height: 2.4;
+        font-weight: 300;
     }
 
     /* .flapper-link is a class if you want a scrambling effect*/
@@ -797,6 +824,7 @@
             border-radius: 10px;
             padding: 4px 10px;
             font-size: 14px;
+            display: inline-block;
         }
     }
 
@@ -808,6 +836,7 @@
             border-radius: 10px;
             padding: 4px 10px;
             font-size: 14px;
+            display: inline-block;
         }
     }
 
@@ -819,6 +848,7 @@
             border-radius: 10px;
             padding: 4px 10px;
             font-size: 14px;
+            display: inline-block;
         }
     }
 
@@ -848,8 +878,9 @@
     .pagination {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin: 20px 0;
+        align-items: start;
+        padding: 20px 0;
+        background-color: var(--black);
 
         button {
             padding: 8px 12px;
@@ -1553,6 +1584,30 @@ resurssit page starts here
 
     .link {
         font-size: 20px;
+    }
+
+    .advanced {
+
+        span {
+            font-size: 16px;
+
+        }
+    }
+
+    .intermediate {
+
+        span {
+            font-size: 16px;
+
+        }
+    }
+
+    .beginner {
+
+        span {
+            font-size: 16px;
+
+        }
     }
 
 }
