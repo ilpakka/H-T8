@@ -149,7 +149,7 @@ body {
     
     /* Exit state */
     #transition-overlay.exiting {
-        animation: fadeOut 0.5s forwards; /* Apply fadeOut when exiting */
+        animation: fadeOut 1s forwards; /* Apply fadeOut when exiting */
     }
 
 
@@ -994,6 +994,11 @@ toiminta page starts here
         flex-wrap: wrap;
         padding: 20px 5px 20px 0px;
         gap: 20px;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-align: start;
+        scrollbar-width: thin;
+        scrollbar-color: var(--background) var(--table-head);
     }
 
     /* Tooltip container */
