@@ -9,7 +9,7 @@ function getNextOccurrence(eventDate, recurrence) {
   const now = new Date();
   let nextDate = new Date(eventDate);
 
-  if (isNaN(nextDate)) {
+  if (isNaN(nextDate.getTime())) {
     console.error("Invalid date for recurrence:", eventDate);
     return null;
   }
@@ -53,9 +53,12 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
 
       const today = new Date();
       const events = data.map(event => {
+        // Ensure date is in ISO 8601 format for Safari compatibility
+        const eventDate = event.date ? new Date(event.date.replace(/-/g, "/")) : null;
+
         // Handle recurring events
-        if (event.recurring && event.date) {
-          const nextOccurrence = getNextOccurrence(event.date, event.recurrence || recurrence);
+        if (event.recurring && eventDate) {
+          const nextOccurrence = getNextOccurrence(eventDate, event.recurrence || recurrence);
           return { ...event, date: nextOccurrence ? nextOccurrence.toISOString() : null };
         }
         return event;
@@ -121,12 +124,11 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
     .catch(error => console.error("Error fetching JSON:", error));
 }
 
-
-
 // Here are all of the event classes and their properties:
 // Make new classes for each type of event. These elements are dynamically created in the renderEvents function.
 
 // Also remember to add relevant css and html for the new classes
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // Render events in all containers
