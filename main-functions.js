@@ -46,15 +46,27 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
       return response.json();
     })
     .then(data => {
+      console.log("Fetched events data:", data);
+
       const containers = document.querySelectorAll(`.${containerClass}`);
       if (containers.length === 0) {
+        console.warn("No containers found with class:", containerClass);
         return;
       }
 
       const today = new Date();
       const events = data.map(event => {
         // Ensure date is in ISO 8601 format for Safari compatibility
-        const eventDate = event.date ? new Date(event.date.replace(/-/g, "/")) : null;
+        let eventDate = null;
+
+        if (event.date) {
+          eventDate = Date.parse(event.date);
+          if (isNaN(eventDate)) {
+            console.error("Invalid date format in event:", event);
+            return { ...event, date: null };
+          }
+          eventDate = new Date(eventDate);
+        }
 
         // Handle recurring events
         if (event.recurring && eventDate) {
@@ -80,9 +92,16 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
         return matchesFilter;
       });
 
+      console.log("Filtered events:", filteredEvents);
+
       // Filter upcoming events
-      const upcomingEvents = filteredEvents.filter(event => new Date(event.date) >= today);
+      const upcomingEvents = filteredEvents.filter(event => {
+        const eventDate = new Date(event.date);
+        return event.date && eventDate >= today;
+      });
       upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      console.log("Upcoming events:", upcomingEvents);
 
       // Render the events in each container
       containers.forEach(container => {
