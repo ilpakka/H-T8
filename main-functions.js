@@ -208,45 +208,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PAGE TRANSITION
 
-document.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.getElementById("transition-overlay");
+const overlay = document.getElementById('transition-overlay');
 
-  // Function to activate and deactivate the overlay
-  const activateOverlay = () => {
-    overlay.classList.add("active");
-  };
+function showOverlay() {
+    overlay.classList.remove('exiting');
+    overlay.classList.add('active');
+}
 
-  const deactivateOverlay = () => {
-    overlay.classList.remove("active");
-  };
+function hideOverlay() {
+    overlay.classList.remove('active');
+    overlay.classList.add('exiting');
+}
 
-  // Ensure overlay starts hidden
-  deactivateOverlay();
-
-  // Trigger overlay on link clicks
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", e => {
-      if (link.href && link.target !== "_blank" && !link.href.startsWith("#")) {
-        e.preventDefault(); // Prevent immediate navigation
-        activateOverlay();
-        setTimeout(() => {
-          window.location.href = link.href; // Navigate after animation
-        }, 500); // Matches transition duration
-      }
-    });
-  });
-
-  // Handle back and forward navigation
-  window.addEventListener("popstate", () => {
-    activateOverlay();
-    setTimeout(() => deactivateOverlay(), 1000); // Deactivate after animation
-  });
+window.addEventListener('popstate', () => {
+    // Handle back button transitions
+    hideOverlay();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure overlay works across transitions
+    hideOverlay();
+});
 
-
-
-// BREADCRUMBS
 
 // BREADCRUMBS
 
