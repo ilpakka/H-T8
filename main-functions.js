@@ -46,7 +46,7 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
       return response.json();
     })
     .then(data => {
-      console.log("Fetched events data:", data);
+
 
       const containers = document.querySelectorAll(`.${containerClass}`);
       if (containers.length === 0) {
