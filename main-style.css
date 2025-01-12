@@ -43,7 +43,7 @@
 @property --highlight {
     syntax: '<color>';
     inherits: false;
-    initial-value: #32C743;
+    initial-value: #32c743;
 }
 
 @property --black {
@@ -965,7 +965,6 @@ body {
         }
     }
 
-
     /*
     tietoa page ends here
 ------------------------------------------------------------------------------------------------------------------------------
@@ -1044,7 +1043,11 @@ toiminta page starts here
     }
 
 
-
+    .event-link {
+        text-decoration: none;
+        color: inherit;
+      }
+    
 
     .event {
         border-radius: 8px;
@@ -1077,6 +1080,23 @@ toiminta page starts here
             font-size: 14px;
             margin: 5px 5px 0 0;
         }
+
+        .event-icon {
+        
+            svg {
+                height: 30px;
+                width: auto;
+                fill: var(--highlight);
+    
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
+            }
+    
+          }
+
+
     }
 
 

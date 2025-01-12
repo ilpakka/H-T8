@@ -2,15 +2,42 @@
   {
     "title": "Hakkerointi ilta",
     "date": "2025-01-06T14:00:00",
+    "showDate": true,
     "location": "Room 3202, Haaga-Helia",
     "description": "Tule hakkeroimaan yhdessä joka viikko!",
     "recurring": true,
     "recurrence": "weekly",
     "tag1": "hakkerointia",
     "tag2": "rentoa hengausta",
-    "tag3": "ilta",
-    "showDate": true
+    "tag3": "ilta"
     
+  },
+  {
+    "title": "Inside the Mind of a Hacker 2024",
+    "date": "2025-01-16T19:00:00",
+    "showDate": true,
+    "location": "Online Webinar",
+    "description": "Rekisteröidy ja opi hakkeroinnista",
+    "recurring": false,
+    "tag1": "webinar",
+    "tag2": "hacking",
+    "link": "https://www.bugcrowd.com/webinar/"
+  },
+
+  {
+    "title": "Junction 2025",
+    "date": "2025-11-07T09:00:00",
+    "showDate": true,
+    "location": "Messukeskus, Helsinki",
+    "description": "Junction on Euroopan suurin hackathon",
+    "recurring": false,
+    "recurrence": "",
+    "tag1": "hackathon",
+    "tag2": "koodausta",
+    "tag3": "verkostoitumista",
+    "link": "https://hackjunction.com/"
+
   }
+
 
 ]

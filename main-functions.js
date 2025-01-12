@@ -47,7 +47,6 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
     })
     .then(data => {
 
-
       const containers = document.querySelectorAll(`.${containerClass}`);
       if (containers.length === 0) {
         console.warn("No containers found with class:", containerClass);
@@ -92,7 +91,7 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
         return matchesFilter;
       });
 
-      console.log("Filtered events:", filteredEvents);
+
 
       // Filter upcoming events
       const upcomingEvents = filteredEvents.filter(event => {
@@ -107,36 +106,47 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
       containers.forEach(container => {
         container.innerHTML = upcomingEvents.length
           ? upcomingEvents
-              .map(event => {
-                let formattedDate;
+            .map(event => {
+              let formattedDate;
 
-                if (event.date === null || event.date === "TBA") {
-                  formattedDate = "TBA";
-                } else {
-                  formattedDate = new Date(event.date).toLocaleString("fi-FI", {
-                    year: "numeric",
-                    month: "2-digit",
-                    day: "2-digit",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    hourCycle: "h23"
-                  });
-                }
+              if (event.date === null || event.date === "TBA") {
+                formattedDate = "TBA";
+              } else {
+                formattedDate = new Date(event.date).toLocaleString("fi-FI", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hourCycle: "h23"
+                });
+              }
 
-                return `
-                  <div class="event">
-                    <h2 class="h4">${event.title}</h2>
-                    ${event.showDate ? `<p><strong>Date:</strong> ${formattedDate}</p>` : ""}
-                    <p><strong>Location:</strong> ${event.location}</p>
-                    <p>${event.description}</p>
-                    <div class="tags">
-                      ${event.tag1 ? `<span class="tag">${event.tag1}</span>` : ""}
-                      ${event.tag2 ? `<span class="tag">${event.tag2}</span>` : ""}
-                    </div>
+              return `
+              ${event.link ? `<a href="${event.link}" target="_blank" class="event-link">` : ""}
+                <div class="event">
+                  <h2 class="h4">
+                    ${event.title}
+                    ${event.link ? `<span class="event-icon" aria-label="Event Link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1160 960 960"><path d="m242-246-42-42 412-412H234v-60h480v480h-60v-378L242-246Z"/>
+                    </svg>
+                    </span>` : ""}
+                  </h2>
+                  ${event.showDate ? `<p><strong>Date:</strong> ${formattedDate}</p>` : ""}
+                  <p><strong>Location:</strong> ${event.location}</p>
+                  <p>${event.description}</p>
+                  
+                  <div class="tags">
+                    ${event.tag1 ? `<span class="tag">${event.tag1}</span>` : ""}
+                    ${event.tag2 ? `<span class="tag">${event.tag2}</span>` : ""}
                   </div>
-                `;
-              })
-              .join("")
+                </div>
+              ${event.link ? `</a>` : ""}
+            `;
+            
+
+            })
+            .join("")
           : '<p class="paragraph">No upcoming events</p>';
       });
     })
@@ -232,23 +242,23 @@ document.addEventListener("DOMContentLoaded", () => {
 const overlay = document.getElementById('transition-overlay');
 
 function showOverlay() {
-    overlay.classList.remove('exiting');
-    overlay.classList.add('active');
+  overlay.classList.remove('exiting');
+  overlay.classList.add('active');
 }
 
 function hideOverlay() {
-    overlay.classList.remove('active');
-    overlay.classList.add('exiting');
+  overlay.classList.remove('active');
+  overlay.classList.add('exiting');
 }
 
 window.addEventListener('popstate', () => {
-    // Handle back button transitions
-    hideOverlay();
+  // Handle back button transitions
+  hideOverlay();
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure overlay works across transitions
-    hideOverlay();
+  // Ensure overlay works across transitions
+  hideOverlay();
 });
 
 
