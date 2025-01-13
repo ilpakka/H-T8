@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script src="/H-T8/main-functions.js" defer></script>
+    <meta name="breadcrumb-label" content="Getting Started With Hacking">
+</head>
+
+
+<body>
+
+
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <header class="header">
+            <nav class="navbar">
+                <a class="nav-logo" href="/H-T8/">
+                    <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="space-50">
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="/H-T8/resurssit/" class="flapper-link link" id="active">Resurssit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/H-T8/tietoa/" class="flapper-link link">Tietoa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/H-T8/toiminta/" class="flapper-link link">Toiminta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/H-T8/yhteystiedot/" class="flapper-link link">Yhteystiedot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/H-T8/säännöt/" class="flapper-link link">Säännöt</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="page-content">
+            <i>
+                <ul class="breadcrumbs" id="breadcrumb-container"></ul>
+            </i>
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Getting Started With Hacking</h1>
+
+            <div class="break-line"></div>
+            <br>
+
+            <p class="paragraph-secondary">Welcome to the exciting and dynamic world of hacking! This guide is designed
+                to provide a practical and focused introduction, ensuring you can confidently take your first steps into
+                ethical hacking. We’ll guide you through setting up your environment, mastering the basics of Kali
+                Linux, and practicing your newfound skills with hands-on challenges. Let’s embark on this journey
+                together, one step at a time.
+            </p>
+            <div class="space-50"></div>
+            <h2 class="h4">Step 1: Setting Up Your Environment</h2>
+            <h3 class="paragraph">Install Virtualization Software</h3>
+            <p class="paragraph-secondary">To safely practice hacking, you need a secure and isolated environment.
+                Virtualization software allows you to run multiple operating systems simultaneously on your computer.
+                Here are your options:
+                <br><br>
+            <ul class="general-list">
+                <li class="paragraph-secondary"><b>VMware:</b> Now available for free, VMware is the preferred choice
+                    for its better performance and user-friendly interface. It’s an excellent option for running virtual
+                    machines.
+                </li>
+
+                <li class="paragraph-secondary"><b>VirtualBox:</b> A free and open-source alternative that’s also
+                    reliable for creating virtual environments. Little bit easier to setup.
+                </li>
+
+            </ul>
+            </p>
+            <br>
+            <p class="paragraph">
+                Installation Instructions for VMware or VirtualBox:
+            </p>
+            <ul class="numbered-list">
+                <li class="paragraph-secondary">
+                    Download VMware or VirtualBox from their official websites.
+                </li>
+                <li class="paragraph-secondary">
+                    Follow the installation instructions for your operating system (Windows, macOS, or Linux).
+                    Here you can find a helpful tutorial for installing VMware:
+                    <a class="flapper-link" href="https://www.youtube.com/watch?v=nQ_z7a9tCPg&t">Youtube tutorial</a>
+                </li>
+                <li class="paragraph-secondary">
+                    Verify the installation by launching the software.
+                </li>
+            </ul>
+            <br>
+            <p class="paragraph">
+                Install Kali Linux on Your Virtual Machine:
+            </p>
+            <p class="paragraph-secondary">
+                Kali Linux is a specialized Linux distribution designed for penetration testing and ethical hacking.
+                Here’s how to set it up:
+            </p>
+            <ul class="numbered-list">
+                <li class="paragraph-secondary">
+                    <b>Download Kali Linux</b> ISO image from the official website. Choose the version compatible with
+                    your system (VMware image or ISO file).
+                </li>
+                <li class="paragraph-secondary">
+                    Launch your virtualization software and create a new virtual machine:
+                </li>
+                <ul class="numbered-list-inner">
+                    <li class="paragraph-secondary">Allocate at least <b>2 GB</b> of RAM and <b>20 GB</b> of disk space.
+                    </li>
+                    <li class="paragraph-secondary">Attach the Kali Linux ISO file or VMware image as instructed.</li>
+                    <li class="paragraph-secondary"><i>(You can change these settings later as well so no stress
+                            here)</i></li>
+                </ul>
+                <li class="paragraph-secondary">
+                    Follow the installation prompts, selecting default options unless you have specific preferences.
+                </li>
+                <li class="paragraph-secondary">
+                    Start Kali Linux and log in with the default username and password.
+                </li>
+            </ul>
+
+
+            <div class="space-50"></div>
+            <h3 class="paragraph">Configure the Environment</h3>
+            <p class="paragraph-secondary">After installing Kali Linux, configure it to optimize performance and
+                usability:
+                <br><br>
+
+                <i class="paragraph-secondary">(The dollar sign is not part of the command, it represents CLI view)</i>
+            <ul class="general-list">
+                <li class="paragraph-secondary"><b>Update the System:</b></li>
+                <p class="code-snippet">$ sudo apt update && sudo apt upgrade</p>
+                <p class="paragraph-secondary">This ensures all packages are up-to-date and secure.</p>
+                <li class="paragraph-secondary"><b>Install Guest Additions (VirtualBox):</b> Enable features like
+                    clipboard sharing and screen resizing by installing guest additions. Refer to the VirtualBox
+                    documentation for detailed steps.
+                </li>
+                <li class="paragraph-secondary"><b>Verify Network Connectivity:</b>
+                    Test your setup by running:
+                </li>
+                <p class="code-snippet">$ ping google.com</p>
+                <p class="paragraph-secondary">Ensure you can connect to external networks.</p>
+            </ul>
+            </p>
+
+            <div class="space-50"></div>
+
+            <h2 class="h4">Step 2: Introduction to Kali Linux</h2>
+
+            <h3 class="paragraph">Understanding the Interface</h3>
+
+            <p class="paragraph-secondary">Kali Linux offers two primary interfaces:
+                <br>
+            <ul class="general-list">
+                <li class="paragraph-secondary"><b>Graphical User Interface (GUI): </b>Ideal for beginners but not as
+                    powerful as the CLI.</li>
+                <li class="paragraph-secondary"><b>Command-Line Interface (CLI):</b> The backbone of Kali Linux. Most
+                    tools and scripts are run from the terminal.</li>
+            </ul>
+            </p>
+
+            <div class="space-50"></div>
+
+            <h2 class="paragraph">Basic CLI Commands</h2>
+            <p class="paragraph-secondary">Learning the command line is essential for effective navigation and tool
+                usage in Kali Linux. Start with these foundational commands. Each command is accompanied by a
+                description to help you understand its purpose:
+                <br><br>
+            </p>
+            <p class="paragraph">File and Directory Management</p>
+
+            <ul class="general-list">
+                <li class="paragraph-secondary"><b>List files in a directory:</b></li>
+                <p class="code-snippet">$ ls</p>
+                <p class="paragraph-secondary">Displays the contents of the current directory, showing files and
+                    subdirectories. Add flags like <span class="inline-code-snippet">-l</span> for detailed information
+                    or <span class="inline-code-snippet">-a</span> to include hidden files.
+                </p>
+                <li class="paragraph-secondary"><b>Change directory:</b></li>
+                <p class="code-snippet">$ cd [directory_name]</p>
+                <p class="paragraph-secondary">Moves to the specified directory. Use
+                    <span class="inline-code-snippet">cd ..</span> to go back one level or <span
+                        class="inline-code-snippet">cd ~</span> for the home directory.
+                </p>
+                <li class="paragraph-secondary"><b>Create a new directory:</b></li>
+                <p class="code-snippet">$ mkdir [directory_name]</p>
+                <p class="paragraph-secondary">Creates a new directory with the specified name.</p>
+            </ul>
+            <br>
+            <p class="paragraph">System Monitoring</p>
+
+            <ul class="general-list">
+                <li class="paragraph-secondary"><b>View system information:</b></li>
+                <p class="code-snippet">$ uname -a</p>
+                <p class="paragraph-secondary">Displays detailed information about the system, including the kernel
+                    version and architecture. The <span class="inline-code-snippet">-a</span> flag gives all
+                    information.
+                </p>
+                <li class="paragraph-secondary"><b>Check running processes:</b></li>
+                <p class="code-snippet">$ top</p>
+                <p class="paragraph-secondary">Displays real-time information about system processes, memory usage, and
+                    CPU activity.
+                </p>
+                <li class="paragraph-secondary"><b>View disk usage:</b></li>
+                <p class="code-snippet">$ df -h</p>
+                <p class="paragraph-secondary">Shows the amount of disk space used and available on your file system.
+                    The <span class="inline-code-snippet">-h</span> flag presents the information in a human-readable
+                    format (e.g., GB, MB).
+                </p>
+            </ul>
+            <br>
+            <p class="paragraph">Networking Basics</p>
+
+            <ul class="general-list">
+                <li class="paragraph-secondary"><b>Check network interfaces:</b></li>
+                <p class="code-snippet">$ ifconfig</p>
+                <p class="paragraph-secondary">Displays information about network interfaces, including IP addresses and
+                    MAC addresses. Useful for diagnosing network issues or checking connection settings.
+                </p>
+                <li class="paragraph-secondary"><b>Check network connectivity:</b></li>
+                <p class="code-snippet">$ ping [website]</p>
+                <p class="paragraph-secondary">Tests network connectivity by sending packets to a specific website or IP
+                    address. Press <span class="inline-code-snippet">Ctrl + C</span> to stop the process.
+                </p>
+                <li class="paragraph-secondary"><b>Scan for open ports:</b></li>
+                <p class="advanced"><span>!!!<br><br>
+                        CAREFUL HERE NOW! Port scanning without permission is illegal and can lead into
+                        serious consequences. Always ensure you have permission before scanning any network or system.
+                        <br><br>!!!</span></p>
+
+
+                <p class="code-snippet">$ nmap [IP_address]</p>
+                <p class="paragraph-secondary">Performs a network scan on the specified target IP address to discover
+                    open ports, services, and potential vulnerabilities. Use the <span
+                        class="inline-code-snippet">-p</span> flag to specify a port range.
+                </p>
+            </ul>
+            <br>
+            <p class="paragraph">Explore Command Documentation</p>
+            <p class="paragraph-secondary">For a deeper understanding of these commands and their options, use the
+                manual (man) pages:
+            </p>
+            <p class="code-snippet">$ man [command_name]</p>
+            <p class="paragraph-secondary">For example, to learn about <span class="inline-code-snippet">ls</span>, run:
+            </p>
+            <p class="code-snippet">$ man ls</p>
+            <p class="paragraph-secondary">This displays detailed information about the command, including its syntax,
+                options, and usage examples.
+            </p>
+            <br>
+            <p class="paragraph">Exploring Pre-installed Tools</p>
+
+            <p class="paragraph-secondary">Kali Linux is preloaded with powerful tools. Start with these three:
+            </p>
+            <ul class="numbered-list">
+                <li class="paragraph-secondary"><b>Nmap:</b> A network scanning tool for discovering hosts and services
+                    on a network. Use it to identify open ports, detect vulnerabilities, and map network topology.
+                </li>
+                <li class="paragraph-secondary"><b>Metasploit:</b> A penetration testing framework that helps you find,
+                    exploit, and validate vulnerabilities in a system. It’s a powerful tool for ethical hacking and
+                    security testing.
+                </li>
+                <li class="paragraph-secondary"><b>Wireshark:</b> A network protocol analyzer that captures and inspects
+                    data packets in real-time. Use it to troubleshoot network issues, analyze traffic, and detect
+                    security threats.
+                </li>
+            </ul>
+            <p class="paragraph-secondary">Run the tools in the terminal and explore their help documentation by
+                appending <span class="inline-code-snippet">--help</span> to commands.
+            </p>
+
+
+
+            <div class="space-50"></div>
+
+            <h2 class="h4">Step 3: Practicing Your Skills</h2>
+            <p class="paragraph">Beginner-Friendly Challenges</p>
+            <p class="paragraph-secondary">Once you’ve set up Kali Linux and practiced basic commands, enhance your
+                skills with these platforms:
+            </p>
+            <br>
+            <p class="paragraph"><b>OverTheWire: Bandit</b></p>
+
+            <ul class="general-list">
+                <li class="paragraph-secondary">Visit <a class="flapper-link"
+                        href="https://overthewire.org/wargames/bandit/">OverTheWire</a> and start with the Bandit
+                    wargame.</li>
+                <p class="paragraph-secondary">This challenge teaches Linux basics, including file manipulation and
+                    command usage, in an engaging and progressive format.</p>
+            </ul>
+
+            <br>
+
+            <p class="paragraph"><b>Hack The Box: Starting Point</b></p>
+
+            <ul class="general-list">
+                <li class="paragraph-secondary">Join <a class="flapper-link" href="https://www.hackthebox.eu/">Hack The Box</a> 
+                    to access a wide range of realistic hacking challenges.</li>
+                <p class="paragraph-secondary">
+                    Begin with the <b>Starting Point</b> challenges, which simulate real-world scenarios for penetration
+                    testing.
+                    <br><br>
+                    The platform offers machines, challenges, and labs to test your skills in a safe and controlled
+                    environment.
+                </p>
+            </ul>
+
+            <br>
+
+            <p class="paragraph"><b>TryHackMe: Linux Fundamentals</b></p>
+
+            <ul class="general-list">
+                <li class="paragraph-secondary">Explore <a class="flapper-link"
+                        href="https://tryhackme.com/room/linuxfundamentalspart1">TryHackMe</a> to learn Linux
+                    fundamentals and security concepts.</li>
+                <p class="paragraph-secondary">The platform offers guided tutorials, hands-on labs, and challenges to
+                    help you build practical skills in ethical hacking.</p>
+            </ul>
+
+            <div class="space-50"></div>
+
+            <h2 class="h4">Step 4: Building a Learning Routine</h2>
+            <p class="paragraph">Daily Practice Plan</p>
+            <ul class="numbered-list">
+                <li class="paragraph-secondary">Dedicate 1 hour weekly to exploring a new tool in Kali Linux.</li>
+                <li class="paragraph-secondary">Solve at least one challenge or lab on OverTheWire, TryHackMe, or Hack
+                    The Box weekly.</li>
+
+            </ul>
+            <p class="paragraph-secondary">Be realistic with your goals, don't make them too extreme and try to
+                stick with your plan long term</p>
+            <br>
+
+            <p class="paragraph">Document Your Progress</p>
+            <p class="paragraph-secondary">Maintain a log of:
+            <ul class="general-list">
+                <li class="paragraph-secondary">Commands and tools you’ve learned.</li>
+                <li class="paragraph-secondary">Challenges you’ve completed and key takeaways.</li>
+                <li class="paragraph-secondary">Areas where you need more practice.</li>
+            </ul>
+
+            <p class="paragraph-secondary">
+                Make a system that works for you, whether it’s a physical notebook, digital document, or blog.
+                Also try to be organized and keep your files, notes and logs in order.
+            </p>
+            <br><br>
+            <div class="break-line"></div>
+            <br>
+            <p class="paragraph-secondary">
+                By following this expanded guide, you’ll build a strong foundation in ethical hacking. Remember,
+                consistent practice and curiosity are your greatest allies. Take it step by step, stay ethical, and
+                enjoy the journey. Happy hacking!
+            </p>
+
+            <div class="space-150"> </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+
+
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
+                    </div>
+
+
+
+                    <div class="space-50"></div>
+                    <div class="footer-info">
+                        <p class="paragraph-secondary">Hakkerointikerho H-T8</p>
+                        <p class="paragraph-secondary">Haaga-Helia ammattikorkeakoulu</p>
+                        <p class="paragraph-secondary">Ratapihantie 13, 00520 Helsinki</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+</body>
+
+</html>

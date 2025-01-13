@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+  <title>Hakkerointikerho H-T8</title>
+
+  <link rel="stylesheet" href="/H-T8/main-style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+  <script src="/H-T8/main-functions.js" defer></script>
+  <meta name="breadcrumb-label" content="General">
+</head>
+
+
+<body>
+
+
+  <div id="transition-overlay" class="active"></div>
+  <main>
+    <header class="header">
+      <nav class="navbar">
+        <a class="nav-logo" href="/H-T8/">
+          <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
+        </a>
+        <div class="hamburger" id="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="space-50">
+
+          </li>
+          <li class="nav-item">
+            <a href="/H-T8/resurssit/" class="flapper-link link" id="active">Resurssit</a>
+          </li>
+          <li class="nav-item">
+            <a href="/H-T8/tietoa/" class="flapper-link link">Tietoa</a>
+          </li>
+          <li class="nav-item">
+            <a href="/H-T8/toiminta/" class="flapper-link link">Toiminta</a>
+          </li>
+          <li class="nav-item">
+            <a href="/H-T8/yhteystiedot/" class="flapper-link link">Yhteystiedot</a>
+          </li>
+          <li class="nav-item">
+            <a href="/H-T8/säännöt/" class="flapper-link link">Säännöt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="page-content">
+      <i>
+        <ul class="breadcrumbs" id="breadcrumb-container"></ul>
+      </i>
+
+      <div class="space-50"></div>
+
+
+      <h2 class="h4">ALoittelijan opas</h2>
+
+      <p class="paragraph-secondary">
+        Täältä löydät resursseja millä pääset alkuun hakkeroinnin maailmassa.
+        Käy resurssit läpi järjestyksessä ja opettele perusta ennen kuin siirryt
+        haastavampiin tehtäviin.
+
+      </p>
+
+      <div class="table-container">
+        <div class="scrollable">
+          <table id="resourceTable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Link Type</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>01</td>
+                <td>Getting started with hacking</td>
+                <td>Internal page</td>
+                <td><a href="/H-T8/resurssit/general/getting-started-with-hacking.html">Visit</a></td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Quick Linux Guide by Tero</td>
+                <td>External page</td>
+                <td><a href="https://terokarvinen.com/2020/command-line-basics-revisited/" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Learn the ways of Linux</td>
+                <td>External page</td>
+                <td><a href="https://linuxjourney.com/" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Start Hacking with Hack The Box</td>
+                <td>External page</td>
+                <td><a href="https://help.hackthebox.com/en/articles/6007919-introduction-to-starting-point" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>How to write a raport by Tero</td>
+                <td>External page</td>
+                <td><a href="https://terokarvinen.com/2006/raportin-kirjoittaminen-4/" target="_blank">Visit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="prev-page" disabled>&laquo; Previous</button>
+          <div class="page-numbers"></div>
+          <button class="next-page">Next &raquo;</button>
+        </div>
+      </div>
+
+      <div class="space-100"></div>
+
+      <h2 class="h4">Harjoittelu Alustat</h2>
+      <p class="paragraph-secondary">
+        <br>
+        Täältä löydät melko hyvän listauksen kaikista harjoittelu sivustoista, missä pääsee harjoittelemaan hakkeroinnin
+        saloja.
+
+      </p>
+
+      <div class="table-container">
+        <div class="scrollable">
+          <table id="resourceTable">
+            <thead>
+              <tr>
+                <th>Ideal for</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="advanced"><span>All sites</span></td>
+                <td>Database</td>
+                <td>We Chall</td>
+                <td><a href="https://www.wechall.net/active_sites" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td class="beginner"><span>Beginners</span></td>
+                <td>OverTheWire</td>
+                <td>FREE</td>
+                <td><a href="https://overthewire.org" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td class="beginner"><span>Beginners</span></td>
+                <td>TryHackMe</td>
+                <td>Free / Subscription (11.20€)</td>
+                <td><a href="https://tryhackme.com" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td class="intermediate"><span>Intermediate</span></td>
+                <td>Hack The Box LAB</td>
+                <td>Free / Subscription (14€)</td>
+                <td><a href="https://hackthebox.eu" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td class="beginner"><span>Beginners</span></td>
+                <td>Hack The Box Academy</td>
+                <td>Free / Subscription (8€)</td>
+                <td><a href="https://hackthebox.eu" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td class="intermediate"><span>Intermediate</span></td>
+                <td>PicoCTF</td>
+                <td>FREE</td>
+                <td><a href="https://ctftime.org" target="_blank">Visit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="prev-page" disabled>&laquo; Previous</button>
+          <div class="page-numbers"></div>
+          <button class="next-page">Next &raquo;</button>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="space-100"></div>
+
+      <h2 class="h4">CTF Harjotusta</h2>
+
+      <div class="table-container">
+        <div class="scrollable">
+          <table id="resourceTable">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Level</th>
+                <th>Name</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Platform</td>
+                <td class="beginner"><span>For&nbsp;Beginners</span></td>
+                <td>Google&nbsp;CTF&nbsp;|&nbsp;Beginners&nbsp;Quest</td>
+                <td><a href="https://capturetheflag.withgoogle.com/beginners-quest" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td>Handbook</td>
+                <td class="beginner"><span>Fundamental</span></td>
+                <td>CTF101</td>
+                <td><a href="https://ctf101.org/" target="_blank">Visit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="prev-page" disabled>&laquo; Previous</button>
+          <div class="page-numbers"></div>
+          <button class="next-page">Next &raquo;</button>
+        </div>
+      </div>
+
+      <div class="space-100"></div>
+
+      <h2 class="h4">Projektit</h2>
+
+      <p class="paragraph-secondary">
+        Täältä löytyy eri resurrseja omien projektien kehittämiselle.
+      </p>
+
+      <div class="table-container">
+        <div class="scrollable">
+        <table id="resourceTable">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Link Type</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Template</td>
+              <td>Project Report Template</td>
+              <td>Internal page</td>
+              <td><a href="/H-T8/resurssit/general/project-template.html">Visit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <div class="pagination">
+          <button class="prev-page" disabled>&laquo; Previous</button>
+          <div class="page-numbers"></div>
+          <button class="next-page">Next &raquo;</button>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="space-150"> </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+
+
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
+          </div>
+
+
+
+          <div class="space-50"></div>
+          <div class="footer-info">
+            <p class="paragraph-secondary">Hakkerointikerho H-T8</p>
+            <p class="paragraph-secondary">Haaga-Helia ammattikorkeakoulu</p>
+            <p class="paragraph-secondary">Ratapihantie 13, 00520 Helsinki</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+
+</body>
+
+</html>

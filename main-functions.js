@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const rowsPerPage = 5;
+    const rowsPerPage = 10;
     let currentPage = 1;
     const totalRows = tbody.rows.length;
     const totalPages = Math.ceil(totalRows / rowsPerPage);
