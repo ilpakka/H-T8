@@ -1,6 +1,6 @@
 [
   {
-    "title": "Hakkerointi ilta",
+    "title": "Kerhon hallinnollinen tapaaminen",
     "date": "2025-01-06T14:00:00",
     "showDate": true,
     "location": "Room 3202, Haaga-Helia",
@@ -12,6 +12,20 @@
     "tag3": "ilta"
     
   },
+  {
+    "title": "Hakkerointi ilta",
+    "date": "2025-01-06T16:00:00",
+    "showDate": true,
+    "location": "Bar Super Bario, Helsinki",
+    "description": "Tule hakkeroimaan yhdessä joka viikko!",
+    "recurring": true,
+    "recurrence": "weekly",
+    "tag1": "hakkerointia",
+    "tag2": "rentoa hengausta",
+    "tag3": "ilta"
+    
+  },
+
   {
     "title": "Inside the Mind of a Hacker 2024",
     "date": "2025-01-16T19:00:00",

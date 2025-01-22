@@ -1099,6 +1099,79 @@ toiminta page starts here
 
     }
 
+/*
+toiminta page ends here
+------------------------------------------------------------------------------------------------------------------------------
+yhteystiedot page starts here
+*/
+
+.club-board {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+        
+
+    }
+
+
+    .board-member {
+        border: 1px solid var(--background);
+        border-radius: 5px;
+        padding: 0 20px;
+
+
+
+        &:hover {
+            box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
+        }
+        
+
+        .board-member-image {
+            margin: 0 0 10px 0;
+            display: flex;
+            justify-content: center;
+            filter: brightness(0.8);
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .board-member-info {
+
+            h3 {
+                margin: 0;
+            }
+
+            .board-member-contact {
+                display: flex;
+                flex-direction: row;
+                margin: 0 0 20px 0;
+
+                svg {
+                    height: 30px;
+                    width: auto;
+                    fill: var(--secondary);
+                    margin: 0 10px 0 0;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.2);
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+    
+}
 
 
 
