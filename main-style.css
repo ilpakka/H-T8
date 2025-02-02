@@ -990,7 +990,7 @@ toiminta page starts here
 
     .events-container-2 {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         padding: 20px 5px 20px 0px;
         gap: 20px;
         overflow-x: scroll;

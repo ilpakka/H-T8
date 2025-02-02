@@ -5,24 +5,37 @@
     "showDate": true,
     "location": "Room 3202, Haaga-Helia",
     "description": "Tule hakkeroimaan yhdessä joka viikko!",
-    "recurring": true,
+    "recurring": false,
     "recurrence": "weekly",
     "tag1": "hakkerointia",
-    "tag2": "rentoa hengausta",
-    "tag3": "ilta"
+    "tag2": "rentoa hengausta"
+    
     
   },
   {
-    "title": "Hakkerointi ilta",
-    "date": "2025-01-06T15:00:00",
+    "title": "Hakkerointi ilta > Super&nbsp;Bario",
+    "date": "2025-01-07T15:00:00",
     "showDate": true,
     "location": "Bar Super Bario, Helsinki",
     "description": "Tule hakkeroimaan yhdessä joka viikko!",
     "recurring": true,
-    "recurrence": "weekly",
+    "recurrence": "biweekly",
     "tag1": "hakkerointia",
-    "tag2": "rentoa hengausta",
-    "tag3": "ilta"
+    "tag2": "rentoa hengausta"
+    
+    
+  },
+  {
+    "title": "Hakkerointi ilta > Discord",
+    "date": "2025-02-11T15:00:00",
+    "showDate": true,
+    "location": "Kerhon Discord kanava",
+    "description": "Tule hakkeroimaan yhdessä joka viikko!",
+    "recurring": true,
+    "recurrence": "biweekly",
+    "tag1": "hakkerointia",
+    "tag2": "rentoa hengausta"
+    
     
   },
 
@@ -51,6 +64,20 @@
     "tag3": "verkostoitumista",
     "link": "https://hackjunction.com/"
 
+  },
+
+  {
+    "title": "Kyberlahti Seminaari",
+    "date": "2025-03-13T12:00:00",
+    "showDate": true,
+    "location": "Lahti Halli, Lahden Messukeskus",
+    "description": "Ilmainen kyberturvallisuuden seminaari.",
+    "recurring": false,
+    "recurrence": "biweekly",
+    "tag1": "Huippu puhujat",
+    "tag2": "Verkostoitumista",
+    "tag3": "Ilmainen",
+    "link": "https://www.kyberlahti.fi/"
   }
 
 

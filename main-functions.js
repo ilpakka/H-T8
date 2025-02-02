@@ -19,6 +19,10 @@ function getNextOccurrence(eventDate, recurrence) {
     while (nextDate <= now) {
       nextDate.setDate(nextDate.getDate() + 7);
     }
+  } else if (recurrence === "biweekly") {
+    while (nextDate <= now) {
+      nextDate.setDate(nextDate.getDate() + 14);
+    }
   } else if (recurrence === "daily") {
     while (nextDate <= now) {
       nextDate.setDate(nextDate.getDate() + 1);
@@ -139,11 +143,12 @@ function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
                   <div class="tags">
                     ${event.tag1 ? `<span class="tag">${event.tag1}</span>` : ""}
                     ${event.tag2 ? `<span class="tag">${event.tag2}</span>` : ""}
+                    ${event.tag3 ? `<span class="tag">${event.tag3}</span>` : ""}
                   </div>
                 </div>
               ${event.link ? `</a>` : ""}
             `;
-            
+
 
             })
             .join("")
