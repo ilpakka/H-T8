@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="/H-T8/main-style.css">
   <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
-  <script src="/H-T8/main-functions.js" defer></script>
+  <script type="module" src="/H-T8/src/main.js" defer></script>
 </head>
 
 
@@ -18,38 +18,9 @@
 
   <div id="transition-overlay"></div>
   <main>
-    <header class="header">
-      <nav class="navbar">
-        <a class="nav-logo" href="/H-T8/">
-          <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
-        </a>
-        <div class="hamburger" id="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-          <li class="space-50">
+    <div class="grid-background"></div>
+    <div id="header-container"></div>
 
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/resurssit/" class="flapper-link link">Resurssit</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/tietoa/" class="flapper-link link">Tietoa</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/toiminta/" class="flapper-link link" id="active">Toiminta</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/yhteystiedot/" class="flapper-link link">Yhteystiedot</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/säännöt/" class="flapper-link link">Säännöt</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
     <div class="space-50"></div>
     <section class="page-content">
       <div class="toiminta">
@@ -157,13 +128,33 @@
         <h2 class="h2">Miten toimintaan pääsee mukaan?</h2>
         <p class="paragraph-secondary">
           <br>
-          Hakkerointikerho H-T8 on avoin kaikille Haaga-Helian tietojenkäsittelyn opiskelijoille <i>(Myös Metropolian ja Laurean opiskelijat 
+          Hakkerointikerho H-T8 on avoin kaikille Haaga-Helian tietojenkäsittelyn opiskelijoille <i>(Myös Metropolian ja
+            Laurean opiskelijat
             ovat tervettulleita)</i>. Jotta voit osallistua
-          kerhon toimintaan, sinun tulee liittyä kerhon Discord-kanavalle. <i>(Viralliseksi jäseneeksi liittyminen on työnalla
-          ja siitä tiedotetaan myöhemmin.)</i>
+          kerhon toimintaan, sinun tulee liittyä kerhon Discord-kanavalle.
           <br><br>
-          Discord-kanavalle pääset liittymään <a class="flapper-link" href="https://discord.gg/gv2FCm3JU5">tästä</a>.
+        </p>
+        <div class="icon-container">
+          <div class="icon-link">
+            <a class="icon" href="https://discord.gg/gv2FCm3JU5" target="_blank">
+              <img src="/H-T8/assets/icons8-discord-50.png" alt="Discord Icon">
+            </a>
+            <p class="paragraph-secondary">Liity Kanavalle</p>
+          </div>
+          <div class="icon-link">
+            <a class="icon" href="mailto:robin.niinemets@myy.haaga-helia.fi">
+              <img src="/H-T8/assets/icons8-email-50.png" alt="Email Icon">
+            </a>
+            <p class="paragraph-secondary">Kysy Lisää</p>
+          </div>
+        </div>
+        <p class="paragraph-secondary">
           <br><br>
+          Viralliseksi jäseneksi pääsee osallistumalla ainakin
+          yhteen kerhon tapahtumaan ja suorittamalla kerhon jäsenyyteen liittyvän ilmottautumisen.
+          <br><br>
+  
+  
           Tapahtumista ja kokoontumisista tiedotetaan kerhon Discord-kanavalla ja kotisivuilla. Joten seuraa molempia
           aktiivisesti, jotta et jää paitsi tulevista tapahtumista.
         </p>
@@ -171,26 +162,7 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-
-
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
-          </div>
-
-
-
-          <div class="space-50"></div>
-          <div class="footer-info">
-            <p class="paragraph-secondary">Hakkerointikerho H-T8</p>
-            <p class="paragraph-secondary">Haaga-Helia ammattikorkeakoulu</p>
-            <p class="paragraph-secondary">Ratapihantie 13, 00520 Helsinki</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
   </main>
 
 

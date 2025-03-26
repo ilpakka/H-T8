@@ -9,65 +9,39 @@
 
   <link rel="stylesheet" href="/H-T8/main-style.css">
   <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
-  <script src="/H-T8/main-functions.js" defer></script>
-
-
+  <script type="module" src="/H-T8/src/main.js" defer></script>
 </head>
 
 
 <body>
 
-
   <div id="transition-overlay" class="active"></div>
   <main>
-    <header class="header">
-      <nav class="navbar">
-        <a class="nav-logo" href="./">
-          <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
-        </a>
-        <div class="hamburger" id="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-          <li class="space-50">
+    <div class="grid-background"></div>
+    <div id="header-container"></div>
 
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/resurssit/" class="flapper-link link">Resurssit</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/tietoa/" class="flapper-link link">Tietoa</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/toiminta/" class="flapper-link link">Toiminta</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/yhteystiedot/" class="flapper-link link">Yhteystiedot</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/säännöt/" class="flapper-link link">Säännöt</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
+
+
     <section class="page-content">
+
       <section class="hero">
         <div class="container">
           <div>
-            <h1 class="h1-hero">Hakkerointikerho H-T8</h1>
-            <p class="paragraph-hero">H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu hakkerointikerho. 
-              Toimintaan ovat tervetulleita myös Metropolian ja Laurean opiskelijat.
+            <h1 class="h1-hero">H-T8: Murra salaus. Hallitse järjestelmää.</h1>
+            <p class="paragraph-hero"> Oletko valmis astumaan hakkeroinnin maailmaan? H-T8 on paikka, jossa tutustut
+              kybermaailman saloihin, opit perusteet ja kehityt huipputaitavaksi hakkeriksi. Meillä ei ole rajoja –
+              olitpa aloittelija tai kokenut konkari, täällä pääset haastamaan itseäsi.
             </p>
-            <button class="button-hero"><a href="/H-T8/yhteystiedot/"> Tule mukaan </a></button>
           </div>
         </div>
       </section>
+
+
       <section class="about">
         <div class="container">
           <div class="introduction">
-            
+
             <h2 class="h2">Tietoa</h2>
 
             <p class="paragraph-secondary">H-T8 on porttisi eettisen hakkeroinnin ja kyberturvallisuuden jännittävään
@@ -82,7 +56,7 @@
 
             </p>
           </div>
-          
+
         </div>
       </section>
 
@@ -94,19 +68,20 @@
           <div class="activity-cards">
             <div class="activity-card">
               <a href="/H-T8/toiminta/">
+                <img src="/H-T8/assets/tietoa1.webp" alt="">
                 <h3 class="h4">Hacking Nights</h3>
                 <p class="paragraph-secondary">
                   Osallistu viikoittaisiin hakkerointi iltoihin, joissa pääset
                   harjoittelemaan hakkerointia ja oppimaan uutta tiimin kanssa.
                   <br><br>
-                  Illat ovat ilmapiiriltään rentoja ja tarjoavat loistavan tilaisuuden
-                  verkostoitua muiden alan opiskelijoiden kanssa tai vain viettää aikaa
-                  yhdessä ja hakkeroida.
+                  Joka kuukausi käymme eri moduulia läpi yhdessä. Joten vaikka et olisi
+                  paikalla joka kerta, voit silti osallistua ja oppia uutta.
                 </p>
               </a>
             </div>
             <div class="activity-card">
               <a href="/H-T8/toiminta/">
+                <img src="/H-T8/assets/tietoa3.webp" alt="">
                 <h3 class="h4">Ovi hakkeroinnin maailmaan</h3>
                 <p class="paragraph-secondary">
                   Käymme myös kerhona muiden yhdistysten ja järjestöjen tilaisuuksissa ja
@@ -117,6 +92,7 @@
             </div>
             <div class="activity-card">
               <a href="/H-T8/toiminta/">
+                <img src="/H-T8/assets/tietoa2.webp" alt="">
                 <h3 class="h4">CTF kilpailut</h3>
                 <p class="paragraph-secondary">
                   Osallistu kilpailuihin, joissa pääset testaamaan taitojasi ja
@@ -127,6 +103,7 @@
             </div>
             <div class="activity-card">
               <a href="/H-T8/toiminta/">
+                <img src="/H-T8/assets/tietoa4.webp" alt="">
                 <h3 class="h4">Tapahtumat</h3>
                 <p class="paragraph-secondary">
                   Kerho järjestää erilaisia tapahtumia yhteistyössä muiden ainejärjestöjen ja
@@ -147,60 +124,54 @@
 
       <section class="contacts">
         <div class="container">
-          <h2 class="h2">Yhteystiedot</h2>
-          <div class="contact card">
-            <p class="paragraph-secondary">Ota yhteyttä ja kysy lisää toiminnastamme. Toimintaan mukaan pääsee
-              joko laittamalla sähköpostia tai kerhon discord kanavalla.
-              <br><br>
-              Tervetuloa mukaan!
-            </p>
-            <br><br>
-          </div>
-          <div class="contact-info">
-            <div class="contact-item">
-              <p class="paragraph-secondary">
+          <h2 class="h2">Tulevat Tapahtumat</h2>
+          <div class="space-50"></div>
 
 
-                <b class="paragraph">Yhteyshenkilö: </b> Robin Niinemets
-                <br><br>
-                <b class="paragraph">Discord: </b>
-                <a class="paragraph-secondary flapper-link" href="https://discord.gg/gv2FCm3JU5">H-T8 Discord</a>
-                <br><br>
-
-                <b class="paragraph">Sähköposti: </b>
-                <a class="paragraph-secondary flapper-link"
-                  href="mailto:robin.niinemets@myy.haaga-helia.fi">robin.niinemets@myy.haaga-helia.fi</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
+          <div class="events-container-all"></div>
       </section>
+
+      <div class="space-300"></div>
+
+      <h2 class="h2">Miten toimintaan pääsee mukaan?</h2>
+      <p class="paragraph-secondary">
+        <br>
+        Hakkerointikerho H-T8 on avoin kaikille Haaga-Helian tietojenkäsittelyn opiskelijoille <i>(Myös Metropolian ja
+          Laurean opiskelijat
+          ovat tervettulleita)</i>. Jotta voit osallistua
+        kerhon toimintaan, sinun tulee liittyä kerhon Discord-kanavalle.
+        <br><br>
+      </p>
+      <div class="icon-container">
+        <div class="icon-link">
+          <a class="icon" href="https://discord.gg/gv2FCm3JU5" target="_blank">
+            <img src="/H-T8/assets/icons8-discord-50.png" alt="Discord Icon">
+          </a>
+          <p class="paragraph-secondary">Liity Kanavalle</p>
+        </div>
+        <div class="icon-link">
+          <a class="icon" href="mailto:robin.niinemets@myy.haaga-helia.fi">
+            <img src="/H-T8/assets/icons8-email-50.png" alt="Email Icon">
+          </a>
+          <p class="paragraph-secondary">Kysy Lisää</p>
+        </div>
+      </div>
+      <p class="paragraph-secondary">
+        <br><br>
+        Viralliseksi jäseneksi pääsee osallistumalla ainakin
+        yhteen kerhon tapahtumaan ja suorittamalla kerhon jäsenyyteen liittyvän ilmottautumisen.
+        <br><br>
+
+
+        Tapahtumista ja kokoontumisista tiedotetaan kerhon Discord-kanavalla ja kotisivuilla. Joten seuraa molempia
+        aktiivisesti, jotta et jää paitsi tulevista tapahtumista.
+      </p>
 
     </section>
     <div class="space-150"></div>
-
-    <footer class="footer">
-      <div class="container">
-
-
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
-          </div>
-
-
-
-          <div class="space-50"></div>
-          <div class="footer-info">
-            <p class="paragraph-secondary">Hakkerointikerho H-T8</p>
-            <p class="paragraph-secondary">Haaga-Helia ammattikorkeakoulu</p>
-            <p class="paragraph-secondary">Ratapihantie 13, 00520 Helsinki</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
   </main>
+
 
 
 </body>

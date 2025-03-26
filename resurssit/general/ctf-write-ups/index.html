@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+  <title>Hakkerointikerho H-T8</title>
+
+  <link rel="stylesheet" href="/H-T8/main-style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+  <script type="module" src="/H-T8/src/main.js" defer></script>
+  <meta name="breadcrumb-label" content="CTF Write-Ups & Info">
+</head>
+
+
+<body>
+  <div id="transition-overlay" class="active"></div>
+  <main>
+    <div class="grid-background"></div>
+    <div id="header-container"></div>
+
+    <section class="page-content">
+      <i>
+        <ul class="breadcrumbs" id="breadcrumb-container"></ul>
+      </i>
+
+      <div class="space-50"></div>
+
+      <h2 class="h4">CTF Harjotusta</h2>
+
+      <div class="table-container">
+        <div class="scrollable">
+          <table id="resourceTable">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Level</th>
+                <th>Name</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Platform</td>
+                <td class="beginner"><span>For&nbsp;Beginners</span></td>
+                <td>Google&nbsp;CTF&nbsp;|&nbsp;Beginners&nbsp;Quest</td>
+                <td><a href="https://capturetheflag.withgoogle.com/beginners-quest" target="_blank">Visit</a></td>
+              </tr>
+              <tr>
+                <td>Handbook</td>
+                <td class="beginner"><span>Fundamental</span></td>
+                <td>CTF101</td>
+                <td><a href="https://ctf101.org/" target="_blank">Visit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="prev-page" disabled>&laquo; Previous</button>
+          <div class="page-numbers"></div>
+          <button class="next-page">Next &raquo;</button>
+        </div>
+      </div>
+
+      <div class="space-150"></div>
+
+      <h2 class="h4">CTF Write-Ups</h2>
+
+      <div class="space-50"></div>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by nickname..." />
+      </div>
+
+      <div class="table-container">
+        <div class="scrollable" id="searchable">
+          <table id="resourceTable">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Writer</th>
+                <th>Write-Up Name</th>
+                <th>CTF Name</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button class="prev-page" disabled>&laquo; Previous</button>
+          <div class="page-numbers"></div>
+          <button class="next-page">Next &raquo;</button>
+        </div>
+
+
+
+        <div class="space-150"> </div>
+
+
+
+    </section>
+
+    <div id="footer-container"></div>
+  </main>
+
+
+</body>
+
+</html>

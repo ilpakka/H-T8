@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+
+
 * {
     font-family: 'JetBrains Mono', monospace;
     margin: 0;
@@ -117,39 +119,46 @@ body {
         height: 100%;
         background-color: var(--table-head);
         z-index: 9999;
-        pointer-events: none; /* Prevent interactions during idle state */
-        opacity: 0; /* Default invisible state */
+        pointer-events: none;
+        /* Prevent interactions during idle state */
+        opacity: 0;
+        /* Default invisible state */
     }
-    
+
     /* Show animation */
     @keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
-    
+
     /* Hide animation */
     @keyframes fadeOut {
         from {
             opacity: 1;
         }
+
         to {
             opacity: 0;
         }
     }
-    
+
     /* Active state with animation */
     #transition-overlay.active {
-        pointer-events: auto; /* Allow interactions when active */
-        animation: fadeIn 1s forwards; /* Apply fadeIn when active */
+        pointer-events: auto;
+        /* Allow interactions when active */
+        animation: fadeIn 2s forwards;
+        /* Apply fadeIn when active */
     }
-    
+
     /* Exit state */
     #transition-overlay.exiting {
-        animation: fadeOut 1s forwards; /* Apply fadeOut when exiting */
+        animation: fadeOut 2s forwards;
+        /* Apply fadeOut when exiting */
     }
 
 
@@ -216,15 +225,54 @@ body {
 
     }
 
+    .nav-link {
+        text-decoration: none;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 42px;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
 
-    #active {
-        box-shadow: var(--highlight) 0px 2px 0px 0px;
-        padding: 2px;
+        span {
+            display: inline-block;
+            position: relative;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
 
-        &:hover {
-            box-shadow: none;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background: var(--primary);
+            width: 0;
+            transition: width 0.2s ease;
+            /* Smooth underline animation */
+        }
+
+        &:hover::after {
+            width: 100%;
+            color: var(--primary);
+            /* Extend the underline on hover */
         }
     }
+    
+
+
+    .nav-link.active {
+        color: inherit; /* Retain the original color */
+        box-shadow: var(--highlight) 0px 2px 0px 0px;
+        padding: 2px;
+        
+      }
+      
+      .nav-link.active:hover {
+        color: inherit; /* Retain the original color on hover */
+        box-shadow: none; /* Remove the underline on hover */
+      }
 
     .breadcrumbs {
         display: flex;
@@ -263,8 +311,8 @@ body {
     .h1-hero {
         font-size: 35px;
         color: var(--primary);
-        font-weight: 800;
-
+        font-weight: 1000;
+        margin: 0 0 10px 0;
     }
 
     .paragraph-hero {
@@ -324,6 +372,8 @@ body {
         font-size: 14px;
         font-family: 'Geist Mono', monospace;
         margin: 10px 0;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .inline-code-snippet {
@@ -496,6 +546,23 @@ body {
         padding: 0 10px;
     }
 
+    .grid-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Create a large grid for a smoother effect */
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(50, 40px);
+        grid-template-rows: repeat(50, 40px);
+        background-size: 300px 300px;
+        background-image: linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+        filter: hue-rotate(120deg) brightness(1);
+        opacity: 0.9;
+        pointer-events: none;
+    }
 
     .hero {
         background: url(assets/front_page.webp);
@@ -505,45 +572,19 @@ body {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 800px;
+        height: 900px;
         position: relative;
 
 
         .container {
             margin: 100px 0;
 
-            .button-hero {
 
-                margin: 20px 0;
-                padding: 12px 30px;
-                border-radius: 10px;
-                font-weight: 200;
-                border: 0;
-                box-shadow: 0 10px 40px 1px rgba(131, 132, 131, 0.513);
-                background: rgba(11, 11, 11, 0.05);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-
-
-
-                &:hover {
-                    cursor: pointer;
-                    transform: translateY(-4px);
-                    box-shadow: inset 8px 2px 25px 0 rgba(46, 46, 46, 0.5);
-                    backdrop-filter: blur(0px);
-                    -webkit-backdrop-filter: blur(0px);
-                    box-shadow: 0 20px 60px 1px rgba(49, 98, 61, 0.513);
-
-                }
-
-                a {
-                    text-decoration: none;
-                    font-size: 16px;
-                    color: var(--primary);
-                }
-            }
         }
+
+
     }
+
 
     .about {
         margin: 0;
@@ -583,6 +624,12 @@ body {
                     padding: 20px;
                     border-radius: 10px;
 
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 6px;
+                    }
+
                     &:hover {
                         transform: translateY(-4px);
                         box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
@@ -600,18 +647,35 @@ body {
             }
 
         }
+
     }
 
-    .contacts {
+    .icon-container {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        position: relative;
 
-        .container {
+        .icon-link {
+            display: flex;
+            flex-direction: column;
+            width: 110px;
+            text-align: center;
+            border: 1px solid var(--background);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 10px;
+            box-shadow: inset 10px 2px 50px 0 rgba(46, 46, 46, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
 
-            .h2 {
-                margin: 0 0 20px 0;
+            &:hover {
+                cursor: pointer;
+                transform: scale(0.95);
+                box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.125);
+
             }
         }
-
-
     }
 
     .footer {
@@ -619,8 +683,8 @@ body {
         color: var(--primary);
         padding: 20px;
         border-top: 2px solid var(--background);
-        z-index: 2;
-
+        z-index: 0;
+        position: relative;
 
         .container {
             display: flex;
@@ -815,12 +879,16 @@ body {
         border-radius: 5px;
         background-color: rgba(21, 20, 20, 0.715);
         scrollbar-color: var(--table-body) var(--table-head);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
 
         .scrollable {
             overflow-x: auto;
             scrollbar-width: thin;
-            -webkit-overflow-scrolling: touch;
+
             border-radius: 5px;
+
         }
 
         table {
@@ -851,6 +919,8 @@ body {
 
     .advanced {
         color: var(--advanced);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
 
         span {
             background-color: var(--advanced-background);
@@ -986,6 +1056,8 @@ toiminta page starts here
         scroll-snap-align: start;
         scrollbar-width: thin;
         scrollbar-color: var(--background) var(--table-head);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .events-container-2 {
@@ -998,6 +1070,8 @@ toiminta page starts here
         scroll-snap-align: start;
         scrollbar-width: thin;
         scrollbar-color: var(--background) var(--table-head);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     /* Tooltip container */
@@ -1046,8 +1120,8 @@ toiminta page starts here
     .event-link {
         text-decoration: none;
         color: inherit;
-      }
-    
+    }
+
 
     .event {
         border-radius: 8px;
@@ -1082,101 +1156,252 @@ toiminta page starts here
         }
 
         .event-icon {
-        
+
             svg {
                 height: 30px;
                 width: auto;
                 fill: var(--highlight);
-    
+
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.2);
                 }
             }
-    
-          }
+
+        }
 
 
     }
 
-/*
+    /*
 toiminta page ends here
 ------------------------------------------------------------------------------------------------------------------------------
 yhteystiedot page starts here
 */
 
-.club-board {
+    .club-board {
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        flex-wrap: wrap;
-        width: 100%;
-        
-
-    }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
 
 
-    .board-member {
-        border: 1px solid var(--background);
-        border-radius: 5px;
-        padding: 0 20px;
-
-
-
-        &:hover {
-            box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
-        }
-        
-
-        .board-member-image {
-            margin: 0 0 10px 0;
-            display: flex;
-            justify-content: center;
-            filter: brightness(0.8);
-
-            img {
-                width: 150px;
-            }
         }
 
-        .board-member-info {
 
-            h3 {
-                margin: 0;
+        .board-member {
+            border: 1px solid var(--background);
+            border-radius: 5px;
+            padding: 0 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+
+            &:hover {
+                box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
             }
 
-            .board-member-contact {
+
+            .board-member-image {
+                margin: 0 0 10px 0;
                 display: flex;
-                flex-direction: row;
-                margin: 0 0 20px 0;
+                justify-content: center;
+                filter: brightness(0.8);
 
-                svg {
-                    height: 30px;
-                    width: auto;
-                    fill: var(--secondary);
-                    margin: 0 10px 0 0;
+                img {
+                    width: 150px;
+                }
+            }
 
-                    &:hover {
-                        cursor: pointer;
-                        transform: scale(1.2);
+            .board-member-info {
+
+                h3 {
+                    margin: 0;
+                }
+
+                .board-member-contact {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0 0 20px 0;
+
+                    svg {
+                        height: 30px;
+                        width: auto;
+                        fill: var(--secondary);
+                        margin: 0 10px 0 0;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.2);
+                        }
                     }
+
                 }
 
             }
 
+
+        }
+
+    }
+
+    /*
+yhteystiedot page ends here
+------------------------------------------------------------------------------------------------------------------------------
+honor board page starts here
+*/
+
+
+    #tableBody {
+        font-size: 14px;
+    }
+
+    .tooltip {
+        position: fixed;
+        /* Position relative to the viewport */
+        z-index: 1000;
+        /* Ensure it's above other elements */
+        background-color: var(--black);
+        color: var(--secondary);
+        padding: 8px;
+        border-radius: 4px;
+        text-align: left;
+        min-width: 200px;
+        max-width: 500px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+    }
+
+    .badge-item {
+        display: inline-block;
+        margin-right: 10px;
+
+        img.badge {
+            display: block;
+            max-height: 50px;
+            max-width: 70px;
+        }
+    }
+
+    .th-nic {
+        width: 15%;
+    }
+
+
+    #searchInput {
+        width: 100%;
+        padding: 20px 10px;
+        border: 1px solid var(--background);
+        background-color: var(--table-head);
+        color: var(--primary);
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    #searchInput:focus {
+        border-color: var(--highlight);
+    }
+
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        overflow: hidden;
+        border-radius: 8px;
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: inset 20px 2px 70px 0 rgba(46, 46, 46, 0.5);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+
+            .carousel-slide {
+                min-width: 100%;
+                box-sizing: border-box;
+                padding: 15px;
+                background-color: var(--background);
+                color: var(--secondary);
+                border-radius: 8px;
+                font-size: 14px;
+
+                .none-link {
+                    text-decoration: none;
+                    color: var(--secondary);
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                }
+
+                .throphy {
+                    position: absolute;
+                    top: 15px;
+                    width: 60px;
+                    height: auto;
+                    border-radius: 8px;
+                }
+
+                h3 {
+                    margin: 10px 0 25px 0;
+                }
+
+                p {
+                    margin: 10px 0;
+
+                }
+
+                .space {
+                    margin: 5px 0 20px 0;
+                }
+
+
+                .prev {
+                    left: 10px;
+                }
+
+                .next {
+                    right: 10px;
+                }
+
+                .tags {
+                    margin-top: 20px;
+                }
+
+                .tag {
+                    display: inline-block;
+                    background-color: var(--beginner-background);
+                    color: var(--beginner);
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    margin: 5px 5px 0 0;
+                }
+
+            }
         }
 
 
     }
-    
-}
-
-
-
 
 }
+
 
 @media screen and (min-width: 768px) {
 
@@ -1193,7 +1418,7 @@ yhteystiedot page starts here
     }
 
     .paragraph-hero {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .h1 {
@@ -1258,7 +1483,6 @@ yhteystiedot page starts here
 
     .page-content {
         margin: 0 20px;
-        ;
     }
 
 
@@ -1374,7 +1598,6 @@ resurssit page starts here
             }
 
             .blue-team {
-                background-color: blue;
                 width: 100%;
                 text-align: center;
                 padding: 250px 0;
@@ -1553,10 +1776,7 @@ resurssit page starts here
                     color: var(--primary);
                     font: 18px 'JetBrains Mono', monospace;
                     font-weight: 600;
-
-                    &:hover {
-                        color: var(--highlight);
-                    }
+ 
                 }
             }
         }
@@ -1628,9 +1848,58 @@ resurssit page starts here
         }
     }
 
+
+
+    /*
+resurssit page ends here
+------------------------------------------------------------------------------------------------------------------------------
+honor board page starts here
+
+*/
+
+    #tableBody {
+        font-size: 16px;
+    }
+
+    .carousel-container {
+
+        .carousel-track {
+
+
+            .carousel-slide {
+                font-size: 16px;
+
+                .throphy {
+                    top: 15px;
+                    width: 80px;
+                    filter: brightness(0.9);
+                }
+
+                h3 {
+                    margin: 10px 0 25px 0;
+                }
+
+                p {
+                    margin: 10px 0;
+                }
+
+                .space {
+                    margin: 5px 0 20px 0;
+                }
+
+
+                .prev {
+                    left: 10px;
+                }
+
+                .next {
+                    right: 10px;
+                }
+            }
+        }
+    }
+
 }
-
-
 
 @media screen and (min-width: 1480px) {
 
@@ -1694,11 +1963,11 @@ resurssit page starts here
 
 
     .h1-hero {
-        font-size: 70px;
+        font-size: 65px;
     }
 
     .paragraph-hero {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .h1 {
@@ -1726,6 +1995,7 @@ resurssit page starts here
     }
 
     .advanced {
+
 
         span {
             font-size: 16px;

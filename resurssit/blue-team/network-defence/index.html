@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="/H-T8/main-style.css">
   <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
-  <script src="/H-T8/main-functions.js" defer></script>
+  <script type="module" src="/H-T8/src/main.js" defer></script>
   <meta name="breadcrumb-label" content="network-defence">
 </head>
 
@@ -19,38 +19,8 @@
 
   <div id="transition-overlay" class="active"></div>
   <main>
-    <header class="header">
-      <nav class="navbar">
-        <a class="nav-logo" href="/H-T8/">
-          <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
-        </a>
-        <div class="hamburger" id="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-          <li class="space-50">
+    <div id="header-container"></div>
 
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/resurssit/" class="flapper-link link" id="active">Resurssit</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/tietoa/" class="flapper-link link">Tietoa</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/toiminta/" class="flapper-link link">Toiminta</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/yhteystiedot/" class="flapper-link link">Yhteystiedot</a>
-          </li>
-          <li class="nav-item">
-            <a href="/H-T8/säännöt/" class="flapper-link link">Säännöt</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
     <section class="page-content">
       <i>
         <ul class="breadcrumbs" id="breadcrumb-container"></ul>
@@ -92,26 +62,7 @@
       <div class="space-150"> </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-
-
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="/H-T8/assets/main_logo.webp" alt="Logo" />
-          </div>
-
-
-
-          <div class="space-50"></div>
-          <div class="footer-info">
-            <p class="paragraph-secondary">Hakkerointikerho H-T8</p>
-            <p class="paragraph-secondary">Haaga-Helia ammattikorkeakoulu</p>
-            <p class="paragraph-secondary">Ratapihantie 13, 00520 Helsinki</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
   </main>
 
 
