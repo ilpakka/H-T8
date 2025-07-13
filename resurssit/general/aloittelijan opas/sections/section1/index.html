@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+
+
+            <h1 class="h2">Introduction to Hacking</h1>
+            <p class="paragraph-secondary">SECTION 1</p>
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="paragraph-secondary">
+                Welcome to the first section of the Hacker Bible! In this section, we will introduce you to the world of
+                ethical hacking and cybersecurity. You'll learn about the basics of hacking, the hacker mindset, and the
+                legal and ethical considerations involved in this field.
+                <br><br>
+            </p>
+
+            <div class="break-line"></div>
+
+            <h3 class="h4">Ethical Hacking vs. Malicious Hacking</h3>
+            <p class="paragraph-secondary">
+                It's crucial to understand the difference between ethical hacking (also known as penetration testing or
+                white hat hacking) and malicious hacking (black hat hacking).
+                <br><br>
+                <strong>Ethical hackers:</strong> Work with permission to find and fix security vulnerabilities, help
+                organizations improve their security posture, and follow legal and ethical guidelines.
+                <br><br>
+                <strong>Malicious hackers:</strong> Break into systems without permission, steal data, cause damage, and
+                operate outside the law.
+            </p>
+            <br>
+            <div class="break-line"></div>
+            <h3 class="h4">What is Hacking?</h3>
+            <p class="paragraph-secondary">
+                <br>
+                Hacking is the process of understanding and manipulating systems beyond their intended design. At its
+                core, hacking is about curiosity, problem-solving, and deep technical exploration. It often involves
+                reverse engineering, discovering vulnerabilities, bypassing limitations, or repurposing tools in
+                unintended ways.
+                <br><br>
+                Hacking is not just "breaking into systems." That’s one application—unauthorized intrusion, but not the
+                full picture. Hacking is broader: it includes building, modifying, testing, securing, and understanding
+                systems, from software and hardware to networks and protocols. It exists in both offensive and defensive
+                forms, and the same skillset can be used to either exploit or protect.
+                <br><br>
+            <p class="intermediate">
+                <span>
+                    ⚠️ Media often reduces hacking to cybercrime. This is wrong. Criminality depends on intent,
+                    legality,
+                    and context, not the skillset itself.
+                </span>
+            </p>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section1-completed" class="section-completion-checkbox" style="display: none;">
+                    <label for="section1-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section1-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="/H-T8/resurssit/general/aloittelijan opas/" class="nav-button">← Back to Guide</a>
+                <a href="../section2/" class="nav-button">Continue →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

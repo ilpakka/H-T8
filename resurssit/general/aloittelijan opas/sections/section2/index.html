@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Who Hacking Fits</h1>
+            <p class="paragraph-secondary">SECTION 1</p>
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h4">What kind of person you have to be?</h2>
+            <p class="paragraph-secondary">
+                Hacking is not for everyone. It suits people who are:
+                <br>
+            </p>
+            <ul class="general-list paragraph-secondary">
+                <li>Obsessively curious: You have to want to know why something works, not just that it works.</li>
+                <li>Self-driven: No one will spoon-feed you. You have to seek out knowledge and resources on your own.
+                    <i class="beginner">(Let me tell you there is a lot of boring reading involved.)</i>
+
+                </li>
+                <li>Mental stubbornness: Debugging broken code, analyzing hex dumps, or tracing through undocumented
+                    behavior requires intense patience.
+                </li>
+                <li>Comfort with uncertainty: You'll often operate without clear paths or guarantees—just incomplete
+                    clues and broken systems.
+                </li>
+                <li><strong>Ethical </strong>(if you want to stay in the game legally): The best hackers don’t get
+                    caught—not because they’re
+                    sneaky, but because they understand the limits of what’s legal and moral, and they stay within them.
+                </li>
+            </ul>
+            <p class="paragraph-secondary">
+                It does <i>not </i>require being a math genius or having a formal computer science degree. But it does
+                require
+                a high tolerance for failure and a mindset that accepts constant learning.
+                <br><br>
+
+            </p>
+            <div class="break-line"></div>
+            <br>
+            <h2 class="h4">Hacking Ethics</h2>
+            <p class="paragraph-secondary">
+                The ethical side of hacking matters. Without ethics, hacking becomes exploitation and harm.
+            </p>
+            <ul class="general-list paragraph-secondary">
+                <li><strong>Consent:</strong> Test or poke only what you have explicit permission to touch. Unauthorized
+                    access is still illegal, even if done "just to see."</li>
+                <li><strong>Transparency:</strong> If you find a vulnerability, report it responsibly.</li>
+                <li><strong>Do no harm:</strong> Avoid causing downtime, data loss or user exposure, even if it earns
+                    you technical kudos.</li>
+                <li><strong>Accountability:</strong> Own your actions. Whether you're working on red teams, building
+                    exploits or securing systems, be able to explain your choices and stand by them.</li>
+            </ul>
+            <p class="paragraph-secondary">
+                Ultimately, ethics is what separates a skilled hacker from a criminal. Mastery without restraint is just
+                weaponry.
+            </p>
+            <div class="break-line"></div>
+            <p class="paragraph-secondary">
+                <br>
+                Now that you have a understanding about what hacking is and what kind of person you have to be, you are
+                ready to start learning the basic structure of hacking.
+                
+            </p>
+            <div class="space-100"></div>
+            
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section2-completed" class="section-completion-checkbox" style="display: none;">
+                    <label for="section2-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section2-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section1/" class="nav-button">← Previous: Introduction</a>
+                <a href="../section3/" class="nav-button">Next: Basic Environment →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

@@ -14,7 +14,8 @@ export async function loadEvents() {
     if (events.length > 1) {
       startCarousel(); // Start sliding if more than one event exists
     }
-  } catch (error) {
+} catch (error) {
+  console.error('Failed to load events:', error);
 }
 }
 

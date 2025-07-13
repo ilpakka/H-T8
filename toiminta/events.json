@@ -18,7 +18,7 @@
     "showDate": true,
     "location": "Bar Super Bario, Helsinki",
     "description": "Tule hakkeroimaan yhdessä joka viikko!",
-    "recurring": true,
+    "recurring": false,
     "recurrence": "biweekly",
     "tag1": "hakkerointia",
     "tag2": "rentoa hengausta"
@@ -31,7 +31,7 @@
     "showDate": true,
     "location": "Kerhon Discord kanava",
     "description": "Tule hakkeroimaan yhdessä joka viikko!",
-    "recurring": true,
+    "recurring": false,
     "recurrence": "biweekly",
     "tag1": "hakkerointia",
     "tag2": "rentoa hengausta"
@@ -56,12 +56,12 @@
     "date": "2025-11-07T09:00:00",
     "showDate": true,
     "location": "Messukeskus, Helsinki",
-    "description": "Junction on Euroopan suurin hackathon",
+    "description": "Junction on Euroopan suurin hackathon tapahtuma, joka kokoaa yhteen yli 1000 kehittäjää, suunnittelijaa ja yrittäjää.",
     "recurring": false,
     "recurrence": "",
-    "tag1": "hackathon",
-    "tag2": "koodausta",
-    "tag3": "verkostoitumista",
+    "tag1": "Hackathon",
+    "tag2": "Koodausta",
+    "tag3": "Verkostoitumista",
     "link": "https://hackjunction.com/"
 
   },
@@ -77,6 +77,43 @@
     "tag2": "Verkostoitumista",
     "tag3": "Ilmainen",
     "link": "https://www.kyberlahti.fi/"
+  },
+
+  {
+    "title": "Disobey 2026",
+    "date": "2026-02-13T09:00:00",
+    "showDate": true,
+    "location": "Kaapelitehdas, Helsinki",
+    "description": "Disobey on Suomen suurin hakkerointitapahtuma, joka yhdistää kyberturvallisuuden asiantuntijat, tutkijat ja harrastajat.",
+    "recurring": false,
+    "tag1": "Conference",
+    "tag2": "Hacking",
+    "tag3": "Verkostoitumista",
+    "link": "https://disobey.fi/2026/"
+  },
+
+  {
+    "title": " Online CTF",
+    "date": "2025-10-20T00:00:00",
+    "showDate": false,
+    "location": "Online",
+    "description": "TBA",
+    "recurring": false,
+    "tag1": "CTF",
+    "tag2": "Hakkerointi",
+    "tag3": "Kilpailu"
+  },
+
+  {
+    "title": "Orjentaatioviikon Info",
+    "date": "2025-08-25T10:00:00",
+    "showDate": false,
+    "location": "Haaga-Helia, Pasila",
+    "description": "Tervetuloa uudet opiskelijat! Kerho esittäytyy ja kertoo toiminnastaan.",
+    "recurring": false,
+    "tag1": "Orjentaatioviikko",
+    "tag2": "Tapahtuma",
+    "tag3": "Uudet opiskelijat"
   }
 
 

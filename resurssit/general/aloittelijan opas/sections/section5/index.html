@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Linux Basics</h1>
+            <p class="paragraph-secondary">SECTION 3</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="paragraph-secondary">
+                You have now successfully installed a hypervisor and set up Kali Linux, what now?
+                <br><br>
+                We use Kali Linux as our primary operating system for hacking activities, but there are many other
+                distros (Linux distributions). We use Kali because it comes pre-installed
+                with many tools that are useful for penetration testing and ethical hacking.
+                <br><br>
+            </p>
+
+            <div class="break-line"></div>
+
+            <h2 class="h4">What Now?</h2>
+            <p class="paragraph-secondary">
+                After setting up your Kali Linux environment, you might be wondering what to do next. This section will
+                guide you through the basic concepts of Linux, which is essential for any hacker. Understanding Linux
+                will help you navigate the system and use command-line tools.
+            </p>
+            <br>
+            <h2 class="h4">Packet manager & Text Editors</h2>
+            <p class="paragraph-secondary">
+                In Kali Linux, package management is handled through APT (Advanced Package Tool). You can use
+                commands like <code class="inline-code-snippet">apt-get</code> to install, update, and remove software
+                packages.
+                <br><br>
+            </p>
+            <p class="intermediate">
+                <span>⚠️ Note: There are a lot of other packet managers, but there are some security
+                    implications with using them, so we stick to APT for now.</span>
+            <p class="paragraph-secondary">
+                <br>
+                Text editors like <code class="inline-code-snippet">nano</code> and <code
+                    class="inline-code-snippet">vim</code>
+                are essential for editing configuration files and writing scripts in linux. Nano is easier to learn
+                for beginners, while Vim is more powerful and widely used in the industry.
+                <br><br>
+                But there is a good middle ground between the two, which is <a class="flapper-link"
+                    href="https://terokarvinen.com/tags/micro-editor/">micro</a>. This editor is also used 
+                    in Haaga-Helia by one of the lecturers, so you might wanna check it out!
+                <br><br>
+                You can find all the necessary instructions on how to install micro on the link above.
+            </p>
+            <br>
+            <div class="break-line"></div>
+
+            <h2 class="h4">Core Commands</h2>
+            <p class="paragraph-secondary">
+                Here is a list of which will get you started with mastering your Linux! I know it might look
+                bit intimidating, but best way to learn is to try them out! So open up your Linux terminal and get to
+                it, go through the commands and see what they do! H-T8 also gives you couple of tasks to do in this
+                manual after you studied a bit.
+            </p>
+
+            <div class="table-container">
+                <div class="scrollable">
+                    <table id="resourceTable">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ls</td>
+                                <td>List directory contents</td>
+                                <td>ls -l /home/santeri</td>
+                            </tr>
+                            <tr>
+                                <td>cd</td>
+                                <td>Change directory to</td>
+                                <td>cd /var/log</td>
+                            </tr>
+                            <tr>
+                                <td>pwd</td>
+                                <td>Show current directory path</td>
+                                <td>pwd</td>
+                            </tr>
+                            <tr>
+                                <td>cat</td>
+                                <td>Display contents of a file</td>
+                                <td>cat notes.txt</td>
+                            </tr>
+                            <tr>
+                                <td>less</td>
+                                <td>View file one page at a time</td>
+                                <td>less longfile.txt</td>
+                            </tr>
+                            <tr>
+                                <td>grep</td>
+                                <td>Search for patterns in files</td>
+                                <td>grep 'error' /var/log/syslog</td>
+                            </tr>
+                            <tr>
+                                <td>find</td>
+                                <td>Search for files and directories</td>
+                                <td>find /home -name "*.txt"</td>
+                            </tr>
+                            <tr>
+                                <td>wget</td>
+                                <td>Download files from the web</td>
+                                <td>wget http://example.com/file.zip</td>
+                            </tr>
+                            <tr>
+                                <td>curl</td>
+                                <td>Transfer data from or to a server</td>
+                                <td>curl -O http://example.com/file.zip</td>
+                            </tr>
+                            <tr>
+                                <td>nc (netcat)</td>
+                                <td>Network tool (port scanning, chat, etc.)</td>
+                                <td>nc -v -z 192.168.0.1 1-1000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <h2 class="h4">Bonus Essentials</h2>
+            <p class="paragraph-secondary">
+                Here are some additional essential Linux commands that will further enhance your command-line skills.
+                These commands are crucial for file management, system monitoring, and understanding your environment.
+            </p>
+            <br>
+            <p class="intermediate paragraph-secondary">
+                <span>⚠️ Tip: If you want to learn more about a specific command,
+                    you can use "man" to view its manual page. Example: <i>$ man ls</i>
+                </span>
+            </p>
+
+            <div class="table-container">
+                <div class="scrollable">
+                    <table id="resourceTable">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>echo</td>
+                                <td>Print text to terminal</td>
+                                <td>echo "Hello, hacking club!"</td>
+                            </tr>
+                            <tr>
+                                <td>man</td>
+                                <td>Show manual/help for a command</td>
+                                <td>man grep</td>
+                            </tr>
+                            <tr>
+                                <td>chmod</td>
+                                <td>Change file permissions</td>
+                                <td>chmod +x script.sh</td>
+                            </tr>
+                            <tr>
+                                <td>chown</td>
+                                <td>Change file ownership</td>
+                                <td>chown santeri:santeri notes.txt</td>
+                            </tr>
+                            <tr>
+                                <td>mkdir</td>
+                                <td>Make a new directory</td>
+                                <td>mkdir projects</td>
+                            </tr>
+                            <tr>
+                                <td>rm</td>
+                                <td>Remove a file or directory</td>
+                                <td>rm old_file.txt or rm -r old_folder</td>
+                            </tr>
+                            <tr>
+                                <td>cp</td>
+                                <td>Copy files and directories</td>
+                                <td>cp file.txt backup.txt</td>
+                            </tr>
+                            <tr>
+                                <td>mv</td>
+                                <td>Move or rename files</td>
+                                <td>mv file.txt archive.txt</td>
+                            </tr>
+                            <tr>
+                                <td>whoami</td>
+                                <td>Show your current username</td>
+                                <td>whoami</td>
+                            </tr>
+                            <tr>
+                                <td>top</td>
+                                <td>Real-time system resource usage</td>
+                                <td>top</td>
+                            </tr>
+                            <tr>
+                                <td>ps</td>
+                                <td>Show running processes</td>
+                                <td>ps aux</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">Exercise</h2>
+            <p class="paragraph-secondary">Here you get to put what you learned to the test, and we'll actually start
+                learning. Skills is not just reading and remembering. It's also failing and finding out!</p>
+            <ul class="numbered-list paragraph-secondary">
+                <li>Head to the website <a class="flapper-link"
+                        href="https://overthewire.org/wargames/bandit/bandit0.html">OverTheWire</a>
+                </li>
+                <li>Read the instructions carefully</li>
+                <li>Solve the challenges 0-8</li>
+            </ul>
+            <div class="space-100"></div>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section5-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section5-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section5-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section4/" class="nav-button">← Previous: Hypervisor (VM)</a>
+                <a href="../section6/" class="nav-button">Next: Continue →</a>
+            </div>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

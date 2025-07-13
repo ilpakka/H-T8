@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Common Weak Spots</h1>
+            <p class="paragraph-secondary">SECTION 5</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h4">What Is a Vulnerability?</h2>
+
+            <p class="paragraph-secondary">
+                A vulnerability is a weak spot in a system. A crack in the armor.
+                <br><br>
+                <strong>Hackers don't look at systems the way normal people do.</strong> Where a regular user sees a
+                website, a login form, a router. Hacker sees potential:
+            </p>
+            <ul class="paragraph-secondary general-list">
+                <li>That login form? Maybe the inputs aren't filtered.</li>
+                <li>That exposed service? Maybe it's running outdated software.</li>
+                <li>That "hidden" admin page? Maybe there's no access control.</li>
+            </ul>
+            <img class="image" src="/H-T8/assets/Screenshot 2025-07-13 at 14.54.56.png" alt="">
+            <p class="paragraph-secondary">
+                <strong>Vulnerabilities rarely exist alone.</strong> The real damage happens when you <i>combine</i>
+                weak spots, stacking small mistakes into full compromise.
+                <br><br>
+                Every vulnerability type has a question or a thing where it occurs. When you know where they occur, you
+                know where to focus your energy. This is mostly true with common vulnerabilities, that happen a lot.
+            </p>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">What Looks Innocent to Others — Looks Valuable to You</h2>
+
+            <ul class="paragraph-secondary general-list">
+                <li>Version numbers → fingerprinting targets.</li>
+                <li>Login forms → injection opportunities.</li>
+                <li>Open ports → exposed services.</li>
+                <li>Default creds → free access.</li>
+                <li>Error messages → information leakage.</li>
+            </ul>
+
+            <p class="paragraph-secondary">
+                A hacker sees systems like puzzle pieces. The trick is spotting how they fit together. Any kind of
+                information about the system is valuable. The better you can identify the system, the wider attack surface
+                you have. This helps you in the initial weak spot stage.
+                <br><br>
+                This is why the understanding of all systems is so important. In the beginning, you might not
+                understand the system, but you can still look for vulnerabilities. You can look for things that
+                look out of place, or things that look like they could be vulnerable.
+            </p>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section8-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section8-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section8-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section7/" class="nav-button">← Previous: Networks For Hackers</a>
+                <a href="../section9/" class="nav-button">Next: Continue →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

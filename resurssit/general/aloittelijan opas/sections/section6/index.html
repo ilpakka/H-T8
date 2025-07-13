@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Linux Basics — Tools</h1>
+            <p class="paragraph-secondary">SECTION 3</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="paragraph-secondary">
+                Good job on completing the OverTheWire Bandit challenges! You have now learned the basics of Linux
+                command line and file management.
+                <br><br>
+                This section introduces you to common command-line tools to check and explore networks.
+            </p>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">Networking Tools</h2>
+
+
+            <ul class="numbered-list paragraph-secondary">
+                <li>ping — Test if a computer is reachable</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Sends a small message to another computer to see if it's online
+                        and how fast the
+                        response is.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> You can check if your internet is working, or if a specific
+                        website or device
+                        is reachable.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ ping google.com</code>
+                        <strong>What it might show:</strong>
+
+                        <code class="code-snippet">
+                        PING google.com (142.250.200.142) 56(84) bytes of data <br>
+                        64 bytes from 142.250.200.142: icmp_seq=1 ttl=117 time=20.4 ms <br>
+                        64 bytes from 142.250.200.142: icmp_seq=2 ttl=117 time=21.1 ms
+                        </code>
+                    </p>
+                </ul>
+                <br>
+                <li>ip a — Show your computer's IP address</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Displays the IP addresses assigned to your computer's network
+                        interfaces.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> You can find out your computer's local and public IP
+                        addresses,
+                        which is important for
+                        networking.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ ip a</code>
+                        <strong>What it might show:</strong>
+
+                        <code class="code-snippet">
+                        2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; ... <br>
+                            inet 192.168.1.42/24 brd 192.168.1.255 scope global dynamic eth0
+                        </code>
+                    </p>
+                </ul>
+                <br>
+                <li>netstat or ss — See open ports and connections</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Lists the network connections your computer is making and ports
+                        it's listening on.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> Useful for spotting unexpected programs connecting to the
+                        internet or checking if your server is running.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ netstat -tulnp</code>
+                        <strong>What it might show:</strong>
+                    <pre class="code-snippet">
+Proto  Recv-Q Send-Q Local Address    Foreign Address  State   PID/Program name
+tcp        0      0  0.0.0.0:22      0.0.0.0:*        LISTEN  743/sshd
+udp        0      0  0.0.0.0:68      0.0.0.0:*        LISTEN  644/dhclient
+                        </pre>
+
+                    </p>
+                </ul>
+                <br>
+                <li>nmap — Scan other devices on the network</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Checks what ports are open on a remote device and tries to
+                        guess what services are running.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> Helps you understand what other devices are doing and if they
+                        might be vulnerable.
+                    </li>
+                    <p class="advanced">
+                        <span>🚫 Note: Scanning networks, devices and services without permission is illegal! Only scan
+                            your own devices or those you have explicit permission to test.
+                        </span>
+                    </p>
+                    <br>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ nmap -sV 192.168.1.10</code>
+                        <strong>What it might show:</strong>
+
+                    <pre class="code-snippet">
+Nmap scan report for 192.168.1.1
+Host is up (0.0010s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh      OpenSSH 8.2
+80/tcp   open  http     Apache httpd 2.4.41
+                        </pre>
+                    </p>
+                </ul>
+                <br>
+                <li>arp-scan — Discover devices on your local network</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Finds every device connected to the same Wi-Fi or LAN.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> Great way to see who's sharing your network, even hidden or
+                        unnamed devices.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ sudo arp-scan --interface=eth0 --localnet</code>
+                        <strong>What it might show:</strong>
+
+                    <pre class="code-snippet">
+192.168.1.1  00:11:22:33:44:55  TP-Link Technologies
+192.168.1.42 00:0c:29:ab:cd:ef  Raspberry Pi Foundation
+                    </pre>
+                    </p>
+                </ul>
+            </ul>
+            </div>
+
+            <div class="break-line"></div>
+
+            <h2 class="h4">Bonus tools</h2>
+
+            <ul class="numbered-list paragraph-secondary">
+                <li>traceroute — Follow the path to a website</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Shows every server your data passes through on its way to a
+                        website.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> Helps spot where network delays or issues might be happening.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ traceroute example.com</code>
+                    </p>
+                </ul>
+                <br>
+                <li>dig or nslookup — Check domain name info (DNS)</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Asks the internet's “phone book” what IP address a domain (like
+                        <code class="inline-code-snippet">bing.com</code>) uses.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> Understanding DNS is key to how the web works.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ dig example.com</code>
+                    </p>
+                </ul>
+                <br>
+                <li>tcpdump — Capture all network traffic (advanced)</li>
+                <ul>
+                    <li>
+                        <strong>What it does:</strong> Records packets (tiny data chunks) going in and out of your
+                        computer.
+                    </li>
+                    <li>
+                        <strong>Why it's useful:</strong> Very powerful for analyzing or debugging network behavior.
+                    </li>
+                    <p>
+                        <strong>Example:</strong>
+                        <code class="code-snippet">$ sudo tcpdump -i eth0</code>
+                    </p>
+                </ul>
+            </ul>
+            <div class="break-line"></div>
+            <br>
+            <h2 class="h4">Exercise</h2>
+            <p class="paragraph-secondary">
+                Now that you know the basics of networking tools, it's time to practice!
+                <br><br>
+            </p>
+            <ul class="numbered-list paragraph-secondary">
+                <li>Get back to overthewire and complete exercises 14-20! <i>(I know you need to complete 9-13 before
+                        you
+                        get the password to get here, but greatness has never been without a cost!)</i></li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary intermediate">
+                <span>⚠️ Reminder: Always get permission before scanning or sniffing any network. Stick to school labs,
+                    virtual machines or your own LAN.</span>
+            </p>
+
+            <div class="space-100"></div>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section6-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section6-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section6-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section5/" class="nav-button">← Previous: Linux Basics</a>
+                <a href="../section7/" class="nav-button">Next: Networks In Hacking →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

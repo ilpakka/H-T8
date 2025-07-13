@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Networks for hackers</h1>
+            <p class="paragraph-secondary">SECTION 4</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h4">What Are Networks?</h2>
+
+            <p class="paragraph-secondary">A network is a group of interconnected devices (like computers, phones and
+                servers) that communicate and share resources. Networks allow data to travel between devices, enabling
+                things like internet access, file sharing and online communication.
+            </p>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">OSI Model</h2>
+
+            <p class="paragraph-secondary">The OSI model is a framework used to understand how networking protocols
+                interact and how data travels across a network. Even though this is probably the most boring part of
+                hacking, it is important to understand the basics of how networks work.
+            </p>
+            <img class="image" src="/H-T8/assets/Screenshot 2025-07-13 at 14.19.58.png" alt="">
+            <p class="paragraph-secondary">It is important to know how OSI-layers work because each of the layers has
+                their own security risks and vulnerabilities:
+            </p>
+            <ul class="paragraph-secondary general-list">
+                <li>Physical Layer: Hardware tampering or wiretapping.</li>
+                <li>Data Link Layer: MAC address spoofing or ARP poisoning.</li>
+                <li>Network Layer: IP address spoofing or routing attacks.</li>
+                <li>Transport Layer: Session hijacking or TCP/IP attacks.</li>
+                <li>Application Layer: Malware, phishing or SQL injections.</li>
+            </ul>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">Notable network devices and their functions</h2>
+
+            <ul class="paragraph-secondary general-list">
+                <li><strong>Router:</strong> Directs data between networks and connects a LAN to the internet.</li>
+                <li><strong>Firewall:</strong> Monitors and controls incoming/outgoing network traffic for security.
+                </li>
+                <li><strong>Server:</strong> Provides services or resources <i>(like websites or files)</i> to other
+                    devices.</li>
+                <li><strong>Client:</strong> A device that requests services from a server <i>(e.g., your laptop
+                        accessing a website)</i>.</li>
+            </ul>
+            <br>
+            <h2 class="h4">Notable protocols and common exploits/vulnerabilities</h2>
+            <ul class="paragraph-secondary general-list">
+                <li><strong>HTTP/HTTPS:</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Used for web traffic.</li>
+                        <li>Exploited via attacks like XSS, SQL injection, and man-in-the-middle (MITM).</li>
+                    </ul>
+                </li>
+                <li><strong>DNS (Domain Name System):</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Translates domain names to IP addresses.</li>
+                        <li>Vulnerable to DNS spoofing, cache poisoning, and tunneling.</li>
+                    </ul>
+                </li>
+                <li><strong>FTP (File Transfer Protocol):</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Transfers files between systems.</li>
+                        <li>Often targeted due to weak authentication or unencrypted data.</li>
+                    </ul>
+                </li>
+                <li><strong>SMB (Server Message Block):</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Used for file and printer sharing in Windows networks.</li>
+                        <li>Exploited in attacks like WannaCry ransomware (via EternalBlue vulnerability).</li>
+                    </ul>
+                </li>
+                <li><strong>SSH (Secure Shell):</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Secure remote login.</li>
+                        <li>Targeted for brute-force attacks or credential theft.</li>
+                    </ul>
+                </li>
+                <li><strong>ICMP (Internet Control Message Protocol):</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Used for diagnostics (e.g., ping).</li>
+                        <li>Can be abused in DDoS or network reconnaissance.</li>
+                    </ul>
+                </li>
+                <li><strong>ARP (Address Resolution Protocol):</strong>
+                    <ul class="paragraph-secondary general-list-inner">
+                        <li>Maps IP addresses to MAC addresses.</li>
+                        <li>Vulnerable to ARP spoofing/poisoning.</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary intermediate">
+                <span>⚠️ Note: Technical vulnerabilities are really common, because of misconfigurations, outdated
+                    software and lack of security awareness. The code itself is often not the problem, but rather the
+                    way it is used or configured.
+                </span>
+            </p>
+            <div class="break-line"></div>
+            <h2 class="h4">Exercise</h2>
+            <p class="paragraph-secondary">This exercise will help you understand how these things apply
+                in practice.
+            </p>
+            <ul class="numbered-list paragraph-secondary">
+                <li>Scan your home network using a tool like Nmap and Arp-scan</li>
+                <li>Identify open ports and services running on your devices</li>
+                <li>Check for any unauthorized devices connected to your network</li>
+                <li>Document your findings and take action if needed</li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary">This exercise will help you understand how networks work and how to identify
+                potential vulnerabilities in your own network. It is important to practice these skills in a safe and
+                legal environment, such as your own home network.
+            </p>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section7-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section7-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section7-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section6/" class="nav-button">← Previous: Linux Basics — Tools</a>
+                <a href="../section8/" class="nav-button">Next: Basic vulnerabilities →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

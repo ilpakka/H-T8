@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Basic Hacking Environment</h1>
+            <p class="paragraph-secondary">SECTION 2</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h4">Why the right environment matters?</h2>
+            <p class="paragraph-secondary">
+                Having the right environment is crucial for effective hacking. Doing it the
+                right way ensures you can test and learn without risking your main system.
+                <br><br>
+                <strong>What are the benefits:</strong>
+            </p>
+            <ul class="general-list paragraph-secondary">
+                <li>You get isolation from your main system</li>
+                <li>It's a safe space to experiment</li>
+                <li>Environment repeatability</li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary intermediate">
+                <span>⚠️ It's like defusing a bomb: you will not defuse it on your kitchen table,
+                    but in a safe place.
+                </span>
+            </p>
+            <br>
+
+            <div class="break-line"></div>
+
+            <h2 class="h4">What are your options?</h2>
+            <p class="paragraph-secondary">
+                There are several ways to set up your hacking environment. The most common
+                methods include:
+            </p>
+            <ul class="numbered-list paragraph-secondary">
+                <li>Virtual Machines (VMs)</li>
+                <li>Docker Containers</li>
+                <li>Dedicated Hacking Hardware</li>
+                <li>USB Live Environments</li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary">
+                Each method has its own advantages and disadvantages. The choice depends on
+                your needs, resources, and preferences.
+            </p>
+            <br>
+            <p class="paragraph-secondary">
+                We are going to focus on Virtual Machines (VMs) in this section, as they
+                provide a good balance of isolation, flexibility, and ease of use.
+                <br><br>
+                This is the method we use in the club.
+            </p>
+
+            <div class="space-100"></div>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section3-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section3-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section3-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section2/" class="nav-button">← Previous: Who Hacking Fits</a>
+                <a href="../section4/" class="nav-button">Next: Hypervisor (VM) →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

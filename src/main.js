@@ -1,7 +1,7 @@
 import { renderEvents } from './modules/events.js';
 import { setupHamburgerMenu } from './modules/hamburgerMenu.js';
 import { initializeFlapperLinks } from './modules/linkHoverEffect.js';
-import { showOverlay, hideOverlay, initializeOverlayTransitions } from './modules/pageTransition.js';
+import { hideOverlay } from './modules/pageTransition.js';
 import { generateBreadcrumbs } from './modules/breadcrumbs.js';
 import { setupPagination } from './modules/pagination.js';
 import { setupTableSearch } from './modules/tableSearch.js';
@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveNavLink();
     setupHamburgerMenu();
     initializeFlapperLinks();
-    initializeOverlayTransitions();
-    showOverlay();
+
     hideOverlay();
     generateBreadcrumbs();
     setupPagination();

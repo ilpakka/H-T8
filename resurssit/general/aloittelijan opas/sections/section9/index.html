@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Common Weak Spots</h1>
+            <p class="paragraph-secondary">SECTION 5</p>
+
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h4">The Main Types of Vulnerabilities</h2>
+
+            <div class="vulnerability-grid">
+                <div class="vulnerability-card">
+                    <div class="vulnerability-header">
+                        <h3 class="h4">1. Misconfiguration</h3>
+                    </div>
+                    <div class="vulnerability-content">
+                        <div class="paragraph-secondary">
+                            <strong>What:</strong> System set up wrong or left wide open.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Where:</strong> Exposed admin panels, open ports, default settings.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Impact:</strong> Easy unauthorized access, pivot points.
+                        </div>
+                        <div class="vulnerability-example">
+                            <strong>Example:</strong> Jenkins web UI exposed to the internet with no auth.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vulnerability-card">
+                    <div class="vulnerability-header">
+                        <h3 class="h4">2. Injection</h3>
+                    </div>
+                    <div class="vulnerability-content">
+                        <div class="paragraph-secondary">
+                            <strong>What:</strong> Sending input that executes unintended commands or queries.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Where:</strong> Web forms, APIs, search boxes.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Impact:</strong> Database dumps, remote code execution, system compromise.
+                        </div>
+                        <div class="vulnerability-example">
+                            <strong>Example:</strong> SQL Injection: <code class="inline-code-snippet">' OR 1=1--</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vulnerability-card">
+                    <div class="vulnerability-header">
+                        <h3 class="h4">3. Broken Access Control</h3>
+                    </div>
+                    <div class="vulnerability-content">
+                        <div class="paragraph-secondary">
+                            <strong>What:</strong> Access granted without proper checks.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Where:</strong> Hidden URLs, API endpoints, user role flaws.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Impact:</strong> Privilege escalation, unauthorized admin access.
+                        </div>
+                        <div class="vulnerability-example">
+                            <strong>Example:</strong> <code class="inline-code-snippet">/admin</code> page accessible without authentication.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vulnerability-card">
+                    <div class="vulnerability-header">
+                        <h3 class="h4">4. Insecure Defaults</h3>
+                    </div>
+                    <div class="vulnerability-content">
+                        <div class="paragraph-secondary">
+                            <strong>What:</strong> Systems ship insecure, often with default creds or settings.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Where:</strong> IoT devices, CMS installs, routers.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Impact:</strong> Initial access without effort.
+                        </div>
+                        <div class="vulnerability-example">
+                            <strong>Example:</strong> Router with default <code class="inline-code-snippet">admin:admin</code> login.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vulnerability-card">
+                    <div class="vulnerability-header">
+                        <h3 class="h4">5. Unpatched Vulnerabilities</h3>
+                    </div>
+                    <div class="vulnerability-content">
+                        <div class="paragraph-secondary">
+                            <strong>What:</strong> Known software flaws left unfixed.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Where:</strong> Everywhere — operating systems, web servers, apps.
+                        </div>
+                        <div class="paragraph-secondary">
+                            <strong>Impact:</strong> Known exploits work out of the box.
+                        </div>
+                        <div class="vulnerability-example">
+                            <strong>Example:</strong> EternalBlue exploited SMB flaw <i>(CVE-2017-0144)</i>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="space-50"></div>
+            <div class="break-line"></div>
+            <br>
+            <h2 class="h4">How Hackers Really Use Vulnerabilities</h2>
+
+            <p class="paragraph-secondary">
+                Hackers don't care about <i>individual</i> vulnerabilities, they care about <strong>attack
+                    chains</strong>. One
+                vulnerability is just one step closer to valuable data.
+                <br><br>
+                <strong>The cycle looks like this:</strong>
+            </p>
+            <ul class="paragraph-secondary numbered-list">
+                <li><strong>Find weak spot #1</strong> — maybe low impact alone.</li>
+                <li><strong>Pivot</strong> — use that to access another system or escalate.</li>
+                <li><strong>Stack weak spots</strong> — chain vulnerabilities.</li>
+                <li><strong>Full compromise</strong> — access, control, persistence.</li>
+            </ul>
+            <img class="image" src="/H-T8/assets/Pasted image 20250701010904.png" alt="">
+            <br>
+            <div class="break-line"></div>
+            <br>
+            <h2 class="h4">Your Key Resource: CVE.org</h2>
+            <p class="paragraph-secondary">
+                The <a class="flapper-link" href="https://www.cve.org/" target="_blank">CVE database</a> is your go-to
+                for vulnerability
+                information.
+                <br><br>
+                <strong>CVE = Common Vulnerabilities and Exposures</strong>
+                <br><br>
+                It lists vulnerabilities with IDs like <code>CVE-2023-12345</code>, providing:
+            </p>
+            <ul class="paragraph-secondary general-list">
+                <li>Search for software, version numbers, keywords.</li>
+                <li>Get vulnerability ID, description, severity.</li>
+                <li>See how others exploit flaws.</li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary">
+                Example Workflow:
+            </p>
+            <ul class="paragraph-secondary numbered-list">
+                <li>You scan a system → find it's running Apache 2.4.49.</li>
+                <li>You search <code class="inline-code-snippet">Apache 2.4.49 vulnerability</code> on cve.org.</li>
+                <li>You find CVE-2021-41773. A path traversal + RCE exploit.</li>
+                <li>Now you know there's a known weakness. You research the exploit and test safely in lab.</li>
+            </ul>
+            <br>
+            <p class="paragraph-secondary intermediate">
+                <span>⚠️ Rule: Always verify versions before attacking blindly. Smart hackers research and test
+                    first.</span>
+            </p>
+            <div class="space-100"></div>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section9-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section9-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section9-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section8/" class="nav-button">← Previous: Common Weak Spots</a>
+                <a href="../section10/" class="nav-button">Next: Continue →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>

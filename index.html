@@ -23,149 +23,172 @@
 
 
 
-    <section class="page-content">
-
-      <section class="hero">
+    <section class="front-page">
+      <!-- Quick links sidebar - 20% width -->
+      <aside class="quick-links-sidebar">
         <div class="container">
-          <div>
-            <h1 class="h1-hero">H-T8: Murra salaus. Hallitse järjestelmää.</h1>
-            <p class="paragraph-hero"> Oletko valmis astumaan hakkeroinnin maailmaan? H-T8 on paikka, jossa tutustut
-              kybermaailman saloihin, opit perusteet ja kehityt huipputaitavaksi hakkeriksi. Meillä ei ole rajoja –
-              olitpa aloittelija tai kokenut konkari, täällä pääset haastamaan itseäsi.
-            </p>
-          </div>
+          <nav class="quick-links-nav">
+
+            <h2 class="paragraph-secondary">Social</h2>
+            <div class="break-line"></div>
+            <ul>
+              <li><a class="flapper-link" href="/H-T8/hall of fame/">Hall of Fame</a></li>
+              <li><a class="flapper-link" href="https://discord.gg/gv2FCm3JU5" target="_blank">Discord</a></li>
+            </ul>
+            <h2 class="paragraph-secondary">Resources</h2>
+            <div class="break-line"></div>
+            <ul>
+              <li><a class="flapper-link" href="https://www.cve.org/">CVE.org</a></li>
+              <li><a class="flapper-link" href="https://www.exploit-db.com/">Exploit-DB</a></li>
+              <li><a class="flapper-link" href="https://cheatsheetseries.owasp.org/">OWASP Cheat Sheets</a></li>
+              <li><a class="flapper-link" href="https://github.com/swisskyrepo/PayloadsAllTheThings">Payloads All The
+                  Things</a></li>
+            </ul>
+            <h2 class="paragraph-secondary">Learning</h2>
+            <div class="break-line"></div>
+            <ul>
+              <li><a class="flapper-link" href="https://www.hackthebox.com/">Hack The Box</a></li>
+              <li><a class="flapper-link" href="https://overthewire.org/wargames/bandit/">OverTheWire</a></li>
+              <li><a class="flapper-link" href="https://pwncollege.com/">Pwn College</a></li>
+            </ul>
+            <h2 class="paragraph-secondary">Tools</h2>
+            <div class="break-line"></div>
+            <ul>
+              <li><a class="flapper-link" href="https://www.kali.org/">Kali Linux</a></li>
+              <li><a class="flapper-link" href="https://nmap.org/">Nmap</a></li>
+              <li><a class="flapper-link" href="https://www.wireshark.org/">Wireshark</a></li>
+              <li><a class="flapper-link" href="https://www.metasploit.com/">Metasploit</a></li>
+            </ul>
+
+          </nav>
         </div>
-      </section>
+      </aside>
 
+      <!-- Main content area - 80% width -->
+      <main class="main-content">
 
-      <section class="about">
-        <div class="container">
-          <div class="introduction">
+        <h1 class="h1">HAKKEROINTIKERHO H-T8</h1>
+        <div class="space-50"></div>
 
-            <h2 class="h2">Tietoa</h2>
-
-            <p class="paragraph-secondary">H-T8 on porttisi eettisen hakkeroinnin ja kyberturvallisuuden jännittävään
-              maailmaan. Olemme opiskelijavetoinen klubi, joka keskittyy teknologian salaisuuksien avaamiseen ja
-              vastuullisten digitaalisten käytäntöjen edistämiseen.
-            </p>
-            <br> >
-            <p class="paragraph-secondary">
-              Oletpa sitten fuksi tai alan konkari, kaikki Haaga-Helian tietojenkäsittelyn opiskelijat ovat lämpimästi
-              tervetulleita mukaan toimintaan! Sukella käytännön toimintaan, opi asiantuntijoilta ja liity
-              yhteisöön, joka muokkaa tekniikan tulevaisuutta.
-
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <div class="space-150"></div>
-
-      <section class="activities">
-        <div class="container">
-          <h2 class="h2">Toiminta</h2>
-          <div class="activity-cards">
-            <div class="activity-card">
-              <a href="/H-T8/toiminta/">
-                <img src="/H-T8/assets/tietoa1.webp" alt="">
-                <h3 class="h4">Hacking Nights</h3>
-                <p class="paragraph-secondary">
-                  Osallistu viikoittaisiin hakkerointi iltoihin, joissa pääset
-                  harjoittelemaan hakkerointia ja oppimaan uutta tiimin kanssa.
-                  <br><br>
-                  Joka kuukausi käymme eri moduulia läpi yhdessä. Joten vaikka et olisi
-                  paikalla joka kerta, voit silti osallistua ja oppia uutta.
-                </p>
-              </a>
+        <div class="card-container">
+          <a href="/H-T8/resurssit/general/aloittelijan opas/" class="card">
+            <div class="card-image hide-on-mobile">
+              <img style="filter: brightness(0.9);" src="/H-T8/assets/Aloittelijan_opas.webp" alt="">
             </div>
-            <div class="activity-card">
-              <a href="/H-T8/toiminta/">
-                <img src="/H-T8/assets/tietoa3.webp" alt="">
-                <h3 class="h4">Ovi hakkeroinnin maailmaan</h3>
-                <p class="paragraph-secondary">
-                  Käymme myös kerhona muiden yhdistysten ja järjestöjen tilaisuuksissa ja
-                  tapahtumissa. Osa jäsenistämme on myös muissa yhdistyksissä ja järjestöissä
-                  mukana ja toimimme yhteistyössä muiden yhdistysten kanssa.
-                </p>
-              </a>
+            <div class="card-content">
+              <h2 class="h3">Hacker Bible</h2>
+              <p class="paragraph-secondary">
+                "Hacker Bible" on perusta, josta aloittaa hakkeroinnin opiskelu. Se sisältää
+                perusasioita hakkeroinnista, kuten hakkerointi ympäristön, verkkojen toiminta hakkeroinnissa,
+                perus haavoittuvuudet sekä perus työkalut.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Basics</span>
+                <span class="tag">Hacking fundamentals</span>
+                <span class="tag">Getting Started With Hacking</span>
+              </div>
+
             </div>
-            <div class="activity-card">
-              <a href="/H-T8/toiminta/">
-                <img src="/H-T8/assets/tietoa2.webp" alt="">
-                <h3 class="h4">CTF kilpailut</h3>
-                <p class="paragraph-secondary">
-                  Osallistu kilpailuihin, joissa pääset testaamaan taitojasi ja
-                  ratkaisemaan haasteita tiimin kanssa. CTF-kilpailut ovat loistava
-                  tapa oppia uutta ja kehittää osaamistasi.
-                </p>
-              </a>
-            </div>
-            <div class="activity-card">
-              <a href="/H-T8/toiminta/">
-                <img src="/H-T8/assets/tietoa4.webp" alt="">
-                <h3 class="h4">Tapahtumat</h3>
-                <p class="paragraph-secondary">
-                  Kerho järjestää erilaisia tapahtumia yhteistyössä muiden ainejärjestöjen ja
-                  yhteistyökumppaneiden kanssa. Tapahtumissa pääset kuulemaan alan ammattilaisten
-                  puheenvuoroja ja verkostoitumaan muiden opiskelijoiden kanssa.
-                  <br><br>
-
-                </p>
-              </a>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
-
-      <div class="space-150"></div>
-
-      <section class="contacts">
-        <div class="container">
-          <h2 class="h2">Tulevat Tapahtumat</h2>
-          <div class="space-50"></div>
-
-
-          <div class="events-container-all"></div>
-      </section>
-
-      <div class="space-300"></div>
-
-      <h2 class="h2">Miten toimintaan pääsee mukaan?</h2>
-      <p class="paragraph-secondary">
-        <br>
-        Hakkerointikerho H-T8 on avoin kaikille Haaga-Helian tietojenkäsittelyn opiskelijoille <i>(Myös Metropolian ja
-          Laurean opiskelijat
-          ovat tervettulleita)</i>. Jotta voit osallistua
-        kerhon toimintaan, sinun tulee liittyä kerhon Discord-kanavalle.
-        <br><br>
-      </p>
-      <div class="icon-container">
-        <div class="icon-link">
-          <a class="icon" href="https://discord.gg/gv2FCm3JU5" target="_blank">
-            <img src="/H-T8/assets/icons8-discord-50.png" alt="Discord Icon">
           </a>
-          <p class="paragraph-secondary">Liity Kanavalle</p>
         </div>
-        <div class="icon-link">
-          <a class="icon" href="mailto:robin.niinemets@myy.haaga-helia.fi">
-            <img src="/H-T8/assets/icons8-email-50.png" alt="Email Icon">
-          </a>
-          <p class="paragraph-secondary">Kysy Lisää</p>
-        </div>
-      </div>
-      <p class="paragraph-secondary">
-        <br><br>
-        Viralliseksi jäseneksi pääsee osallistumalla ainakin
-        yhteen kerhon tapahtumaan ja suorittamalla kerhon jäsenyyteen liittyvän ilmottautumisen.
-        <br><br>
+
+        <div class="space-50"></div>
 
 
-        Tapahtumista ja kokoontumisista tiedotetaan kerhon Discord-kanavalla ja kotisivuilla. Joten seuraa molempia
-        aktiivisesti, jotta et jää paitsi tulevista tapahtumista.
-      </p>
+        <section class="contacts">
+          <div class="container">
+            <h2 class="h2">Tulevat Tapahtumat</h2>
+            <div class="space-50"></div>
+            <div class="events-container-all"></div>
+          </div>
+        </section>
+
+        <div class="space-150"></div>
+
+        <section class="activities">
+          <div class="container">
+            <h2 class="h2">Toiminta</h2>
+            <div class="activity-cards">
+              <div class="activity-card">
+                <a href="/H-T8/toiminta/">
+                  <img src="/H-T8/assets/tietoa3.webp" alt="">
+                  <h3 class="h4">Ovi hakkeroinnin maailmaan</h3>
+                  <p class="paragraph-secondary">
+                    Käymme myös kerhona muiden yhdistysten ja järjestöjen tilaisuuksissa ja
+                    tapahtumissa. Osa jäsenistämme on myös muissa yhdistyksissä ja järjestöissä
+                    mukana ja toimimme yhteistyössä muiden yhdistysten kanssa.
+                  </p>
+                </a>
+              </div>
+              <div class="activity-card">
+                <a href="/H-T8/toiminta/">
+                  <img src="/H-T8/assets/tietoa2.webp" alt="">
+                  <h3 class="h4">CTF kilpailut</h3>
+                  <p class="paragraph-secondary">
+                    Osallistu kilpailuihin, joissa pääset testaamaan taitojasi ja
+                    ratkaisemaan haasteita tiimin kanssa. CTF-kilpailut ovat loistava
+                    tapa oppia uutta ja kehittää osaamistasi.
+                  </p>
+                </a>
+              </div>
+              <div class="activity-card">
+                <a href="/H-T8/toiminta/">
+                  <img src="/H-T8/assets/tietoa4.webp" alt="">
+                  <h3 class="h4">Tapahtumat</h3>
+                  <p class="paragraph-secondary">
+                    Kerho järjestää erilaisia tapahtumia yhteistyössä muiden ainejärjestöjen ja
+                    yhteistyökumppaneiden kanssa. Tapahtumissa pääset kuulemaan alan ammattilaisten
+                    puheenvuoroja ja verkostoitumaan muiden opiskelijoiden kanssa.
+                    <br><br>
+
+                  </p>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </section>
+
+        <div class="space-150"></div>
+
+        <section class="join-section">
+          <h2 class="h2">Miten toimintaan pääsee mukaan?</h2>
+          <p class="paragraph-secondary">
+            <br>
+            Hakkerointikerho H-T8 on avoin kaikille Haaga-Helian tietojenkäsittelyn opiskelijoille <i>(Myös Metropolian
+              ja
+              Laurean opiskelijat
+              ovat tervettulleita)</i>. Jotta voit osallistua
+            kerhon toimintaan, sinun tulee liittyä kerhon Discord-kanavalle.
+            <br><br>
+          </p>
+          <div class="icon-container">
+            <div class="icon-link">
+              <a class="icon" href="https://discord.gg/gv2FCm3JU5" target="_blank">
+                <img src="/H-T8/assets/icons8-discord-50.png" alt="Discord Icon">
+              </a>
+              <p class="paragraph-secondary">Liity Kanavalle</p>
+            </div>
+            <div class="icon-link">
+              <a class="icon" href="mailto:robin.niinemets@myy.haaga-helia.fi">
+                <img src="/H-T8/assets/icons8-email-50.png" alt="Email Icon">
+              </a>
+              <p class="paragraph-secondary">Kysy Lisää</p>
+            </div>
+          </div>
+          <p class="paragraph-secondary">
+            <br><br>
+            Viralliseksi jäseneksi pääsee osallistumalla ainakin
+            yhteen kerhon tapahtumaan ja suorittamalla kerhon jäsenyyteen liittyvän ilmottautumisen.
+            <br><br>
+
+            Tapahtumista ja kokoontumisista tiedotetaan kerhon Discord-kanavalla ja kotisivuilla. Joten seuraa molempia
+            aktiivisesti, jotta et jää paitsi tulevista tapahtumista.
+          </p>
+        </section>
+      </main>
 
     </section>
     <div class="space-150"></div>

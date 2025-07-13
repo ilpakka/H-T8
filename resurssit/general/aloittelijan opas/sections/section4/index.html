@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H-T8 on Haaga-Helian tietojenkäsittelijöille suunnattu kerho hakkerointikerho.">
+    <title>Hakkerointikerho H-T8</title>
+    <link rel="stylesheet" href="/H-T8/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/H-T8/assets/main_logo.webp">
+    <script type="module" src="/H-T8/src/main.js" defer></script>
+    <script type="module" src="/H-T8/src/modules/progressTracker.js" defer></script>
+</head>
+
+<body>
+    <div id="transition-overlay" class="active"></div>
+    <main>
+        <div id="header-container"></div>
+        <section class="page-content">
+
+            <div class="space-50"></div>
+
+            <h1 class="h2">Hypervisor (Virtual Machine)</h1>
+            <p class="paragraph-secondary">SECTION 2</p>
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">Your Progress</div>
+                    <div class="progress-stats">x of x sections completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill">
+                        <span class="progress-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h4">What is a Hypervisor?</h2>
+            <p class="paragraph-secondary">
+                A hypervisor is software that splits the host PC's resources into multiple virtual computers.
+                <br><br>
+                These virtual computers, also known as virtual machines (VMs), have their own dedicated resources (RAM,
+                CPU, etc.) and do not share anything with each other unless you explicitly configure them to
+            </p>
+            <br>
+            <p class="paragraph-secondary">Some example hypervisors:</p>
+
+            <ul class="general-list paragraph-secondary">
+                <li><a class="flapper-link" href="https://www.virtualbox.org/">VirtualBox</a>: Windows, Mac, Linux</li>
+                <li><a class="flapper-link"
+                        href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/overview">HyperV</a>:
+                    Windows</li>
+                <li><a class="flapper-link" href="https://www.vmware.com/products/workstation-pro.html">VMware
+                        Workstation/Fusion</a>: Windows, Mac, Linux</li>
+            </ul>
+
+            <div class="break-line"></div>
+
+            <h3 class="h4">Types of Hypervisors</h3>
+            <p class="paragraph-secondary">
+                There are two main types of hypervisors:
+                <br>
+            </p>
+            <ul class="numbered-list paragraph-secondary">
+                <li> Installs directly on bare metal (the physical hardware) and is significantly faster than Type 2
+                    hypervisors</li>
+                <img src="/H-T8/assets/Screenshot 2025-07-12 at 23.44.06.png" alt="">
+                <li><strong>Type 2 Hypervisor:</strong> Runs on top of a host operating system, making it easier to set
+                    up but less efficient.</li>
+                <img src="/H-T8/assets/Screenshot 2025-07-12 at 23.43.40.png" alt="">
+
+            </ul>
+            </p>
+
+            <div class="break-line"></div>
+            <h3 class="h4">Why Do We Use Hypervisors?</h3>
+            <ul class="general-list paragraph-secondary">
+                <li>
+                    Hypervisors create isolated environments, which makes them ideal for safely studying malware
+                </li>
+                <li>
+                    You can create snapshots of virtual machines, allowing you to test or break things, then restore
+                    them easily
+                </li>
+                <li>
+                    They're useful for learning new operating systems without needing separate hardware
+                </li>
+                <li>
+                    You can build entire virtual networks with multiple machines to practice penetration testing
+                </li>
+
+            </ul>
+            <br>
+            <div class="break-line"></div>
+            <h3 class="h4">Setting Up a Hypervisor</h3>
+            <p class="paragraph-secondary">
+                Enable virtualization in your computer's BIOS.
+            </p>
+            <ul class="general-list paragraph-secondary">
+                <li>You can check if virtualization is already enabled by opening Task Manager:</li>
+                <img src="/H-T8/assets/Screenshot 2025-07-12 at 23.52.59.png" alt="">
+                <li>If it's not enabled, you'll need to access your BIOS settings and enable Intel VT-x or AMD-V,
+                    depending on your CPU.
+            </ul>
+            <br>
+            <p class="paragraph-secondary intermediate">
+                <span>⚠️ Since we recommend using Kali Linux for learning purposes, you can download pre-made virtual
+                    machine images from <a style="text-decoration: underline; color: inherit"
+                        href="https://www.kali.org/get-kali/#kali-virtual-machines">Kali’s official website</a></span>
+            </p>
+            <br>
+            <p class="paragraph-secondary">
+                Here are some tutorial videos on how to install Kali Linux on each of the hypervisors listed above:
+            </p>
+            <br>
+            <p class="paragraph-secondary">VirtualBox:</p>
+            <ul class="general-list paragraph-secondary">
+                <li><a class="flapper-link" href="https://www.youtube.com/watch?v=wX75Z-4MEoM&t=905s">Installation Guide</a></li>
+                <li><a class="flapper-link" href="https://www.youtube.com/watch?v=MPkni85O9JA">Install Kali</a></li>
+            </ul>
+            <p class="paragraph-secondary">HyperV:</p>
+            <ul class="general-list paragraph-secondary">
+                <li><a class="flapper-link" href="https://www.youtube.com/watch?v=TGmjaK_dUGc&t">Installation Guide</a></li>
+            </ul>
+            <p class="paragraph-secondary">VMware:</p>
+            <ul class="general-list paragraph-secondary">
+                <li><a class="flapper-link" href="https://www.youtube.com/watch?v=A1Bm9KmPQ0o">Installation Guide</a></li>
+            </ul>
+            <br>
+            <div class="break-line"></div>
+            <h2 class="h4">Exercise</h2>
+            <ul class="numbered-list paragraph-secondary">
+                <li>Install a hypervisor of your choice</li>
+                <li>Download the Kali Linux virtual machine image from the official website</li>
+                <li>Import the Kali Linux image into your hypervisor</li>
+                <li>Start the Kali Linux virtual machine and ensure it runs correctly</li>
+
+            </ul>
+
+            <p class="paragraph-secondary">
+                If you run into any issues, feel free to ask for help on our <a class="flapper-link" href="https://discord.gg/gv2FCm3JU5">Discord server</a>
+            </p>
+
+            <!-- Section Completion Checkbox -->
+            <div class="section-completion">
+                <div class="container">
+                    <input type="checkbox" id="section4-completed" class="section-completion-checkbox"
+                        style="display: none;">
+                    <label for="section4-completed" class="check">
+                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                            <path
+                                d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z">
+                            </path>
+                            <polyline points="1 9 7 14 15 4"></polyline>
+                        </svg>
+                    </label>
+                </div>
+                <label for="section4-completed" class="section-completion-label">
+                    Mark this section as completed
+                </label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <a href="../section3/" class="nav-button">← Previous: Basic Environment</a>
+                <a href="../section5/" class="nav-button">Next: Linux Basics →</a>
+            </div>
+
+            <div class="space-100"></div>
+        </section>
+        <div id="footer-container"></div>
+    </main>
+
+    <script>
+        // Initialize progress tracker for this section
+        document.addEventListener('DOMContentLoaded', function () {
+            const initializeProgress = () => {
+                if (window.progressTracker) {
+                    window.progressTracker.updateUI();
+                } else {
+                    setTimeout(initializeProgress, 100);
+                }
+            };
+
+            initializeProgress();
+        });
+    </script>
+</body>
+
+</html>
