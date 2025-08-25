@@ -117,7 +117,7 @@
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "ilpakka",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Team leader of H-T8 CTF Team and attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>. Scored 178 points.",
         "team_leader": true,
         "flags": 2
@@ -126,7 +126,7 @@
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "lansiri",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>. Scored 100 points.",
         "flags": 1
     },
@@ -134,7 +134,7 @@
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "ridicculus",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>. Scored 100 points.",
         "flags": 1
     },
@@ -142,28 +142,28 @@
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "Mizard",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>."
     },
     {
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "Lisko",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>."
     },
     {
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "ExcelAtSheets",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>."
     },
     {
         "badge_name": "SekaiCTF 2025",
         "date": "2025-08-18",
         "resipiant": "S200963",
-        "image": "/H-T8/assets/badges/SekaiCTF 2025",
+        "image": "/H-T8/assets/badges/SekaiCTF 2025.png",
         "description": "Attended SekaiCTF 2025 CTF competition under team <Strong>H-T8</Strong>."
     }
 
