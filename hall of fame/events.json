@@ -14,5 +14,19 @@
     "tag1": "CTF",
     "tag2": "HackTheBox",
     "tag3": "Cyber Apocalypse"
+  },
+    {
+    "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
+    "link": "https://2025.ctf.sekai.team/",
+    "icon": "/H-T8/assets/events/Throphy.png",
+    "image": "/H-T8/assets/events/Frame 2.png",
+    "title": "SekaiCTF 2025",
+    "date": "2025-08-16 - 2025-18-26",
+    "location": "Online",
+    "finishing_position": "198th out of 2289 teams",
+    "team_size": "7",
+    "description": "Team <Strong>H-T8</Strong> participated in SekaiCTF 2025 and secured 198th position out of 2289 teams. Total points scored was 378. ",
+    "tag1": "CTF",
+    "tag2": "Sekai"
   }
 ]
