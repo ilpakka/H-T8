@@ -9,8 +9,6 @@
     "recurrence": "weekly",
     "tag1": "hakkerointia",
     "tag2": "rentoa hengausta"
-    
-    
   },
   {
     "title": "Hakkerointi ilta > Super&nbsp;Bario",
@@ -22,8 +20,6 @@
     "recurrence": "biweekly",
     "tag1": "hakkerointia",
     "tag2": "rentoa hengausta"
-    
-    
   },
   {
     "title": "Hakkerointi ilta > Discord",
@@ -35,10 +31,7 @@
     "recurrence": "biweekly",
     "tag1": "hakkerointia",
     "tag2": "rentoa hengausta"
-    
-    
   },
-
   {
     "title": "Inside the Mind of a Hacker 2024",
     "date": "2025-01-16T19:00:00",
@@ -50,7 +43,6 @@
     "tag2": "hacking",
     "link": "https://www.bugcrowd.com/webinar/"
   },
-
   {
     "title": "Junction 2025",
     "date": "2025-11-07T09:00:00",
@@ -63,9 +55,7 @@
     "tag2": "Koodausta",
     "tag3": "Verkostoitumista",
     "link": "https://hackjunction.com/"
-
   },
-
   {
     "title": "Kyberlahti Seminaari",
     "date": "2025-03-13T12:00:00",
@@ -78,7 +68,6 @@
     "tag3": "Ilmainen",
     "link": "https://www.kyberlahti.fi/"
   },
-
   {
     "title": "Disobey 2026",
     "date": "2026-02-13T09:00:00",
@@ -91,19 +80,18 @@
     "tag3": "Verkostoitumista",
     "link": "https://disobey.fi/2026/"
   },
-
   {
-    "title": " Online CTF",
-    "date": "2025-10-20T00:00:00",
-    "showDate": false,
+    "title": "TFC CTF 2025",
+    "date": "2025-08-29T13:00:00",
+    "showDate": true,
     "location": "Online",
-    "description": "TBA",
+    "description": "CTF jokaiseen osaamis tasoon. Haasteita eri osa-alueilta ovat esimerkiksi Pwn, Reverse, Web, Crypto ja Misc.",
     "recurring": false,
     "tag1": "CTF",
     "tag2": "Hakkerointi",
-    "tag3": "Kilpailu"
+    "tag3": "Kilpailu",
+    "link": "https://ctftime.org/event/2822"
   },
-
   {
     "title": "Orjentaatioviikon Info",
     "date": "2025-08-25T10:00:00",
@@ -114,7 +102,30 @@
     "tag1": "Orjentaatioviikko",
     "tag2": "Tapahtuma",
     "tag3": "Uudet opiskelijat"
+  },
+  {
+    "title": "Holmes CTF 2025",
+    "date": "2025-09-22T16:00:00",
+    "showDate": true,
+    "location": "Online",
+    "description": "Ensimmäistä kertaa HackTheBox:in tarjoama Blue Team CTF kilpailu. Kilpailussa keskitytään puolustukseen ja uhkien torjuntaan. Tiimikoko max 5 henkilöä.<br><br> Osallistuja määrästä riipuen tarjotaan useita tiimejä. (Yhteistyö ei sallittua tiimien välillä)",
+    "recurring": false,
+    "tag1": "CTF",
+    "tag2": "Blue Team",
+    "tag3": "Kilpailu",
+    "link": "https://ctf.hackthebox.com/event/details/holmes-ctf-2025-2536"
+  },
+    {
+    "title": "Women4Cyber EWICSFI25",
+    "date": "2025-10-22T09:00:00",
+    "showDate": true,
+    "location": "Aalto University Marsio, Otakaari 2, Espoo",
+    "description": "Women4Cyber on tapahtuma, joka keskittyy naisten rooliin kyberturvallisuudessa. Tapahtuma tarjoaa verkostoitumismahdollisuuksia ja inspiroivia puheenvuoroja.",
+    "recurring": false,
+    "tag1": "Conference",
+    "tag2": "Free",
+    "tag3": "Verkostoitumista",
+    "link": "https://www.meetup.com/women4cyber-finland/events/308275809/"
   }
-
-
+  
 ]
