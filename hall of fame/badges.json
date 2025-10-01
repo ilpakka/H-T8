@@ -193,6 +193,41 @@
         "resipiant": "ridicculus",
         "image": "/H-T8/assets/badges/Disobey Hacker Puzzle.png",
         "description": "Solved Disobey Hacker Puzzle 2026."
-    }
-
+    },
+    {
+        "badge_name": "Holmes CTF 2025",
+        "date": "2025-09-26",
+        "resipiant": "ilpakka",
+        "image": "/H-T8/assets/badges/Holmes CTF 2025.png",
+        "description": "Team leader of H-T8 CTF Team and attended Holmes CTF 2025 under team <Strong>H-T8</Strong>",
+        "team_leader": true
+    },
+    {
+        "badge_name": "Holmes CTF 2025",
+        "date": "2025-09-26",
+        "resipiant": "ExcelAtSheets",
+        "image": "/H-T8/assets/badges/Holmes CTF 2025.png",
+        "description": "Attended Holmes CTF 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "Holmes CTF 2025",
+        "date": "2025-09-26",
+        "resipiant": "ridicculus",
+        "image": "/H-T8/assets/badges/Holmes CTF 2025.png",
+        "description": "Attended Holmes CTF 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "Holmes CTF 2025",
+        "date": "2025-09-26",
+        "resipiant": "lansiri",
+        "image": "/H-T8/assets/badges/Holmes CTF 2025.png",
+        "description": "Attended Holmes CTF 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "Holmes CTF 2025",
+        "date": "2025-09-26",
+        "resipiant": "lemonish",
+        "image": "/H-T8/assets/badges/Holmes CTF 2025.png",
+        "description": "Attended Holmes CTF 2025 under team <Strong>H-T8</Strong>"
+    },
 ]
