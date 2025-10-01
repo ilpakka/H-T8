@@ -37,6 +37,7 @@ export function renderCarousel(events) {
         ${event.tag1 ? `<span class="tag">${event.tag1}</span>` : ""}
         ${event.tag2 ? `<span class="tag">${event.tag2}</span>` : ""}
         ${event.tag3 ? `<span class="tag">${event.tag3}</span>` : ""}
+        ${event.tag4 ? `<span class="tag">${event.tag4}</span>` : ""}
       </div>
       </a>
     </div>

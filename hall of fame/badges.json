@@ -230,4 +230,11 @@
         "image": "/H-T8/assets/badges/Holmes CTF 2025.png",
         "description": "Attended Holmes CTF 2025 under team <Strong>H-T8</Strong>"
     },
+    {
+        "badge_name": "Disobey Hacker Puzzle 2026",
+        "date": "2025-09-29",
+        "resipiant": "lemonish",
+        "image": "/H-T8/assets/badges/Disobey Hacker Puzzle.png",
+        "description": "Solved Disobey Hacker Puzzle 2026."
+    }
 ]

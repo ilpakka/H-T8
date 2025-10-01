@@ -15,7 +15,7 @@
     "tag2": "HackTheBox",
     "tag3": "Cyber Apocalypse"
   },
-    {
+  {
     "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
     "link": "https://2025.ctf.sekai.team/",
     "icon": "/H-T8/assets/events/Throphy.png",
@@ -28,5 +28,22 @@
     "description": "Team <Strong>H-T8</Strong> participated in SekaiCTF 2025 and secured 198th position out of 2289 teams. Total points scored was 378. ",
     "tag1": "CTF",
     "tag2": "Sekai"
+  },
+  {
+    "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
+    "link": "https://ctf.hackthebox.com/event/details/holmes-ctf-2025-2536",
+    "icon": "/H-T8/assets/events/Throphy.png",
+    "image": "/H-T8/assets/events/holmes2025.jpg",
+    "title": "Holmes CTF 2025",
+    "date": "2025-09-15 - 2025-09-17",
+    "location": "Online",
+    "finishing_position": "211th out of 7084 teams",
+    "team_size": "5",
+    "flags": "65",
+    "description": "Team <Strong>H-T8</Strong> participated in Holmes CTF 2025 and secured 211th position out of 7084 teams. Team solved all 5/5 challenges, got 65/65 flags and scored 8975 points.",
+    "tag1": "Malware Reversing",
+    "tag2": "SOC",
+    "tag3": "Threat Intelligence",
+    "tag4": "DFIR"
   }
 ]
