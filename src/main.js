@@ -20,7 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hideOverlay();
     generateBreadcrumbs();
-    setupPagination();
+    
+    // For Hall of Fame page, pagination is set up after data is loaded
+    // For other pages, set up pagination immediately
+    if (!document.querySelector('#hallOfFamePage')) {
+      setupPagination();
+    }
+    
     setupTableSearch('searchInput', 'searchable');
     fetchBadgeData();
     loadEvents();

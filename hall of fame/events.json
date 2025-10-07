@@ -45,5 +45,22 @@
     "tag2": "SOC",
     "tag3": "Threat Intelligence",
     "tag4": "DFIR"
+  },
+    {
+    "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
+    "link": "https://ctf.hackthebox.com/event/details/insta-intruders-ctf-2721",
+    "icon": "/H-T8/assets/events/Throphy.png",
+    "image": "/H-T8/assets/events/Intruders CTF.webp",
+    "title": "Insta Intruders CTF 2025",
+    "date": "2025-10-03 - 2025-10-04",
+    "location": "Online",
+    "finishing_position": "2nd and 3rd out of 35 teams",
+    "team_size": "6 & 3",
+    "flags": "38",
+    "description": "Team <Strong>H-T8</Strong> and second team <Strong>63iq</Strong> participated in Insta Intruders CTF 2025 and secured 2nd and 3rd position out of 35 teams. Both teams solved all 20/20 challenges, got 38/38 flags and scored 12850 points.",
+    "tag1": "Red Teaming",
+    "tag2": "Forensics",
+    "tag3": "Hardware",
+    "tag4": "ICS"
   }
 ]

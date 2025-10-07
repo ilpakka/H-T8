@@ -3,6 +3,58 @@ const tooltip = document.createElement('div');
 tooltip.className = 'tooltip';
 document.body.appendChild(tooltip);
 
+// Helper functions for ranking management
+function getPreviousRankings() {
+  const stored = localStorage.getItem('hallOfFameRankings');
+  return stored ? JSON.parse(stored) : {};
+}
+
+function saveCurrentRankings(snapshot) {
+  localStorage.setItem('hallOfFameRankings', JSON.stringify(snapshot.rankings));
+  localStorage.setItem('hallOfFameDataHash', snapshot.hash);
+}
+
+function createRankingSnapshot(groupedData) {
+  const rankings = {};
+  const dataForHash = [];
+  
+  groupedData.forEach((user, index) => {
+    rankings[user.resipiant] = {
+      rank: index + 1,
+      badgeCount: user.badges.length
+    };
+    // Create a string representation for change detection
+    dataForHash.push(`${user.resipiant}:${user.badges.length}`);
+  });
+  
+  // Create a simple hash of the data
+  const hash = dataForHash.join('|');
+  
+  return { rankings, hash };
+}
+
+function hasDataChanged(currentSnapshot) {
+  const previousHash = localStorage.getItem('hallOfFameDataHash');
+  return previousHash !== currentSnapshot.hash;
+}
+
+function getMovementIndicator(username, currentRank, previousRankings, dataChanged) {
+  if (!dataChanged || !previousRankings[username]) {
+    return '<span class="rank-indicator rank-new">●</span>';
+  }
+  
+  const previousRank = previousRankings[username].rank;
+  const movement = previousRank - currentRank; // Positive = moved up, Negative = moved down
+  
+  if (movement > 0) {
+    return `<span class="rank-indicator rank-up" title="Up ${movement} position${movement > 1 ? 's' : ''}">▲</span>`;
+  } else if (movement < 0) {
+    return `<span class="rank-indicator rank-down" title="Down ${Math.abs(movement)} position${Math.abs(movement) > 1 ? 's' : ''}">▼</span>`;
+  } else {
+    return '<span class="rank-indicator rank-same">━</span>';
+  }
+}
+
 // Fetch the badge data from badge.json
 export async function fetchBadgeData() {
   // Check if the current page is the correct page by looking for a specific element
@@ -50,7 +102,11 @@ export function groupBadgesByUser(data) {
     });
   });
 
-  return Object.values(grouped); // Convert grouped object into an array of grouped users
+  // Convert grouped object into an array and sort by badge count (most to least)
+  const groupedArray = Object.values(grouped);
+  groupedArray.sort((a, b) => b.badges.length - a.badges.length);
+  
+  return groupedArray;
 }
 
 export function renderTable(groupedData) {
@@ -61,10 +117,24 @@ export function renderTable(groupedData) {
   }
   tableBody.innerHTML = ''; // Clear previous data
 
-  groupedData.forEach((user) => {
-    const row = document.createElement('tr');
+  // Get previous rankings from localStorage
+  const previousRankings = getPreviousRankings();
+  const currentSnapshot = createRankingSnapshot(groupedData);
+  
+  // Check if data has actually changed (new badges added)
+  const dataChanged = hasDataChanged(currentSnapshot);
 
-    // Create a cell for the user's name and badges
+  groupedData.forEach((user, index) => {
+    const row = document.createElement('tr');
+    const currentRank = index + 1;
+
+    // Create rank cell with movement indicator
+    const rankCell = document.createElement('td');
+    const movementIndicator = getMovementIndicator(user.resipiant, currentRank, previousRankings, dataChanged);
+    rankCell.innerHTML = `<div class="rank-cell"><span class="rank-number">${currentRank}</span>${movementIndicator}</div>`;
+    rankCell.style.textAlign = 'center';
+
+    // Create a cell for the user's name
     const userCell = document.createElement('td');
     userCell.innerHTML = `<strong>${user.resipiant}</strong>`;
 
@@ -84,10 +154,21 @@ export function renderTable(groupedData) {
     const badgesCell = document.createElement('td');
     badgesCell.innerHTML = badgesList;
 
+    row.appendChild(rankCell);
     row.appendChild(userCell);
     row.appendChild(badgesCell);
 
     tableBody.appendChild(row);
+  });
+
+  // Update stored rankings only if data changed
+  if (dataChanged) {
+    saveCurrentRankings(currentSnapshot);
+  }
+
+  // Import and setup pagination after table is populated
+  import('./pagination.js').then(module => {
+    module.setupPagination();
   });
 
   // After rendering, attach hover handlers to badges

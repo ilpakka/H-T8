@@ -1656,6 +1656,46 @@ honor board page starts here
     }
 }
 
+/* Rank cell styling */
+.rank-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rank-number {
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 25px;
+    text-align: right;
+}
+
+.rank-indicator {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+}
+
+.rank-up {
+    color: #22c55e; /* Green for moving up */
+}
+
+.rank-down {
+    color: #ef4444; /* Red for moving down */
+}
+
+.rank-same {
+    color: #64748b; /* Gray for no change */
+}
+
+.rank-new {
+    color: #3b82f6; /* Blue for new entry */
+    font-size: 10px;
+}
+
 .th-nic {
     width: 15%;
 }
