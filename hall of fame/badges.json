@@ -309,5 +309,12 @@
         "image": "/H-T8/assets/badges/Insta Intruders 2025.webp",
         "description": "Attended Insta Intruders CTF 2025 under team <Strong>63iq</Strong>",
         "flags": 19
+    },
+    {
+        "badge_name": "Disobey Hacker Puzzle 2026",
+        "date": "2025-10-12",
+        "resipiant": "ilpakka",
+        "image": "/H-T8/assets/badges/Disobey Hacker Puzzle.png",
+        "description": "Solved Disobey Hacker Puzzle 2026."
     }
 ]
