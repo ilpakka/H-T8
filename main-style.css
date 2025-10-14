@@ -743,16 +743,43 @@ body {
         .container {
             display: flex;
             flex-direction: row;
+        }
 
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            gap: 50px;
+        }
 
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
+        .footer-powered {
+            text-align: center;
+            width: 100%;
+            
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1px;
+            }
+
+            .upcloud-logo {
+                height: 30px;
+                margin: 10px 0 0 10px;
+            }
         }
 
         img {
             height: 60px;
             margin: 0 0 10px 0;
-
-
         }
 
     }
@@ -2147,6 +2174,34 @@ resurssit page starts here
     
     .vulnerability-card {
         padding: 15px;
+    }
+
+    /* Footer tablet styles */
+    .footer {
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .footer-left {
+            align-items: flex-start;
+        }
+
+        .footer-powered {
+            margin-top: 0;
+            align-self: flex-end;
+            width: auto;
+
+            .upcloud-logo {
+                height: 35px;
+            }
+            
+            p {
+                justify-content: center;
+                align-self: center;
+            }
+        }
     }
 
 
