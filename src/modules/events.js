@@ -46,7 +46,7 @@ function addYears(date, years, now) {
 }
   
   export function renderEvents(containerClass, eventFilter = {}, recurrence = "weekly") {
-    fetch("/H-T8/toiminta/events.json")
+    fetch("/toiminta/events.json")
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

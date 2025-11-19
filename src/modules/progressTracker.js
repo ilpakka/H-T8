@@ -227,7 +227,7 @@ class ProgressTracker {
                     
                     <div class="completion-actions">
                         <a href="https://discord.gg/HmGuxvauZQ" class="completion-btn primary">Join Our Community</a>
-                        <a href="/H-T8/hall of fame/" class="completion-btn secondary">View Hall of Fame</a>
+                        <a href="/hall of fame/" class="completion-btn secondary">View Hall of Fame</a>
                     </div>
                 </div>
             </div>

@@ -762,7 +762,7 @@ body {
         .footer-powered {
             text-align: center;
             width: 100%;
-            
+
             p {
                 display: flex;
                 align-items: center;
@@ -835,7 +835,7 @@ body {
                 width: 100%;
                 text-align: center;
                 padding: 80px 0;
-                background-image: url('/H-T8/assets/red_team.webp');
+                background-image: url('/assets/red_team.webp');
                 background-size: cover;
                 background-position: center;
                 background-blend-mode: multiply;
@@ -856,7 +856,7 @@ body {
                 width: 100%;
                 text-align: center;
                 padding: 80px 0;
-                background-image: url('/H-T8/assets/blue_team.webp');
+                background-image: url('/assets/blue_team.webp');
                 background-size: cover;
                 background-position: center;
                 filter: grayscale(100%);
@@ -877,7 +877,7 @@ body {
 
             .general {
                 width: 100%;
-                background-image: url("/H-T8/assets/general.webp");
+                background-image: url("/assets/general.webp");
                 text-align: center;
                 text-decoration: none;
                 padding: 80px 0;
@@ -1465,7 +1465,7 @@ body {
     .vulnerability-grid {
         gap: 15px;
     }
-    
+
     .vulnerability-card {
         padding: 15px;
     }
@@ -1707,19 +1707,23 @@ honor board page starts here
 }
 
 .rank-up {
-    color: #22c55e; /* Green for moving up */
+    color: #22c55e;
+    /* Green for moving up */
 }
 
 .rank-down {
-    color: #ef4444; /* Red for moving down */
+    color: #ef4444;
+    /* Red for moving down */
 }
 
 .rank-same {
-    color: #64748b; /* Gray for no change */
+    color: #64748b;
+    /* Gray for no change */
 }
 
 .rank-new {
-    color: #3b82f6; /* Blue for new entry */
+    color: #3b82f6;
+    /* Blue for new entry */
     font-size: 10px;
 }
 
@@ -2171,7 +2175,7 @@ resurssit page starts here
     .vulnerability-grid {
         gap: 15px;
     }
-    
+
     .vulnerability-card {
         padding: 15px;
     }
@@ -2196,7 +2200,7 @@ resurssit page starts here
             .upcloud-logo {
                 height: 35px;
             }
-            
+
             p {
                 justify-content: center;
                 align-self: center;
@@ -2305,19 +2309,19 @@ resurssit page starts here
 
             .red-team {
                 padding: 300px 0;
-                background-image: url('/H-T8/assets/red_team.webp');
+                background-image: url('/assets/red_team.webp');
 
 
             }
 
             .blue-team {
                 padding: 300px 0;
-                background-image: url('/H-T8/assets/blue_team.webp');
+                background-image: url('/assets/blue_team.webp');
             }
 
             .general {
                 padding: 300px 0;
-                background-image: url("/H-T8/assets/general.webp");
+                background-image: url("/assets/general.webp");
             }
         }
     }

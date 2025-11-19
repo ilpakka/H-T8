@@ -4,7 +4,7 @@ let interval;
 
 export async function loadEvents() {
   try {
-    const response = await fetch('/H-T8/hall of fame/events.json'); // Adjust path if needed
+    const response = await fetch('/hall-of-fame/events.json'); // Adjust path if needed
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -14,9 +14,9 @@ export async function loadEvents() {
     if (events.length > 1) {
       startCarousel(); // Start sliding if more than one event exists
     }
-} catch (error) {
-  console.error('Failed to load events:', error);
-}
+  } catch (error) {
+    console.error('Failed to load events:', error);
+  }
 }
 
 export function renderCarousel(events) {
@@ -56,7 +56,7 @@ export function updateCarousel() {
 
 export function moveSlide(direction) {
   if (events.length <= 1) return; // Don't slide if only one event
-  
+
   currentIndex += direction;
 
   // Handle looping

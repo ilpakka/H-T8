@@ -17,7 +17,7 @@ function saveCurrentRankings(snapshot) {
 function createRankingSnapshot(groupedData) {
   const rankings = {};
   const dataForHash = [];
-  
+
   groupedData.forEach((user, index) => {
     rankings[user.resipiant] = {
       rank: index + 1,
@@ -26,10 +26,10 @@ function createRankingSnapshot(groupedData) {
     // Create a string representation for change detection
     dataForHash.push(`${user.resipiant}:${user.badges.length}`);
   });
-  
+
   // Create a simple hash of the data
   const hash = dataForHash.join('|');
-  
+
   return { rankings, hash };
 }
 
@@ -42,10 +42,10 @@ function getMovementIndicator(username, currentRank, previousRankings, dataChang
   if (!dataChanged || !previousRankings[username]) {
     return '<span class="rank-indicator rank-new">●</span>';
   }
-  
+
   const previousRank = previousRankings[username].rank;
   const movement = previousRank - currentRank; // Positive = moved up, Negative = moved down
-  
+
   if (movement > 0) {
     return `<span class="rank-indicator rank-up" title="Up ${movement} position${movement > 1 ? 's' : ''}">▲</span>`;
   } else if (movement < 0) {
@@ -63,7 +63,7 @@ export async function fetchBadgeData() {
   }
 
   try {
-    const response = await fetch('/H-T8/hall of fame/badges.json');  // Replace with the correct path to your badge.json file
+    const response = await fetch('/hall-of-fame/badges.json');  // Replace with the correct path to your badge.json file
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -82,7 +82,7 @@ export function groupBadgesByUser(data) {
   // Group the badges based on recipient
   data.forEach((badge) => {
     const { resipiant, badge_name, date, image, description, flags } = badge;
-    
+
     // If the user doesn't exist in the grouped object, create an empty array for them
     if (!grouped[resipiant]) {
       grouped[resipiant] = {
@@ -105,7 +105,7 @@ export function groupBadgesByUser(data) {
   // Convert grouped object into an array and sort by badge count (most to least)
   const groupedArray = Object.values(grouped);
   groupedArray.sort((a, b) => b.badges.length - a.badges.length);
-  
+
   return groupedArray;
 }
 
@@ -120,7 +120,7 @@ export function renderTable(groupedData) {
   // Get previous rankings from localStorage
   const previousRankings = getPreviousRankings();
   const currentSnapshot = createRankingSnapshot(groupedData);
-  
+
   // Check if data has actually changed (new badges added)
   const dataChanged = hasDataChanged(currentSnapshot);
 

@@ -4,7 +4,7 @@ export function loadHeaderFooter(callback) {
     const headerContainer = document.getElementById('header-container');
     const footerContainer = document.getElementById('footer-container');
   
-    const loadHeader = fetch('/H-T8/src/modules/header.html')
+    const loadHeader = fetch('/src/modules/header.html')
       .then(response => response.text())
       .then(data => {
         if (headerContainer) {
@@ -13,7 +13,7 @@ export function loadHeaderFooter(callback) {
         }
       });
   
-    const loadFooter = fetch('/H-T8/src/modules/footer.html')
+    const loadFooter = fetch('/src/modules/footer.html')
       .then(response => response.text())
       .then(data => {
         if (footerContainer) {

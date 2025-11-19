@@ -1,3 +1,8 @@
-<Files "badges.json", "events.json" >
-    Header set Access-Control-Allow-Origin "*"
-</Files>
+<IfModule mod_headers.c>
+    <Files "badges.json">
+        Header set Access-Control-Allow-Origin "*"
+    </Files>
+    <Files "events.json">
+        Header set Access-Control-Allow-Origin "*"
+    </Files>
+</IfModule>
