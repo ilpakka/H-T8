@@ -42,7 +42,7 @@ class ProgressTracker {
         const wasCompleted = this.progress[sectionId] === true;
         this.progress[sectionId] = completed;
         this.saveProgress();
-        
+
         // Check if this completion triggers the badge
         if (completed && !wasCompleted) {
             // Small delay to ensure UI updates before checking completion
@@ -63,7 +63,7 @@ class ProgressTracker {
     getCompletionPercentage() {
         const sections = this.getAllSections();
         if (sections.length === 0) return 0;
-        
+
         const completedSections = sections.filter(section => this.isSectionCompleted(section.id));
         return Math.round((completedSections.length / sections.length) * 100);
     }
@@ -92,12 +92,12 @@ class ProgressTracker {
         const progressBar = document.querySelector('.progress-fill');
         const progressText = document.querySelector('.progress-text');
         const progressStats = document.querySelector('.progress-stats');
-        
+
         if (progressBar && progressText && progressStats) {
             const percentage = this.getCompletionPercentage();
             const completed = this.getCompletedCount();
             const total = this.getTotalCount();
-            
+
             progressBar.style.width = `${percentage}%`;
             progressText.textContent = `${percentage}%`;
             progressStats.textContent = `${completed} of ${total} sections completed`;
@@ -110,7 +110,7 @@ class ProgressTracker {
         if (button) {
             const completed = this.getCompletedCount();
             const total = this.getTotalCount();
-            
+
             if (completed === 0) {
                 button.innerHTML = '<span>Start Learning</span>';
             } else if (completed === total) {
@@ -167,7 +167,7 @@ class ProgressTracker {
     navigateToNextSection() {
         const nextSection = this.getNextSection();
         if (nextSection) {
-            window.location.href = `./sections/${nextSection.id}/`;
+            window.location.href = `./${nextSection.id}/`;
         }
     }
 
@@ -186,12 +186,12 @@ class ProgressTracker {
     checkForCompletion() {
         const completed = this.getCompletedCount();
         const total = this.getTotalCount();
-        
+
         // Only show popup if we just completed all sections
         if (completed === total && total > 0) {
             const hasShownBadge = localStorage.getItem('completion-badge-shown');
             const currentCompletionState = `${completed}-${total}`;
-            
+
             // Show badge if we haven't shown it for this completion state
             if (hasShownBadge !== currentCompletionState) {
                 this.showCompletionBadge();
@@ -232,10 +232,10 @@ class ProgressTracker {
                 </div>
             </div>
         `;
-        
+
         // Add popup to body
         document.body.insertAdjacentHTML('beforeend', popupHTML);
-        
+
         // Show popup with animation
         setTimeout(() => {
             const popup = document.getElementById('completion-popup');
@@ -243,7 +243,7 @@ class ProgressTracker {
                 popup.classList.add('show');
             }
         }, 100);
-        
+
         // Add escape key listener
         this.escapeKeyListener = (e) => {
             if (e.key === 'Escape') {

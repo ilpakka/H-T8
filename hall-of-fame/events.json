@@ -2,8 +2,8 @@
   {
     "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
     "link": "https://ctf.hackthebox.com/event/details/cyber-apocalypse-ctf-2025-tales-from-eldoria-2107",
-    "icon": "/assets/events/Throphy.png",
-    "image": "/assets/events/Cyber Apocalypse CTF 2025- Tales from Eldoria.jpg",
+    "icon": "/assets/hall-of-fame/events/Throphy.png",
+    "image": "/assets/hall-of-fame/events/Cyber Apocalypse CTF 2025- Tales from Eldoria.jpg",
     "title": "Cyber Apocalypse CTF 2025",
     "date": "2025-03-21 - 2025-03-26",
     "location": "Online",
@@ -18,8 +18,8 @@
   {
     "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
     "link": "https://2025.ctf.sekai.team/",
-    "icon": "/assets/events/Throphy.png",
-    "image": "/assets/events/Frame 2.png",
+    "icon": "/assets/hall-of-fame/events/Throphy.png",
+    "image": "/assets/hall-of-fame/events/Frame 2.png",
     "title": "SekaiCTF 2025",
     "date": "2025-08-16 - 2025-08-18",
     "location": "Online",
@@ -32,8 +32,8 @@
   {
     "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
     "link": "https://ctf.hackthebox.com/event/details/holmes-ctf-2025-2536",
-    "icon": "/assets/events/Throphy.png",
-    "image": "/assets/events/holmes2025.jpg",
+    "icon": "/assets/hall-of-fame/events/Throphy.png",
+    "image": "/assets/hall-of-fame/events/holmes2025.jpg",
     "title": "Holmes CTF 2025",
     "date": "2025-09-15 - 2025-09-17",
     "location": "Online",
@@ -49,8 +49,8 @@
   {
     "_comments": "[!] The picture resolution needs to be aproximately 760x400 [!]",
     "link": "https://ctf.hackthebox.com/event/details/insta-intruders-ctf-2721",
-    "icon": "/assets/events/Throphy.png",
-    "image": "/assets/events/Intruders CTF.webp",
+    "icon": "/assets/hall-of-fame/events/Throphy.png",
+    "image": "/assets/hall-of-fame/events/Intruders CTF.webp",
     "title": "Insta Intruders CTF 2025",
     "date": "2025-10-03 - 2025-10-04",
     "location": "Online",
