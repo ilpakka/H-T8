@@ -43,7 +43,7 @@
     {
         "badge_name": "Cyber Apocalypse CTF 2025: Tales from Eldoria",
         "date": "2025-03-27",
-        "resipiant": "EetHeet",
+        "resipiant": "0x45",
         "image": "/H-T8/assets/badges/Cyber Apocalypse CTF 2025 Tales from Eldoria.webp",
         "description": "Attended Cyber Apocalypse CTF 2025: Tales from Eldoria CTF competition under team <Strong>H-T8</Strong>",
         "flags": 1
@@ -94,7 +94,7 @@
     {
         "badge_name": "Original Club Founders",
         "date": "2024-12-09",
-        "resipiant": "EetHeet",
+        "resipiant": "0x45",
         "image": "/H-T8/assets/badges/Original Club Founders.png",
         "description": "Original Club Founders"
     },
@@ -290,7 +290,7 @@
     {
         "badge_name": "Insta Intruders CTF 2025",
         "date": "2025-10-04",
-        "resipiant": "EetHeet",
+        "resipiant": "0x45",
         "image": "/H-T8/assets/badges/Insta Intruders 2025.webp",
         "description": "Attended Insta Intruders CTF 2025 under team <Strong>H-T8</Strong>"
     },
