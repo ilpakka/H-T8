@@ -43,10 +43,8 @@
     {
         "badge_name": "Cyber Apocalypse CTF 2025: Tales from Eldoria",
         "date": "2025-03-27",
-        "resipiant": "EetHeet",
-        "image": "/assets/hall-of-fame/badges/Cyber Apocalypse CTF 2025 Tales from Eldoria.webp",
         "resipiant": "0x45",
-        "image": "/H-T8/assets/badges/Cyber Apocalypse CTF 2025 Tales from Eldoria.webp",
+        "image": "/assets/badges/Cyber Apocalypse CTF 2025 Tales from Eldoria.webp",
         "description": "Attended Cyber Apocalypse CTF 2025: Tales from Eldoria CTF competition under team <Strong>H-T8</Strong>",
         "flags": 1
     },
@@ -62,21 +60,21 @@
         "badge_name": "Disobey 2025",
         "date": "2025-02-14",
         "resipiant": "rnm",
-        "image": "/assets/hall-of-fame/badges/disobey 2025.webp",
+        "image": "/assets/hall-of-fame/badges/Disobey 2025.png",
         "description": "Attended Disobey 2025"
     },
     {
         "badge_name": "Disobey 2025",
         "date": "2025-02-14",
         "resipiant": "pankeeki",
-        "image": "/assets/hall-of-fame/badges/disobey 2025.webp",
+        "image": "/assets/hall-of-fame/badges/Disobey 2025.png",
         "description": "Attended Disobey 2025"
     },
     {
         "badge_name": "Disobey 2025",
         "date": "2025-02-14",
         "resipiant": "Mizard",
-        "image": "/assets/hall-of-fame/badges/disobey 2025.webp",
+        "image": "/assets/hall-of-fame/badges/Disobey 2025.png",
         "description": "Attended Disobey 2025"
     },
     {
@@ -96,10 +94,8 @@
     {
         "badge_name": "Original Club Founders",
         "date": "2024-12-09",
-        "resipiant": "EetHeet",
-        "image": "/assets/hall-of-fame/badges/Original Club Founders.png",
         "resipiant": "0x45",
-        "image": "/H-T8/assets/badges/Original Club Founders.png",
+        "image": "/assets/badges/Original Club Founders.png",
         "description": "Original Club Founders"
     },
     {
@@ -294,10 +290,8 @@
     {
         "badge_name": "Insta Intruders CTF 2025",
         "date": "2025-10-04",
-        "resipiant": "EetHeet",
-        "image": "/assets/hall-of-fame/badges/Insta Intruders 2025.webp",
         "resipiant": "0x45",
-        "image": "/H-T8/assets/badges/Insta Intruders 2025.webp",
+        "image": "/assets/badges/Insta Intruders 2025.webp",
         "description": "Attended Insta Intruders CTF 2025 under team <Strong>H-T8</Strong>"
     },
     {
@@ -313,6 +307,216 @@
         "date": "2025-10-12",
         "resipiant": "ilpakka",
         "image": "/assets/hall-of-fame/badges/Disobey Hacker Puzzle.png",
-        "description": "Solved Disobey Hacker Puzzle 2026."
+        "description": "Solved Disobey Hacker Puzzle 2026"
+    },
+    {
+        "badge_name": "Platypwn 2025",
+        "date": "2025-11-16",
+        "resipiant": "ilpakka",
+        "image": "/assets/hall-of-fame/badges/Platypwn 2025.png",
+        "description": "Captain of team <Strong>H-T8</Strong> for Platypwn 2025"
+    },
+    {
+        "badge_name": "Platypwn 2025",
+        "date": "2025-11-16",
+        "resipiant": "lansiri",
+        "image": "/assets/hall-of-fame/badges/Platypwn 2025.png",
+        "description": "Attended Platypwn 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "Platypwn 2025",
+        "date": "2025-11-16",
+        "resipiant": "lemonish",
+        "image": "/assets/hall-of-fame/badges/Platypwn 2025.png",
+        "description": "Attended Platypwn 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "Platypwn 2025",
+        "date": "2025-11-16",
+        "resipiant": "ridicculus",
+        "image": "/assets/hall-of-fame/badges/Platypwn 2025.png",
+        "description": "Attended Platypwn 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "Platypwn 2025",
+        "date": "2025-11-16",
+        "resipiant": "lansiri",
+        "image": "/assets/hall-of-fame/badges/Platypwn 2025.png",
+        "description": "Attended Platypwn 2025 under team <Strong>H-T8</Strong>"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "ilpakka",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "rnm",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "ExcelAtSheets",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "0x45",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "lemonish",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "pankeeki",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "ridicculus",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "Mizard",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "hneryi",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "Dragonis",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "H-T8 Xmas Party 2025",
+        "date": "2025-11-21",
+        "resipiant": "Andro",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Attended H-T8 Xmas Party 2025"
+    },
+    {
+        "badge_name": "Finland #1 2025",
+        "date": "2025-12-29",
+        "resipiant": "ilpakka",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Captain of team <Strong>H-T8</Strong> in the final push for Finland's #1 against ECSC Finland"
+    },
+    {
+        "badge_name": "Finland #1 2025",
+        "date": "2025-12-29",
+        "resipiant": "lansiri",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Warrior of team <Strong>H-T8</Strong> in the final push for Finland's #1 against ECSC Finland"
+    },
+    {
+        "badge_name": "Finland #1 2025",
+        "date": "2025-12-29",
+        "resipiant": "lemonish",
+        "image": "/assets/hall-of-fame/badges/Xmas 2025.png",
+        "description": "Warrior of team <Strong>H-T8</Strong> in the final push for Finland's #1 against ECSC Finland"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "ilpakka",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "rnm",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "lemonish",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "lansiri",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "Lisko",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "pankeeki",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "ridicculus",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "0x45",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "Pot",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "hneryi",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
+    },
+    {
+        "badge_name": "Disobey 2026",
+        "date": "2026-02-14",
+        "resipiant": "Dragonis",
+        "image": "/assets/hall-of-fame/badges/Disobey 2026.png",
+        "description": "Attended Disobey 2026"
     }
 ]
